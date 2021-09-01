@@ -1,3 +1,6 @@
 [submodule "Kaavatietomalli 1.0"]
-	path = kaavatiedot/1.0
+	path = docs/kaavatiedot/1.0
+	url = https://github.com/YM-rakennettu-ymparisto/kaavatietomalli
+[submodule "Kaavatietomalli 0.7"]
+	path = docs/kaavatiedot/0.7
 	url = https://github.com/YM-rakennettu-ymparisto/kaavatietomalli
