@@ -1,0 +1,12 @@
+theme: jekyll-theme-slate
+url: "https://ry-tietomallit.ymparisto.fi" # the base hostname & protocol for your site
+home: "https://ry-tietomallit.ymparisto.fi"
+plugins:
+  - jekyll-sitemap
+repository: ilkkarinne/ry-tietomallit
+#google_analytics: G-TL17CQFMFK
+plugins:
+- jekyll-sitemap
+- kramdown
+
+

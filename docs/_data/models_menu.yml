@@ -1,0 +1,13 @@
+menu:
+  - id: "yhteiset"
+    title: "Yhteiset komponentit"
+    kind: "model"
+  - id: "kaavatiedot"
+    title: "Maankäytön ohjaus"
+    kind: "model"
+  - id: "rakluvat"
+    title: "Rakennukset ja rakentaminen"
+    kind: "model"
+  - id: "liikenne-verkostot"
+    title: "Liikenne ja verkostot"
+    kind: "model"
