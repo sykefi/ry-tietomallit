@@ -1,6 +1,6 @@
 theme: jekyll-theme-slate
-url: "https://ry-tietomallit.ymparisto.fi" # the base hostname & protocol for your site
-home: "https://ry-tietomallit.ymparisto.fi"
+url: "https://ilkkarinne.github.io/ry-tietomallit/" # the base hostname & protocol for your site
+home: "https://ilkkarinne.github.io/ry-tietomallit/"
 plugins:
   - jekyll-sitemap
 repository: ilkkarinne/ry-tietomallit
