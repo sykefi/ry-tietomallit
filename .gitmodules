@@ -1,3 +1,6 @@
 [submodule "Kaavatietomalli v1.0"]
 	path = docs/kaavatiedot/v1.0
 	url = https://github.com/ilkkarinne/kaavatietomalli-1
+[submodule "docs/kaavatiedot/v1.1-dev"]
+	path = docs/kaavatiedot/v1.1-dev
+	url = https://github.com/ilkkarinne/kaavatietomalli-1
