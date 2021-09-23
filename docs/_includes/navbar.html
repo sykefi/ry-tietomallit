@@ -1,8 +1,6 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color:rgb(41, 55, 69);">
   <div class="container-fluid">
     <a class="navbar-brand short" href="{{ site.url }}/">RY-tietomallit</a>
-    <a class="navbar-brand long" href="{{ site.url }}/">RY-tietomallit</a>
-    <div id="betatag"><span title="RY-tietomallit -sivusto ei ole vielä täysin valmis">&beta;eta</span></div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -33,18 +31,24 @@
         {%- endif -%}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle {{ navlinkClass }}" href="{{ default_path }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ menucol.title }}</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           {%- for item in nav_items -%}
-            {%- capture path %}{% include getNavItemPath.html item=item %}{% endcapture -%}
-            <a class="dropdown-item" href="{{ site.url }}/{{ basepath}}/{{ path }}">{{ item.title }}</a>
+            <li>
+            {%- if item.heading -%}
+              <span class="dropdown-header">{{ item.title }}</span>
+            {%- else -%}
+              {%- capture path %}{% include getNavItemPath.html item=item %}{% endcapture -%}
+              <a class="dropdown-item" href="{{ site.url }}/{{ basepath}}/{{ path }}">{{ item.title }}</a>
+            {%- endif -%}
             {%- if item.subitems -%}
               {%- for subitem in item.subitems -%}
                 {%- capture path %}{% include getNavItemPath.html item=subitem %}{% endcapture -%}
-                <a class="dropdown-item sublevel" href="{{ site.url }}/{{ basepath}}/{{ item.id }}/{{ path }}">{{ subitem.title }}</a>
+              <a class="dropdown-item sublevel" href="{{ site.url }}/{{ basepath}}/{{ item.id }}/{{ path }}">{{ subitem.title }}</a></li>
               {%- endfor -%}
             {%- endif -%}
+            </li>
           {%- endfor -%}
-          </div>
+          </ul>
         </li>
       {%- endfor -%}
        
@@ -67,18 +71,24 @@
         {%- endif -%}
         <li class="dropdown">
           <a class="nav-link dropdown-toggle {{ navlinkClass }}" href="{{ default_path }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ site.data.projects_menu.title }}</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           {%- for item in nav_items -%}
-            {%- capture path %}{% include getNavItemPath.html item=item %}{% endcapture -%}
-            <a class="dropdown-item" href="{{ site.url }}/{{ basepath}}/{{ path }}">{{ item.title }}</a>
-            {%- if item.subitems -%}
-              {%- for subitem in item.subitems -%}
-                {%- capture path %}{% include getNavItemPath.html item=subitem %}{% endcapture -%}
+            <li>
+            {%- if item.heading -%}
+              <h6 class="dropdown-header">{{ item.title }}</h6>
+            {%- else -%}
+              {%- capture path %}{% include getNavItemPath.html item=item %}{% endcapture -%}
+              <a class="dropdown-item" href="{{ site.url }}/{{ basepath}}/{{ path }}">{{ item.title }}</a>
+              {%- if item.subitems -%}
+                {%- for subitem in item.subitems -%}
+                  {%- capture path %}{% include getNavItemPath.html item=subitem %}{% endcapture -%}
                 <a class="dropdown-item sublevel" href="{{ site.url }}/{{ basepath}}/{{ item.id }}/{{ path }}">{{ subitem.title }}</a>
-              {%- endfor -%}
+                {%- endfor -%}
+              {%- endif -%}
             {%- endif -%}
+            </li>
           {%- endfor -%}
-          </div>
+          </ul>
         </li>
       </ul>
       <div class="d-flex">
