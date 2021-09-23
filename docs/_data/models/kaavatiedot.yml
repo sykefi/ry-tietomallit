@@ -23,6 +23,7 @@ nav_items:
     file: "kasitemalli/index.md"
   - id: "looginenmalli"
     title: "Looginen tietomalli"
+    heading: true
     subitems:
       - id: "dokumentaatio"
         title: "Dokumentaatio"
@@ -40,6 +41,7 @@ nav_items:
         title: "Inspire-yhteensopivuus"
   - id: "soveltamisohjeet"
     title: "Tietomallin soveltaminen"
+    heading: true
     subitems:
       - id: "sp-asemakaava"
         title: "Soveltamisprofiili - asemakaava"
@@ -59,12 +61,13 @@ nav_items:
         file: "yleiskaava/keittokirja.md"
   - id: "fyysiset-mallit"
     title: "Fyysiset tietomallit"
+    heading: true
     subitems:
-      - id: "json"
+      - id: "kaava-json"
         title: "Kaava-JSON"
         path: "json/"
         file: "json/index.md"
-      - id: "postgre"
+      - id: "kaava-postgre"
         title: "PostgreSQL-tietokanta"
         path: "postgre/"
         file: "postgre/index.md"
