@@ -6,7 +6,7 @@ menu:
     title: "Yhteiset komponentit"
     kind: "model"
   - id: "kaavatiedot"
-    title: "Alueidenkäyttö"
+    title: "Kaavoitus"
     kind: "model"
   - id: "rakluvat"
     title: "Rakentaminen"
