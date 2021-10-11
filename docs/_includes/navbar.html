@@ -37,13 +37,13 @@
             {%- if item.heading -%}
               <span class="dropdown-header">{{ item.title }}</span>
             {%- else -%}
-              {%- capture path %}{% include getNavItemPath.html item=item %}{% endcapture -%}
+              {%- capture path %}{% include getNavItemPath.html item=item %}{%- endcapture -%}
               <a class="dropdown-item" href="{{ site.url }}/{{ basepath}}/{{ path }}">{{ item.title }}</a>
             {%- endif -%}
             {%- if item.subitems -%}
               {%- for subitem in item.subitems -%}
-                {%- capture path %}{% include getNavItemPath.html item=subitem %}{% endcapture -%}
-              <a class="dropdown-item sublevel" href="{{ site.url }}/{{ basepath}}/{{ item.id }}/{{ path }}">{{ subitem.title }}</a></li>
+                {%- capture path %}{% include getNavItemPath.html item=subitem %}{%- endcapture -%}
+                <a class="dropdown-item sublevel" href="{{ site.url }}/{{ basepath}}/{{ item.id }}/{{ path }}">{{ subitem.title }}</a></li>
               {%- endfor -%}
             {%- endif -%}
             </li>
