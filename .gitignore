@@ -1,6 +1,5 @@
 #
 .DS_Store
 .sass-cache
-docs/*/looginenmalli/uml/doc/index.html
-docs/*/looginenmalli/uml/doc/index.htm
+docs/**/uml/doc/index.html
 

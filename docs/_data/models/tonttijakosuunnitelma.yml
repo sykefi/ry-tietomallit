@@ -3,10 +3,10 @@ github:
   owner_name: "ilkkarinne"
   repository_name: "Tonttijakosuunnitelman-tietomalli"
 versions:
-  - id: "v1.0-dev"
+  - id: "v1.0"
     title: "Tonttijakosuunnitelman tietomalli -projektin lopputulos"
-    path: "v1.0-dev"
-default_version: "v1.0-dev"
+    path: "v1.0"
+default_version: "v1.0"
 default_navitem: "tonttijakosuunnitelma"
 basepath: "tonttijakosuunnitelma"
 nav_items:
