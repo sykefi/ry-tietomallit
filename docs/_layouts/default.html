@@ -5,6 +5,9 @@ style: "default"
     {% include navbar.html %}
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
+      <div class="modelnav">
+        {% include modelnav.html %}
+      </div>
       <section id="main_content" class="inner">
         {% include pagemeta.html %}
         {{ content }}
