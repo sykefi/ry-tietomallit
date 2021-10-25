@@ -1,5 +1,5 @@
 theme: jekyll-theme-slate
-url: "https://ilkkarinne.github.io/ry-tietomallit" # the base hostname & protocol for your site
+url: "https://ilkkarinne.github.io/ry-tietomallit/" # the base hostname & protocol for your site
 home: "https://ilkkarinne.github.io/ry-tietomallit/"
 repository: ilkkarinne/ry-tietomallit
 #google_analytics: G-TL17CQFMFK
