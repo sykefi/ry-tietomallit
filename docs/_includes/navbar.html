@@ -10,7 +10,11 @@
       {%- for menucol in site.data.models_menu.menu -%}
         {%- assign model = site.data.models[menucol.id] -%}
         {%- if model.nav_items -%}
-          {%- capture pageInModel -%}{%- include isPageInHierarchy.html siblings=model.nav_items toFind=page.id -%}{%- endcapture -%}
+          {%- if page.model == menucol.id -%}
+            {%- capture pageInModel -%}{%- include isPageInHierarchy.html siblings=model.nav_items toFind=page.id -%}{%- endcapture -%}
+          {%- else -%}
+            {%- assign pageInModel = "0" -%}
+          {%- endif -%}
           {%- if pageInModel == "1" -%}
             {%- assign navlinkClass = "active" -%}
             {%- assign version = pageModelVersion | default: '' -%}
