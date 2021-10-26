@@ -31,7 +31,7 @@ nav_items:
       - id: "elinkaarisaannot"
         title: "Elinkaarisäännöt"
         file: "elinkaarisaannot.md"
-        path: "elinkaarisannot.html"
+        path: "elinkaarisaannot.html"
       - id: "laatusaannot"
         title: "Laatusäännöt"
         file: "laatusaannot.md"
