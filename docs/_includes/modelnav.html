@@ -1,42 +1,41 @@
-<ul class="nav flex-column">
-  {%- if model.nav_items -%}
-    {%- if page.model == model.id -%}
-      {%- capture pageInModel -%}{%- include isPageInHierarchy.html siblings=model.nav_items toFind=page.id -%}{%- endcapture -%}
-    {%- else -%}
-      {%- assign pageInModel = "0" -%}
-    {%- endif -%}
-    {%- if pageInModel == "1" -%}
-      {%- assign navlinkClass = "active" -%}
-      {%- assign version = pageModelVersion | default: '' -%}
-    {%- else -%}
-      {%- assign navlinkClass = "" -%}
-      {%- assign version = model.default_version -%}
-    {%- endif -%}
-    {%- assign default_item = model.nav_items | where: 'id', model.default_navitem -%}
-    {%- capture default_path -%}{%- include getNavItemPath.html item=default_item -%}{%- endcapture -%}
-    {%- assign default_path = site.url | append: '/' | append: default_path -%}
-    {%- assign nav_items = model.nav_items -%}
-    {%- assign basepath = model.basepath | append: '/' | append: version -%}
-  {%- else -%}
-    {%- assign nav_items = [] -%}
-    {%- assign default_path = '#' -%}
-    {%- assign navlinkClass = "" -%}
-    {%- assign basepath = '' | append: version -%}
+{%- if include.model -%}
+  {%- if pageModelVersion -%}
+  <div class="btn-toolbar nav-heading">
+    <div class="modeltitle">{{ include.model.title }}</div>
+    <div class="btn-group dropleft">
+        <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Malliversio {{ pageModelVersion }}
+        </button>
+        <div class="dropdown-menu">
+            <span class="dropdown-header">Saatavilla olevat versiot</span>
+            {%- assign my_ver = '/' | append: pageModelVersion | append: '/' -%}
+            {%- for version in include.model.versions -%}
+            {%- assign other_ver = '/' | append: version.path | append: '/' -%}
+            <a class="dropdown-item" href="{{ site.url }}{{ page.url | replace: my_ver, other_ver }}" title="{{ version.date | date: '%d.%m.%Y' }}">{{ version.id }}:&nbsp;{{ version.title }}</a>
+            {%- endfor -%}
+        </div>
+    </div>
+  </div>
   {%- endif -%}
-  {%- for item in nav_items -%}
-    <li class="nav-item">
-    {%- if item.heading -%}
-      <span class="header">{{ item.title }}</span>
-    {%- else -%}
+  <ul class="nav flex-column">
+    {%- for item in include.model.nav_items -%}
       {%- capture path %}{% include getNavItemPath.html item=item %}{%- endcapture -%}
-      <a class="nav-link" href="{{ site.url }}/{{ basepath}}/{{ path }}">{{ item.title }}</a>
-    {%- endif -%}
-    {%- if item.subitems -%}
-      {%- for subitem in item.subitems -%}
-        {%- capture path %}{% include getNavItemPath.html item=subitem %}{%- endcapture -%}
-        <a class="nav-link sublevel" href="{{ site.url }}/{{ basepath}}/{{ item.id }}/{{ path }}">{{ subitem.title }}</a></li>
-      {%- endfor -%}
-    {%- endif -%}
-    </li>
-  {%- endfor -%}
-</ul>
+      {%- if item.heading -%}
+      <li class="nav-item header">
+        <span>{{ item.title }}</span>
+      </li>
+      {%- else -%}
+      <li class="nav-item"> 
+        <a class="nav-link" href="{{ site.url }}/{{ include.model.basepath }}/{{ pageModelVersion }}/{{ path }}">{{ item.title }}</a>
+      </li>
+      {%- endif -%}
+      </li>
+        {%- for subitem in item.subitems -%}
+      <li class="nav-item">
+        {%- capture subpath %}{% include getNavItemPath.html item=subitem %}{%- endcapture -%}
+        <a class="nav-link sublevel" href="{{ site.url }}/{{ include.model.basepath}}/{{ pageModelVersion }}/{{ path }}{{ subpath }}">{{ subitem.title }}</a></li>
+      </li>
+        {%- endfor -%}
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

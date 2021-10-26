@@ -31,11 +31,13 @@ body {
   font-family: "Barlow",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
   &.ea-uml {
+    #main_content {
+      max-width: none;
+      padding: 0px;
+    }
     #main_content_wrap {
       .inner {
-        max-width: none;
-        padding: 0px;
-
+      
         h1, p {
           margin-left: 1rem;
 
@@ -183,10 +185,52 @@ b {
     border-top: 0px;
     border-bottom: 0px;
    .inner {
-     max-width: 58em;
-     background-color:  #ffffffe0;
-     padding-left: 2em;
-     padding-right: 3em;
+     max-width: none;
+     padding-top: 0px;
+     padding-left: 0px;
+     padding-right: 0px;
+
+     .modelnav {
+      background-color:#d7e0eb;
+      min-width: fit-content;
+
+      .nav-heading {
+        background-color: #495d72;
+        padding: 1em;
+
+        .modeltitle {
+          color: white;
+          font-size: 120%;
+          padding-right: 0.5em;
+        }
+  
+        .btn {
+          padding-top: 0.1rem;
+          padding-bottom: 0.1rem;
+        }
+      }
+
+      .nav {
+        padding: 1em;
+        .nav-item {
+          &.header {
+            font-weight: bold;
+            padding-top: 0.6rem;
+          }
+
+          .nav-link {
+            color: #0e4ba5;
+            padding-top: 0.3rem;
+            padding-left: 0px;
+            padding-bottom: 0.3rem;
+
+            &.sublevel {
+              padding-left: 1em;
+            }
+          }
+        }
+      }
+    }
    }
 
    p {
@@ -208,7 +252,7 @@ b {
       margin-bottom: 1em;
       margin-left: 1em;
       position: relative;
-      right: -3em;
+      right: 0px;
       float: right;
       font-size: 0.85rem;
 
@@ -299,7 +343,11 @@ ol#markdown-toc > li:before {
 }
 
 #main_content {
+  background-color:  #ffffffe0;
   padding-top: 0px;
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 58em;
   font-weight: 400;
   counter-reset: h2counter;
   a {

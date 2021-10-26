@@ -7,93 +7,40 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      {%- for menucol in site.data.models_menu.menu -%}
-        {%- assign model = site.data.models[menucol.id] -%}
-        {%- if model.nav_items -%}
-          {%- if page.model == menucol.id -%}
-            {%- capture pageInModel -%}{%- include isPageInHierarchy.html siblings=model.nav_items toFind=page.id -%}{%- endcapture -%}
-          {%- else -%}
-            {%- assign pageInModel = "0" -%}
-          {%- endif -%}
-          {%- if pageInModel == "1" -%}
-            {%- assign navlinkClass = "active" -%}
-            {%- assign version = pageModelVersion | default: '' -%}
-          {%- else -%}
-            {%- assign navlinkClass = "" -%}
-            {%- assign version = model.default_version -%}
-          {%- endif -%}
-          {%- assign default_item = model.nav_items | where: 'id', model.default_navitem -%}
-          {%- capture default_path -%}{%- include getNavItemPath.html item=default_item -%}{%- endcapture -%}
-          {%- assign default_path = site.url | append: '/' | append: default_path -%}
-          {%- assign nav_items = model.nav_items -%}
-          {%- assign basepath = model.basepath | append: '/' | append: version -%}
-        {%- else -%}
-          {%- assign nav_items = [] -%}
-          {%- assign default_path = '#' -%}
-          {%- assign navlinkClass = "" -%}
-          {%- assign basepath = '' | append: version -%}
-        {%- endif -%}
+      {%- for menu in site.data.topnavigation -%}
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{ navlinkClass }}" href="{{ default_path }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ menucol.title }}</a>
+          <a class="nav-link dropdown-toggle {{ navlinkClass }}" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ menu.title }}</a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          {%- for item in nav_items -%}
-            <li>
-            {%- if item.heading -%}
-              <span class="dropdown-header">{{ item.title }}</span>
-            {%- else -%}
-              {%- capture path %}{% include getNavItemPath.html item=item %}{%- endcapture -%}
-              <a class="dropdown-item" href="{{ site.url }}/{{ basepath}}/{{ path }}">{{ item.title }}</a>
+          {%- for item in menu.nav_items -%}
+            {%- if item.kind == "model" -%}
+              {%- assign navdata = site.data.models[item.id] -%}
+              {%- assign default_version = navdata.versions | where_exp: "version", "version.default" | first -%}
+              {%- unless default_version -%}
+                {%- assign default_version = navdata.versions | first -%}
+              {%- endunless -%}   
+            {%- elsif item.kind == "project" -%}
+              {%- assign navdata = site.data.projects[item.id] -%}
             {%- endif -%}
-            {%- if item.subitems -%}
-              {%- for subitem in item.subitems -%}
-                {%- capture path %}{% include getNavItemPath.html item=subitem %}{%- endcapture -%}
-                <a class="dropdown-item sublevel" href="{{ site.url }}/{{ basepath}}/{{ item.id }}/{{ path }}">{{ subitem.title }}</a></li>
-              {%- endfor -%}
+            {%- if navdata -%}
+              {%- assign basepath = navdata.basepath -%}
+              {%- assign default_item = navdata.nav_items | where_exp: "item", "item.default" | first -%}
+              {%- unless default_item -%}
+                {%- assign default_item = navdata.nav_items | first -%}
+              {%- endunless -%}
+              {%- capture default_path -%}{%- include getNavItemPath.html item=default_item -%}{%- endcapture -%}
+              {%- if item.kind == "model" -%}
+                {%- assign path = basepath | append: '/' | append: default_version.path | append: '/' | append: default_path -%}
+              {%- elsif item.kind == "project" -%}
+                {%- assign path = 'projektit/' | append: basepath | append: '/' | append: default_path -%}
+              {%- endif -%}
+              <li>
+                <a class="dropdown-item" href="{{ site.url }}/{{ path }}">{{ navdata.title }}</a>
+              </li>
             {%- endif -%}
-            </li>
           {%- endfor -%}
           </ul>
         </li>
       {%- endfor -%}
-       
-        {%- assign nav_items = site.data.projects_menu.nav_items -%}
-        {%- if nav_items -%}
-          {%- capture pageInProjects -%}{%- include isPageInHierarchy.html siblings=nav_items toFind=page.id -%}{%- endcapture -%}
-          {%- if pageInProjects == "1" -%}
-            {%- assign navlinkClass = "active" -%}
-          {%- else -%}
-            {%- assign navlinkClass = "" -%}
-          {%- endif -%}
-          {%- assign default_item = model.nav_items | where: 'id', site.data.projects_menu.default_navitem -%}
-          {%- capture default_path -%}{%- include getNavItemPath.html item=default_item -%}{%- endcapture -%}
-          {%- assign basepath = site.data.projects_menu.basepath -%}
-          {%- assign default_path = site.url | append: '/' | append: default_path -%}
-        {%- else -%}
-          {%- assign nav_items = [] -%}
-          {%- assign default_path = '#' -%}
-          {%- assign navlinkClass = "" -%}
-        {%- endif -%}
-        <li class="dropdown">
-          <a class="nav-link dropdown-toggle {{ navlinkClass }}" href="{{ default_path }}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ site.data.projects_menu.title }}</a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          {%- for item in nav_items -%}
-            <li>
-            {%- if item.heading -%}
-              <h6 class="dropdown-header">{{ item.title }}</h6>
-            {%- else -%}
-              {%- capture path %}{% include getNavItemPath.html item=item %}{% endcapture -%}
-              <a class="dropdown-item" href="{{ site.url }}/{{ basepath}}/{{ path }}">{{ item.title }}</a>
-              {%- if item.subitems -%}
-                {%- for subitem in item.subitems -%}
-                  {%- capture path %}{% include getNavItemPath.html item=subitem %}{% endcapture -%}
-                <a class="dropdown-item sublevel" href="{{ site.url }}/{{ basepath}}/{{ item.id }}/{{ path }}">{{ subitem.title }}</a>
-                {%- endfor -%}
-              {%- endif -%}
-            {%- endif -%}
-            </li>
-          {%- endfor -%}
-          </ul>
-        </li>
       </ul>
       <div class="d-flex">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">

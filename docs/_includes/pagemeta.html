@@ -1,19 +1,4 @@
 <div class="pagemeta">
-    {%- if current_model && pageModelVersion -%}
-    <div class="btn-group dropleft">
-        <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Malliversio {{ pageModelVersion }}
-        </button>
-        <div class="dropdown-menu">
-            <span class="dropdown-header">Saatavilla olevat versiot</span>
-            {%- assign my_ver = '/' | append: pageModelVersion | append: '/' -%}
-            {%- for version in current_model.versions -%}
-            {%- assign other_ver = '/' | append: version.path | append: '/' -%}
-            <a class="dropdown-item" href="{{ site.url }}{{ page.url | replace: my_ver, other_ver }}" title="{{ version.date | date: '%d.%m.%Y' }}">{{ version.id }}:&nbsp;{{ version.title }}</a>
-            {%- endfor -%}
-        </div>
-    </div>
-    {%- endif -%}
     {%- if page.status -%}
     <div class="btn-group">
         <button type="button" disabled="disabled" class="status btn btn-{% case page.status %}{% when 'Keskeneräinen' %}danger{% when 'Luonnos' %}warning{% when 'Ehdotus' %}warning{% when 'Hyväksytty' %}success{% else %}info{% endcase %}">{{ page.status }}</button>

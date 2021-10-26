@@ -4,12 +4,12 @@
             {%- if item.file -%}
                 {{ item.file }}
             {%- else -%}
-                {{ item.id | append: '.md' }}
+                {{ item.id | append: '/index.md' }}
             {%- endif -%}
             {%- break -%}
         {%- else -%}
-            {%- if item.items -%}
-                {%- capture ret -%}{%- include getFilePath.html haystack=item.items needle=include.needle -%}{%- endcapture -%}
+            {%- if item.subitems -%}
+                {%- capture ret -%}{%- include getFilePath.html haystack=item.subitems needle=include.needle -%}{%- endcapture -%}
                 {%- if ret != "" -%}
                     {%- if item.path -%}
                         {{ item.path }}
