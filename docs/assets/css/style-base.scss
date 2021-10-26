@@ -206,15 +206,25 @@ b {
   
         .btn {
           padding-top: 0.1rem;
+          font-size: 0.9rem;
           padding-bottom: 0.1rem;
+        }
+        .btn-light {
+          color: #fdfdfd;
+          background-color: #687b8f;
+          border-color: #b4c0cb;
         }
       }
 
       .nav {
         padding: 1em;
         .nav-item {
+
           &.header {
+            color: #4f6c85;
+            font-size: 110%;
             font-weight: bold;
+            font-variant: all-small-caps;
             padding-top: 0.6rem;
           }
 
