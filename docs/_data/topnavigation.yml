@@ -3,6 +3,8 @@
   nav_items:
   - id: "ylaontologia"
     kind: "model"
+  - id: "kasitemalli"
+    kind: "model"
   - id: "yhteisetkomponentit"
     kind: "model" 
 - id: "alueidenkaytto"
