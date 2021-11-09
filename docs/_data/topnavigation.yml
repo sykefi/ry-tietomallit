@@ -18,6 +18,8 @@
     kind: "model"
   - id: "merialuesuunnitelma"
     kind: "model"
+  - id: "maapoliittinenohjelma"
+    kind: "model"
 - id: "rakentaminen"
   title: "Rakentaminen"
   nav_items:
