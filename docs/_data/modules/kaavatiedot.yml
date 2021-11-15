@@ -8,9 +8,9 @@ versions:
     title: "Asema- ja yleiskaavan tietomallit -projektin lopputulos"
     path: "v1.0"
     default: true
-  - id: "v1.1-dev"
+  - id: "v2.0-dev"
     title: "Seuraava kehitysversio"
-    path: "v1.1-dev"
+    path: "v2.0-dev"
 basepath: "kaavatiedot"
 nav_items:
   - id: "kaavatietomalli"
@@ -42,14 +42,6 @@ nav_items:
         title: "Inspire-yhteensopivuus"
         file: "inspire.md"
         path: "inspire.html"
-  - id: "soveltamisohjeet"
-    title: "Tietomallin soveltaminen"
-    heading: true
-    subitems:
-      - id: "asemakaava"
-        title: "Soveltamisprofiili - asemakaava"
-      - id: "yleiskaava"
-        title: "Soveltamisprofiili - yleiskaava"
   - id: "fyysiset-mallit"
     title: "Fyysiset tietomallit"
     heading: true

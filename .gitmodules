@@ -4,3 +4,9 @@
 [submodule "docs/_includes/common"]
 	path = docs/_includes/common
 	url = https://github.com/ilkkarinne/rytm-jekyll-includes.git
+[submodule "docs/kaavatiedot/v1.0"]
+	path = docs/kaavatiedot/v1.0
+	url = https://github.com/ilkkarinne/kaavatietomalli-1.git
+[submodule "docs/kaavatiedot/v2.0-dev"]
+	path = docs/kaavatiedot/v2.0-dev
+	url = https://github.com/ilkkarinne/kaavatietomalli-1.git
