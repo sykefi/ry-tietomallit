@@ -190,7 +190,7 @@ b {
      padding-left: 0px;
      padding-right: 0px;
 
-     .modelnav {
+     .modulenav {
       background-color:#d7e0eb;
       min-width: fit-content;
 
@@ -198,7 +198,7 @@ b {
         background-color: #495d72;
         padding: 1em;
 
-        .modeltitle {
+        .moduletitle {
           color: white;
           font-size: 120%;
           padding-right: 0.5em;
@@ -236,8 +236,15 @@ b {
 
             &.sublevel {
               padding-left: 1em;
+              width: auto;
             }
           }
+          &.active {
+            .nav-link {
+              font-weight: bolder;
+              color: #0c2e61;
+            }
+          }          
         }
       }
     }
