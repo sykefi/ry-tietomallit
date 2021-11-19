@@ -13,9 +13,9 @@
   - id: "kaavatiedot"
     kind: "module"
     subitems:
-    - id: "asemakaava-sp"
+    - id: "ktm-asemakaava"
       kind: "module"
-    - id: "yleiskaava-sp"
+    - id: "ktm-yleiskaava"
       kind: "module"
   - id: "tonttijakosuunnitelma"
     kind: "module"

@@ -12,3 +12,6 @@
 	path = docs/kaavatiedot/v2.0-dev
 	url = https://github.com/ilkkarinne/kaavatietomalli-1.git
 	branch = v2.x
+[submodule "docs/kaavatiedot/asemakaava/v1.0"]
+	path = docs/kaavatiedot/asemakaava/v1.0
+	url = https://github.com/ilkkarinne/ktm-asemakaava.git
