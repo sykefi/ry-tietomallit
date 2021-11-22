@@ -5,15 +5,18 @@ style: "ea-uml"
     {% include common/navbar.html %}
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        {% include common/pagemeta.html %}
-        {{ content }}
-        <div class="IndexHeader" id="IndexHeader"></div>
-        <noscript>
-          <div class="NoScript">
-            It appears that you may have Javascript disabled.
-          </div>
-        </noscript>
-      </section>
+      <div class="d-flex inner">
+        {%- include common/modulenav.html module=current_module -%}
+        <section id="main_content">
+          {% include common/pagemeta.html %}
+          {{ content }}
+          <div class="IndexHeader" id="IndexHeader"></div>
+          <noscript>
+            <div class="NoScript">
+              It appears that you may have Javascript disabled.
+            </div>
+          </noscript>
+        </section>
+      </div>
     </div>
 {% include common/footer.html %}

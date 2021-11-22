@@ -6,9 +6,7 @@ style: "default"
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <div class="d-flex inner">
-        <div class="modulenav">
-          {%- include common/modulenav.html module=current_module -%}
-        </div>
+        {%- include common/modulenav.html module=current_module -%}
         <section id="main_content">
           {%- include common/pagemeta.html -%}
           {{ content }}
