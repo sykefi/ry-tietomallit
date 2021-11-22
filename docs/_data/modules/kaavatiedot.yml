@@ -1,4 +1,4 @@
-title: "Kaavatiedot"
+title: "Kaavatietomalli"
 github:
   owner_name: "ilkkarinne"
   repository_name: "kaavatietomalli-1"
@@ -12,8 +12,8 @@ versions:
     path: "v2.0-dev"
 basepath: "kaavatiedot"
 nav_items:
-  - id: "kaavatietomalli"
-    title: "Kaavatietomalli"
+  - id: "johdanto"
+    title: "Johdanto"
     path: ""
     file: "index.md"
     default: true
