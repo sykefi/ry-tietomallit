@@ -25,7 +25,7 @@
     kind: "module"
   - id: "merialuesuunnitelma"
     kind: "module"
-  - id: "maapoliittinenohjelma"
+  - id: "kaupunkiseutusuunnitelma"
     kind: "module"
 - id: "rakentaminen"
   title: "Rakentaminen"
