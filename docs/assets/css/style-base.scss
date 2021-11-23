@@ -144,9 +144,11 @@ b {
         padding-left: 0.5ex;
         padding-right: 0.5ex;
         display: inline;
-          span {
-            vertical-align: middle;
-          }
+        span {  
+          position: relative;
+          top: -0.5ex;
+          vertical-align: middle;
+        }
       }
     }
 
