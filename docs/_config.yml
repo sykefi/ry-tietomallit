@@ -1,7 +1,7 @@
 theme: jekyll-theme-slate
-url: "https://ilkkarinne.github.io/ry-tietomallit" # the base hostname & protocol for your site
-home: "https://ilkkarinne.github.io/ry-tietomallit/"
-repository: ilkkarinne/ry-tietomallit
+url: "https://sykefi.github.io/ry-tietomallit" # the base hostname & protocol for your site
+home: "https://sykefi.github.io/ry-tietomallit/"
+repository: sykefi/ry-tietomallit
 name: Rakennetun ympäristön tietomallit
 name_short: "RY-tietomallit"
 beta: true
