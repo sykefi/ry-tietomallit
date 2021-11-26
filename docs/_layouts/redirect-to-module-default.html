@@ -14,13 +14,21 @@
         {%- assign default_item = current_module.nav_items | first -%}
     {%- endunless -%}
     {%- capture default_path -%}{%- include common/getNavItemPath.html item=default_item -%}{%- endcapture -%}   
-    {%- assign path = basepath | append: '/' | append: default_version.path | append: '/' | append: default_path -%}
+    {%- assign path = '/' | append: basepath | append: '/' | append: default_version.path | append: '/' | append: default_path -%}
+   
 {%- endif -%}
 <html>
-  <head>
-    <meta http-equiv="refresh" content="1; url='{{ site.url }}/{{ path }}'" />
+  </head>
+    {%- if path != page.url -%}
+      <meta http-equiv="refresh" content="0; url='{{ site.url }}{{ path }}'" />
+    {%- endif -%}
   </head>
   <body>
-    <p>Uudelleenohjataan <a href="{{ site.url }}/{{ path }}">oletusversioon</a>.</p>
+    {%- if path != page.url -%}
+    <p>Uudelleenohjataan <a href="{{ site.url }}{{ path }}">oletusversioon</a>.</p>
+    {%- else -%}
+    <p>Viallinen uudelleenohjaus, sivun osoite on jo sama kuin oletusversion osoite.</p>
+    {%- endif -%}
   </body>
+ 
 </html>
