@@ -15,3 +15,6 @@
 [submodule "docs/kaavatiedot/asemakaava/v1.0"]
 	path = docs/kaavatiedot/asemakaava/v1.0
 	url = https://github.com/ilkkarinne/ktm-asemakaava.git
+[submodule "docs/ry-yhteiset/v1.0-dev"]
+	path = docs/ry-yhteiset/v1.0-dev
+	url = https://github.com/ilkkarinne/ry-yhteiset.git
