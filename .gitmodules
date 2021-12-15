@@ -1,6 +1,7 @@
 [submodule "docs/tonttijakosuunnitelma/v1.0"]
 	path = docs/tonttijakosuunnitelma/v1.0
 	url = https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
+	branch = v1.x
 [submodule "docs/_includes/common"]
 	path = docs/_includes/common
 	url = https://github.com/ilkkarinne/rytm-jekyll-includes.git
@@ -18,3 +19,7 @@
 [submodule "docs/ry-yhteiset/v1.0-dev"]
 	path = docs/ry-yhteiset/v1.0-dev
 	url = https://github.com/ilkkarinne/ry-yhteiset.git
+[submodule "docs/tonttijakosuunnitelma/v2.0-dev"]
+	path = docs/tonttijakosuunnitelma/v2.0-dev
+	url = https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
+	branch = v2.x
