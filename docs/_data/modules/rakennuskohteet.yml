@@ -1,0 +1,35 @@
+title: "Rakentamiskohteet ja huoneistot"
+github:
+  owner_name: "ilkkarinne"
+  repository_name: "rakentamiskohteet"
+versions:
+  - id: "v1.0-dev"
+    title: "Ensimmäinen luonnosversio"
+    path: "v1.0-dev"
+    default: true
+    dependencies:
+      - module: "yhteisetkomponentit"
+        version: "v1.0-dev"
+basepath: "rakennuskohteet"
+nav_items:
+  - id: "johdanto"
+    title: "Johdanto"
+    path: ""
+    file: "index.md"
+    default: true
+  - id: "kasitemalli"
+    title: "Käsitemalli"
+  - id: "looginenmalli"
+    title: "Looginen tietomalli"
+    heading: true
+    subitems:
+      - id: "dokumentaatio"
+        title: "Dokumentaatio"
+      - id: "uml-doc"
+        title: "UML-kaaviot"
+        path: "uml/doc/"
+        file: "uml/doc/index.md"
+  - id: "muutosloki"
+    title: "Muutosloki"
+    path: "muutosloki.html"
+    file: "muutosloki.md"
