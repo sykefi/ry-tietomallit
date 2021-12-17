@@ -190,6 +190,7 @@ b {
      padding-top: 0px;
      padding-left: 0px;
      padding-right: 0px;
+     padding-bottom: 0px;
 
      .modulenav {
       background-color:#d7e0eb;
@@ -239,18 +240,24 @@ b {
         &:not(.show){
           display: none;
         }
+
         position: absolute;
         top: 3em;
-        transform-origin: 10px 20px;
+        transform-origin: 1.7em 1.7em;
         transform: rotate(90deg);
-        left: 0.7em;
+        padding-bottom: 2em;
+        padding-top: 0.2em;
+        padding-right: 1em;
+        padding-left: 1em;
+        left: 0px;
         letter-spacing: 2px;
         text-transform: uppercase;
-        margin: 0 0 10px 0;
+        background-color: #d7e0eb;
 
         .moduletitle {
           white-space: nowrap;
           font-size: 1.2rem;
+          margin-top: 0.5em;
           color: #4f648b;
         }
       }
