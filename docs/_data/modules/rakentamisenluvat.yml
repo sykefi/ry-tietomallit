@@ -12,6 +12,8 @@ versions:
         version: "v1.0-dev"
       - module: "rakennuskohteet"
         version: "v1.0-dev"
+      - module: "kaavatiedot"
+        version: "v2.0-dev"
 basepath: "rakentamisenluvat"
 nav_items:
   - id: "johdanto"
