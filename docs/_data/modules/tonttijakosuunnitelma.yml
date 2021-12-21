@@ -10,6 +10,8 @@ versions:
     title: "Seuraava kehitysversio"
     path: "v2.0-dev"
     dependencies:
+      - module: "yhteisetkomponentit"
+        version: "v1.0-dev"
       - module: "kaavatiedot"
         version: "v2.0-dev"
 basepath: "tonttijakosuunnitelma"
