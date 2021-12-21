@@ -1,7 +1,7 @@
 title: "Rakentamiskohteet ja huoneistot"
 github:
   owner_name: "ilkkarinne"
-  repository_name: "rakentamiskohteet"
+  repository_name: "rakennuskohteet"
 versions:
   - id: "v1.0-dev"
     title: "Ensimmäinen luonnosversio"
