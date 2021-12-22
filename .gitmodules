@@ -13,9 +13,6 @@
 [submodule "docs/rakentamisenluvat/v1.0-dev"]
 	path = docs/rakentamisenluvat/v1.0-dev
 	url = https://github.com/ilkkarinne/rakentamisenluvat.git
-[submodule "docs/rakennuskohteet/v1.0-dev"]
-	path = docs/rakennuskohteet/v1.0-dev
-	url = https://github.com/ilkkarinne/rakennuskohteet.git
 [submodule "docs/kaavatiedot/dev"]
 	path = docs/kaavatiedot/dev
 	url = https://github.com/ilkkarinne/kaavatietomalli-1.git
@@ -27,4 +24,8 @@
 [submodule "docs/tonttijakosuunnitelma/dev"]
 	path = docs/tonttijakosuunnitelma/dev
 	url = https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
+	branch = develop
+[submodule "docs/rakennuskohteet/dev"]
+	path = docs/rakennuskohteet/dev
+	url = https://github.com/ilkkarinne/rakennuskohteet.git
 	branch = develop
