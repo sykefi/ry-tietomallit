@@ -10,9 +10,6 @@
 [submodule "docs/kaavatiedot/asemakaava/v1.0"]
 	path = docs/kaavatiedot/asemakaava/v1.0
 	url = https://github.com/ilkkarinne/ktm-asemakaava.git
-[submodule "docs/rakentamisenluvat/v1.0-dev"]
-	path = docs/rakentamisenluvat/v1.0-dev
-	url = https://github.com/ilkkarinne/rakentamisenluvat.git
 [submodule "docs/kaavatiedot/dev"]
 	path = docs/kaavatiedot/dev
 	url = https://github.com/ilkkarinne/kaavatietomalli-1.git
@@ -28,4 +25,8 @@
 [submodule "docs/rakennuskohteet/dev"]
 	path = docs/rakennuskohteet/dev
 	url = https://github.com/ilkkarinne/rakennuskohteet.git
+	branch = develop
+[submodule "docs/rakentamisenluvat/dev"]
+	path = docs/rakentamisenluvat/dev
+	url = https://github.com/ilkkarinne/rakentamisenluvat.git
 	branch = develop
