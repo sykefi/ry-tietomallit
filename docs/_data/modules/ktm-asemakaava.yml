@@ -10,12 +10,6 @@ versions:
     dependencies:
       - module: "kaavatiedot"
         version: "v1.0"
-  - id: "v2.0-dev"
-    title: "Seuraava kehitysversio"
-    path: "v2.0-dev"
-    dependencies:
-      - module: "kaavatiedot"
-        version: "v2.0-dev"
 basepath: "kaavatiedot/asemakaava"
 nav_items:
   - id: "johdanto"
