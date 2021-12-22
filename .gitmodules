@@ -8,7 +8,6 @@
 [submodule "docs/kaavatiedot/v1.0"]
 	path = docs/kaavatiedot/v1.0
 	url = https://github.com/ilkkarinne/kaavatietomalli-1.git
-	branch = v1.x
 [submodule "docs/kaavatiedot/asemakaava/v1.0"]
 	path = docs/kaavatiedot/asemakaava/v1.0
 	url = https://github.com/ilkkarinne/ktm-asemakaava.git
@@ -28,3 +27,4 @@
 [submodule "docs/kaavatiedot/dev"]
 	path = docs/kaavatiedot/dev
 	url = https://github.com/ilkkarinne/kaavatietomalli-1.git
+	branch = develop
