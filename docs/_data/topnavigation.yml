@@ -30,9 +30,9 @@
 - id: "rakentaminen"
   title: "Rakentaminen"
   nav_items:
-  - id: "rakentamisenluvat"
-    kind: "module"
   - id: "rakennuskohteet"
+    kind: "module"
+  - id: "rakentamisenluvat"
     kind: "module"
   - id: "rajoitukset"
     kind: "module"
