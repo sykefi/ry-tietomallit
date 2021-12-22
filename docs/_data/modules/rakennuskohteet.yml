@@ -3,13 +3,14 @@ github:
   owner_name: "ilkkarinne"
   repository_name: "rakennuskohteet"
 versions:
-  - id: "v1.0-dev"
-    title: "Ensimmäinen luonnosversio"
-    path: "v1.0-dev"
+  - id: "dev"
+    title: "Ensimmäinen kehitysversio"
+    path: "dev"
     default: true
+    development: true
     dependencies:
       - module: "yhteisetkomponentit"
-        version: "v1.0-dev"
+        version: "dev"
 basepath: "rakennuskohteet"
 nav_items:
   - id: "johdanto"

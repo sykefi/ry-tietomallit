@@ -3,10 +3,11 @@ github:
   owner_name: "ilkkarinne"
   repository_name: "ry-yhteiset"
 versions:
-  - id: "v1.0-dev"
-    title: "Ensimmäinen luonnos"
-    path: "v1.0-dev"
+  - id: "dev"
+    title: "Ensimmäinen kehitysversio"
+    path: "dev"
     default: true
+    development: true
 basepath: "ry-yhteiset"
 nav_items:
   - id: "johdanto"

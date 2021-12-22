@@ -6,14 +6,15 @@ versions:
   - id: "v1.0"
     title: "Tonttijakosuunnitelman tietomalli -projektin lopputulos"
     path: "v1.0"
-  - id: "v2.0-dev"
+  - id: "dev"
     title: "Seuraava kehitysversio"
-    path: "v2.0-dev"
+    path: "dev"
+    development: true
     dependencies:
       - module: "yhteisetkomponentit"
-        version: "v1.0-dev"
+        version: "dev"
       - module: "kaavatiedot"
-        version: "v2.0-dev"
+        version: "dev"
 basepath: "tonttijakosuunnitelma"
 nav_items:
   - id: "tonttijakosuunnitelma"
