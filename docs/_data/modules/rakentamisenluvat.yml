@@ -33,7 +33,8 @@ nav_items:
       - id: "uml-doc"
         title: "UML-kaaviot"
         path: "uml/doc/"
-        file: "uml/doc/index.md"
+         # tiedostona XMI, jotta muutosmetatiedot päivittyvät
+        file: "uml/rakentamisenluvat.xml"
   - id: "muutosloki"
     title: "Muutosloki"
     path: "muutosloki.html"
