@@ -10,20 +10,20 @@ versions:
     dependencies:
       - module: "kaavatiedot"
         version: "v1.0"
-basepath: "kaavatiedot/asemakaava"
+basepath: "kaavatiedot/soveltamisprofiili/asemakaava"
 nav_items:
   - id: "johdanto"
     title: "Johdanto"
-    path: "soveltamisprofiili/"
-    file: "soveltamisprofiili/index.md"
+    path: ""
+    file: "index.md"
     default: true
   - id: "koodistot"
     title: "Koodistot"
-    path: "soveltamisprofiili/koodistot.html"
-    file: "soveltamisprofiili/koodistot.md"
+    path: "koodistot.html"
+    file: "koodistot.md"
   - id: "kaavamaarayslajit"
-    path: "soveltamisprofiili/"
     title: "Kaavamääräyslajit"
+    path: ""
     heading: true
     subitems:
       - id: "kayttotarkoitukset"
@@ -52,8 +52,8 @@ nav_items:
         title: "Yleismääräykset"
   - id: "laatusaannot"
     title: "Laatusäännöt"
-    path: "soveltamisprofiili/laatusaannot.html"
-    file: "soveltamisprofiili/laatusaannot.md"
+    path: "laatusaannot.html"
+    file: "laatusaannot.md"
   - id: "muutosloki"
     title: "Muutosloki"
     path: "muutosloki.html"
