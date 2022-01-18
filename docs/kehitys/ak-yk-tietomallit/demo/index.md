@@ -3,7 +3,6 @@ layout: "default"
 title: "Kaavatietomalli - demopalvelu"
 description: ""
 id: "demo"
-status: "Ehdotus"
 ---
 # Demopalvelu
 [Yleis- ja asemakaavojen tietomallit -projektin](../../../projektit/ak-yk-tietomallit/) testausvaiheen aikana suunniteltiin ja toteutettiin demopalvelu kaavatiedon fyysisen [Kaava-JSON -tietomallin](../json/) mukaisen yleis- ja asemakaavatiedon käsittelyyn ja esittämiseen [sparrausryhmän](../../../projektit/ak-yk-tietomallit/sparrausryhma.html) jäseniltä kerättyjen [testiaineistojen](../aineistot/) avulla.

@@ -2,7 +2,7 @@
 layout: "default"
 title: "Asema- ja yleiskaavan tietomallit  - Jatkokehitysajatukset"
 description: ""
-id: "ak-yk-jatkokehitys"
+id: "jatkokehitys"
 status: "Ehdotus"
 ---
 # Jatkokehitys

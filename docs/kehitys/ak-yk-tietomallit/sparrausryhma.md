@@ -2,8 +2,7 @@
 layout: "default"
 title: "Asema- ja yleiskaavan tietomallit  -sparrausryhmä"
 description: ""
-id: "ak-yk-sparrausryhma"
-status: "Ehdotus"
+id: "sparrausryhma"
 ---
 # AK-YK-sparrausryhmä
 

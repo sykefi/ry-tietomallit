@@ -3,7 +3,6 @@ layout: "default"
 title: "Kaavatietomalli - testiaineistot"
 description: ""
 id: "testiaineistot"
-status: "Ehdotus"
 ---
 # Testiaineistot
 

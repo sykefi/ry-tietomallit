@@ -2,8 +2,7 @@
 layout: "default"
 title: "Ota kantaa -kyselyt"
 description: ""
-id: "ak-yk-kyselyt"
-status: "Ehdotus"
+id: "kyselyt"
 ---
 # Ota kantaa -kyselyt, syksy 2020
 
