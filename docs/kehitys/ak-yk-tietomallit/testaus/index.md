@@ -1,8 +1,7 @@
 ---
 layout: "default"
 title: "Asema- ja yleiskaavan tietomallit -testaus"
-id: "ak-yk-testaus"
-status: "Ehdotus"
+id: "testaus"
 ---
 # Kaavatietomallin testaus
 

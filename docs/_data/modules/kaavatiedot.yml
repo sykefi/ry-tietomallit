@@ -15,6 +15,7 @@ versions:
       - module: "yhteisetkomponentit"
         version: "dev"
 basepath: "kaavatiedot"
+note: "Fyysiset mallit (Kaava-JSON ja Postgre) on siirretty Asema- ja yleiskaavojen tietomallit -kehitysprojektin alle"
 nav_items:
   - id: "johdanto"
     title: "Johdanto"
@@ -46,18 +47,6 @@ nav_items:
         title: "Inspire-yhteensopivuus"
         file: "inspire.md"
         path: "inspire.html"
-  - id: "fyysiset-mallit"
-    title: "Fyysiset tietomallit"
-    heading: true
-    subitems:
-      - id: "kaava-json"
-        title: "Kaava-JSON"
-        path: "json/"
-        file: "json/index.md"
-      - id: "kaava-postgre"
-        title: "PostgreSQL-tietokanta"
-        path: "postgre/"
-        file: "postgre/index.md"
   - id: "muutosloki"
     title: "Muutosloki"
     path: "muutosloki.html"
