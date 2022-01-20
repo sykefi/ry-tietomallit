@@ -1,9 +1,6 @@
 [submodule "docs/tonttijakosuunnitelma/v1.0"]
 	path = docs/tonttijakosuunnitelma/v1.0
 	url = https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
-[submodule "docs/_includes/common"]
-	path = docs/_includes/common
-	url = https://github.com/ilkkarinne/rytm-jekyll-includes.git
 [submodule "docs/kaavatiedot/v1.0"]
 	path = docs/kaavatiedot/v1.0
 	url = https://github.com/ilkkarinne/kaavatietomalli-1.git
@@ -30,3 +27,6 @@
 [submodule "docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0"]
 	path = docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0
 	url = https://github.com/ilkkarinne/sp-asemakaava.git
+[submodule "docs/_includes/common"]
+	path = docs/_includes/common
+	url = https://github.com/sykefi/rytm-jekyll-includes.git
