@@ -11,6 +11,9 @@
     subitems:
     - id: "ktm-asemakaava"
     - id: "ktm-yleiskaava"
+    - type: "link"
+      href: "https://sykefi.github.io/kaavamaaraysoppaat/"
+      title: "Kaavamääräysoppaat"
   - id: "tonttijakosuunnitelma"
   - id: "hame"
   - id: "yleisenalueensuunnitelmat"
@@ -29,7 +32,7 @@
   - id: "kulttuuriymp"
   - id: "rap-suojelupaatokset"
 - id: "kehitys"
-  title: "Mallien kehitys"
+  title: "Mallien kehittäminen"
   nav_items:
   - id: "hallintamalli"
   - id: "ak-yk-tietomallit"

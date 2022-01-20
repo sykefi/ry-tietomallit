@@ -470,7 +470,7 @@ ol#markdown-toc > li:before {
   h5:before {
     content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "\0000a0\0000a0";
     counter-increment: h5counter;
-}
+  }
 
   .clause {
     border-left-width: 5px;
@@ -642,24 +642,24 @@ ol#markdown-toc > li:before {
     }
   }
 
-   .navbar-brand {
-      display: none;
+  .navbar-brand {
+    display: none;
+  }
+  
+  .navbar-nav {
+    font-size: large;
+    color: #fcecdc
+  }
+  
+  .nav-item {
+    &.active {
+      border-bottom-color: #b34d13;
+      border-bottom-width: 3px;
+      border-bottom-style: solid;
+      .nav-link {
+        color: rgba(255,255,255,.5);
+      }
     }
-  
-   .navbar-nav {
-     font-size: large;
-     color: #fcecdc
-   }
-  
-   .nav-item {
-     &.active {
-        border-bottom-color: #b34d13;
-        border-bottom-width: 3px;
-        border-bottom-style: solid;
-        .nav-link {
-          color: rgba(255,255,255,.5);
-        }
-     }
-   }
+  }
 
 }
