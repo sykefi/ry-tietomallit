@@ -87,20 +87,9 @@
   display: none;
 }
 
-@media (min-width: 768px) {
-  .navbar-expand-md .vertical-heading {
+.modulenav {
+  .alert  {
     display: none;
-  }
-}
-
-@media screen and (min-width: 300px) {
-  .navbar-brand {
-    &.short {
-      display:block;
-    }
-    &.long {
-      display:none;
-    }
   }
 }
 
@@ -111,6 +100,18 @@
     }
     &.long {
       display:none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-expand-md .vertical-heading {
+    display: none;
+  }
+
+  .modulenav {
+    .alert  {
+      display: block;
     }
   }
 }
