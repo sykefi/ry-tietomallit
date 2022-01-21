@@ -1,4 +1,4 @@
 ---
 layout: "redirect"
-redirectTo: "kaavatiedot/dev/looginenmalli/uml/doc/"
+redirectPath: "kaavatiedot/dev/looginenmalli/uml/doc/"
 ---

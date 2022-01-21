@@ -1,4 +1,4 @@
 ---
 layout: "redirect"
-redirectTo: "tonttijakosuunnitelma/dev/looginenmalli/uml/doc/"
+redirectPath: "tonttijakosuunnitelma/dev/looginenmalli/uml/doc/"
 ---
