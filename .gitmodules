@@ -24,9 +24,9 @@
 	path = docs/rakentamisenluvat/dev
 	url = https://github.com/ilkkarinne/rakentamisenluvat.git
 	branch = develop
-[submodule "docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0"]
-	path = docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0
-	url = https://github.com/ilkkarinne/sp-asemakaava.git
 [submodule "docs/_includes/common"]
 	path = docs/_includes/common
 	url = https://github.com/sykefi/rytm-jekyll-includes.git
+[submodule "docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0"]
+	path = docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0
+	url = https://github.com/sykefi/sp-asemakaava.git
