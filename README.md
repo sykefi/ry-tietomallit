@@ -1,29 +1,29 @@
 # Rakennetun ympäristön tietomallit
 Ryhti-hankkeen piiriin kuuluvien rakennetun ympäristön tietomallien yhteinen dokumentaatiosivusto. Sivustoa hallinnoi [Suomen ympäristökeskus](https://www.syke.fi/), ja tietomallien muutoshallintaprosessista vastaa [ympäristöministeriö](https://ym.fi/).
 
-Dokumentaatio on koottu pääosin tämän repon [wikiin](https://github.com/sykefi/ry-tietomallit/wiki), ks. muun muassa sivut
-* [Sivuston rakenne](https://github.com/sykefi/ry-tietomallit/wiki/Sivuston-rakenne)
-* [Tietomallien kehittäminen ja ylläpito](https://github.com/sykefi/ry-tietomallit/wiki/Tietomallien-kehitt%C3%A4minen-ja-yll%C3%A4pito)
-* [Modulien konfigurointi](https://github.com/sykefi/ry-tietomallit/wiki/Modulien-konfigurointi)
-* [Sisältömakrot](https://github.com/sykefi/ry-tietomallit/wiki/Sis%C3%A4lt%C3%B6makrot)
+Dokumentaatio on koottu pääosin tämän repon [wikiin](../wiki), ks. muun muassa sivut
+* [Sivuston rakenne](../wiki/Sivuston-rakenne)
+* [Tietomallien kehittäminen ja ylläpito](../wiki/Tietomallien-kehitt%C3%A4minen-ja-yll%C3%A4pito)
+* [Modulien konfigurointi](../wiki/Modulien-konfigurointi)
+* [Sisältömakrot](../wiki/Sis%C3%A4lt%C3%B6makrot)
 
 ## Linkitetyt repot
 
 RY-tietomallit sivusto on rakennettu siten, että sen sisältö koostuu pääosin toisista git-repoista  noudettavista lähdekooditiedostoista. Linkitys ry-tietomallit-reposta toisiin git-repoihin on toteutettu [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules)-mekanismilla. Näin voidaan esittää samalla sivustolla useamman kuin yhden tietomallin version kuvaus linkittämällä ko. tietomallirepon eri release-tagien mukaisiin committeihin, ks. lisää wiki-sivu [Tietomallien kehittäminen ja ylläpito](https://github.com/sykefi/ry-tietomallit/wiki/Tietomallien-kehitt%C3%A4minen-ja-yll%C3%A4pito).
 
-Sivulle voidaan linkittää mitä tahansa julkisia git-repoja, ja GitHub Pages -osaa noutaa ko. linkkien asetetun commitin mukaiset sisällöt automaattisesti sivuston buildauksen yhteydessä. Käytännössä ainakin sisältömodulien julkaisuversioden tulee olla [sykefi -GitHub-organisaation](https://github.com/sykefi/) alla, jotta niiden pysyvyys voidaan taata. **Huom**: Mikäli moduli ei ole julkaistu GitHub:issa, sen sivumetatieto-laatikon muutostietojen esittäminen ei onnistu, sillä sen tiedot haetaan JavaScriptillä käyttäen [GitHub REST API](https://docs.github.com/en/rest)a.
+Sivulle voidaan linkittää mitä tahansa julkisia git-repoja, ja GitHub Pages -osaa noutaa ko. linkkien asetetun commitin mukaiset sisällöt automaattisesti sivuston buildauksen yhteydessä. **Huom**: Mikäli moduli ei ole julkaistu GitHub:issa, sen sivumetatieto-laatikon muutostietojen esittäminen ei onnistu, sillä sen tiedot haetaan JavaScriptillä käyttäen [GitHub REST API](https://docs.github.com/en/rest)a.
 
-| Nimi                 | versio | hakemistopolku          | linkitetty git-repo          | tagi / haara / commit  | huom |
------------------------------|--------|-------------------------|------------------------------|--------------------|----------|
-| RY-yhteiset komponentit    | dev    | [docs/ry-yhteiset/dev](../docs/ry-yhteiset/dev/) | [github.com/ilkkarinne/ry-yhteiset](https://github.com/ilkkarinne/ry-yhteiset) | develop | TODO: siirto ilkkarinne -> sykefi |
-| Kaavatiedot                | 1.0.1  | [docs/kaavatiedot/v1.0](../docs/kaavatiedot/v1.0/) | [github.com/ilkkarinne/kaavatietomalli-1](https://github.com/ilkkarinne/kaavatietomalli-1) | v1.0.1 | TODO: siirto ilkkarinne -> sykefi |
-| Asemakaavan soveltamisprofiili | 1.0 | [docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0](../docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0/) | [github.com/ilkkarinne/sp-asemakaava](https://github.com/ilkkarinne/sp-asemakaava) |  | TODO: siirto ilkkarinne -> sykefi |
-| Kaavatiedot                | dev    | [docs/kaavatiedot/dev](../docs/kaavatiedot/dev/) | [github.com/ilkkarinne/kaavatietomalli-1](https://github.com/ilkkarinne/kaavatietomalli-1) | develop | TODO: siirto ilkkarinne -> sykefi |
-| Tonttijakosuunnitelma      | 1.0    | [docs/tonttijakosuunnitelma/v1.0](../docs/tonttijakosuunnitelma/v1.0/) | [github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli](https://github.com/sykefi/Tonttijakosuunnitelman-tietomalli) |  | TODO: siirto ilkkarinne -> sykefi |
-| Tonttijakosuunnitelma      | dev    | [docs/tonttijakosuunnitelma/dev](../docs/tonttijakosuunnitelma/dev/) | [github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli](https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli) |  | TODO: siirto ilkkarinne -> sykefi |
-| Rakennuskohteet ja huoneistot    | dev    | [docs/rakennuskohteet/dev](../docs/rakennuskohteet/dev/) | [github.com/ilkkarinne/rakennuskohteet](https://github.com/ilkkarinne/rakennuskohteet) | develop | TODO: siirto ilkkarinne -> sykefi |
-| Rakentamista koskevat lupapäätökset    | dev    | [docs/rakentamisenluvat/dev](../docs/rakentamisenluvat/dev/) | [github.com/ilkkarinne/rakentamisenluvat](https://github.com/ilkkarinne/rakentamisenluvat) | develop | TODO: siirto ilkkarinne -> sykefi |
-| Yhteiset Sisältömakrot | | [docs/_includes/common](../docs/_includes/common) | [github.com/ilkkarinne/rytm-jekyll-includes](https://github.com/ilkkarinne/rytm-jekyll-includes) | main | TODO: siirto ilkkarinne -> sykefi 
+| Nimi                       | versio | hakemistopolku          | linkitetty git-repo          | tagi / haara / commit  | huom     |
+-----------------------------|--------|-------------------------|------------------------------|------------------------|----------|
+| RY-yhteiset komponentit    | dev    | [../tree/main/docs/ry-yhteiset/dev](../docs/ry-yhteiset/dev/) | [github.com/ilkkarinne/ry-yhteiset](https://github.com/ilkkarinne/ry-yhteiset) | develop | TODO: siirto ilkkarinne -> sykefi |
+| Kaavatiedot                | 1.0.1  | [../tree/main/docs/kaavatiedot/v1.0](../docs/kaavatiedot/v1.0/) | [github.com/ilkkarinne/kaavatietomalli-1](https://github.com/ilkkarinne/kaavatietomalli-1) | v1.0.1 | TODO: siirto ilkkarinne -> sykefi |
+| Asemakaavan soveltamisprofiili | 1.0 | [../tree/main/docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0](../docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0/) | [github.com/sykefi/sp-asemakaava](https://github.com/sykefi/sp-asemakaava) |  |  |
+| Kaavatiedot                | dev    | [../tree/main/docs/kaavatiedot/dev](../docs/kaavatiedot/dev/) | [github.com/ilkkarinne/kaavatietomalli-1](https://github.com/ilkkarinne/kaavatietomalli-1) | develop | TODO: siirto ilkkarinne -> sykefi |
+| Tonttijakosuunnitelma      | 1.0    | [../tree/main/docs/tonttijakosuunnitelma/v1.0](../docs/tonttijakosuunnitelma/v1.0/) | [github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli](https://github.com/sykefi/Tonttijakosuunnitelman-tietomalli) |  | TODO: siirto ilkkarinne -> sykefi |
+| Tonttijakosuunnitelma      | dev    | [../tree/main/docs/tonttijakosuunnitelma/dev](../docs/tonttijakosuunnitelma/dev/) | [github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli](https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli) |  | TODO: siirto ilkkarinne -> sykefi |
+| Rakennuskohteet ja huoneistot    | dev    | [../tree/main/docs/rakennuskohteet/dev](../docs/rakennuskohteet/dev/) | [github.com/ilkkarinne/rakennuskohteet](https://github.com/ilkkarinne/rakennuskohteet) | develop | TODO: siirto ilkkarinne -> sykefi |
+| Rakentamista koskevat lupapäätökset    | dev    | [../tree/main/docs/rakentamisenluvat/dev](../docs/rakentamisenluvat/dev/) | [github.com/ilkkarinne/rakentamisenluvat](https://github.com/ilkkarinne/rakentamisenluvat) | develop | TODO: siirto ilkkarinne -> sykefi |
+| Yhteiset Sisältömakrot | | [../tree/main/docs/_includes/common](../tree/main/docs/_includes/common) | [github.com/sykefi/rytm-jekyll-includes](https://github.com/sykefi/rytm-jekyll-includes) | main | 
 
 Kulloinkin linkatut git submodulet ja niiden tilan saa tulostettua (linux-tyyppisessä komentoriviympäristössä) seuraavalla loitsulla:
 ```sh
