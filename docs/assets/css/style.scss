@@ -1,6 +1,5 @@
 ---
 ---
-
 @import url('./style-base.css');
 @import url('./ea-uml.css');
 
@@ -110,8 +109,11 @@
   }
 
   .modulenav {
-    .alert  {
+    .alert {
       display: block;
+    }
+    .alert:not(.show) {
+      display: none;
     }
   }
 }
