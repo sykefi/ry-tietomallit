@@ -1,4 +1,5 @@
-title: "Rakennuskohteet ja huoneistot"
+title: "Rakennuskohteet"
+ownership: "ympäristöministeriö"
 github:
   owner_name: "ilkkarinne"
   repository_name: "rakennuskohteet"
@@ -9,29 +10,28 @@ versions:
     default: true
     development: true
     dependencies:
-      - module: "yhteisetkomponentit"
+      - moduleId: "yhteisetkomponentit"
         version: "dev"
 basepath: "rakennuskohteet"
 nav_items:
-  - id: "johdanto"
+  - pageId: "johdanto"
     title: "Johdanto"
     path: ""
-    file: "index.md"
+    gitHubFile: "index.md"
     default: true
-  - id: "kasitemalli"
+  - pageId: "kasitemalli"
     title: "Käsitemalli"
-  - id: "looginenmalli"
+  - groupId: "looginenmalli"
     title: "Looginen tietomalli"
-    heading: true
-    subitems:
-      - id: "dokumentaatio"
+    nav_items:
+      - pageId: "dokumentaatio"
         title: "Dokumentaatio"
-      - id: "uml-doc"
+      - pageId: "uml-doc"
         title: "UML-kaaviot"
         path: "uml/doc/"
          # tiedostona XMI, jotta muutosmetatiedot päivittyvät
-        file: "uml/rakennuskohteet.xml"
-  - id: "muutosloki"
+        gitHubFile: "uml/rakennuskohteet.xml"
+  - pageId: "muutosloki"
     title: "Muutosloki"
     path: "muutosloki.html"
-    file: "muutosloki.md"
+    gitHubFile: "muutosloki.md"
