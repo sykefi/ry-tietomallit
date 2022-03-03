@@ -9,7 +9,7 @@ Dokumentaatio on koottu pääosin tämän repon [wikiin](../../wiki), ks. muun m
 
 ## Linkitetyt repot
 
-RY-tietomallit sivusto on rakennettu siten, että sen sisältö koostuu pääosin toisista git-repoista  noudettavista lähdekooditiedostoista. Linkitys ry-tietomallit-reposta toisiin git-repoihin on toteutettu [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules)-mekanismilla. Näin voidaan esittää samalla sivustolla useamman kuin yhden tietomallin version kuvaus linkittämällä ko. tietomallirepon eri release-tagien mukaisiin committeihin, ks. lisää wiki-sivu [Tietomallien kehittäminen ja ylläpito](https://github.com/sykefi/ry-tietomallit/wiki/Tietomallien-kehitt%C3%A4minen-ja-yll%C3%A4pito).
+RY-tietomallit sivusto on rakennettu siten, että sen sisältö koostuu pääosin toisista git-repoista  noudettavista lähdekooditiedostoista. Linkitys ry-tietomallit-reposta toisiin git-repoihin on toteutettu [git submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules)-mekanismilla. Näin voidaan esittää samalla sivustolla useamman kuin yhden tietomallin version kuvaus linkittämällä ko. tietomallirepon eri release-tagien mukaisiin committeihin, ks. lisää wiki-sivu [Tietomallien kehittäminen ja ylläpito](../../wiki/Tietomallien-kehitt%C3%A4minen-ja-yll%C3%A4pito).
 
 Sivulle voidaan linkittää mitä tahansa julkisia git-repoja, ja GitHub Pages -osaa noutaa ko. linkkien asetetun commitin mukaiset sisällöt automaattisesti sivuston buildauksen yhteydessä. **Huom**: Mikäli moduli ei ole julkaistu GitHub:issa, sen sivumetatieto-laatikon muutostietojen esittäminen ei onnistu, sillä sen tiedot haetaan JavaScriptillä käyttäen [GitHub REST API](https://docs.github.com/en/rest)a.
 
