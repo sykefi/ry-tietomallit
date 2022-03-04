@@ -126,7 +126,12 @@ b {
         margin-left: 1em;
         display: inline-block;
         color: #DDDDDD;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
+     
 
       .betatag {
         background-color: #a01616;
@@ -309,7 +314,7 @@ b {
    }
 
    p {
-    text-align: justify;
+    text-align: left;
    }
 
    &.sidebar-container {
