@@ -6,6 +6,7 @@ name: "Rakennetun ympäristön tietomallit"
 name_short: "Rakennetun ympäristön tietomallit"
 beta: true
 #google_analytics: G-TL17CQFMFK
+accessibility_statement_url: "/accessibility_statement.html"
 plugins:
 - jekyll-sitemap
 - kramdown
