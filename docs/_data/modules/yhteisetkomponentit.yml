@@ -1,7 +1,7 @@
 title: "RY-yhteiset komponentit"
 ownership: "ympäristöministeriö"
 github:
-  owner_name: "ilkkarinne"
+  owner_name: "sykefi"
   repository_name: "ry-yhteiset"
 versions:
   - id: "dev"

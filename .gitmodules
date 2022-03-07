@@ -26,3 +26,6 @@
 [submodule "docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0"]
 	path = docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0
 	url = https://github.com/sykefi/sp-asemakaava.git
+[submodule "docs/ry-yhteiset/dev"]
+	path = docs/ry-yhteiset/dev
+	url = https://github.com/sykefi/ry-yhteiset.git
