@@ -25,3 +25,6 @@
 [submodule "docs/ry-yhteiset/dev"]
 	path = docs/ry-yhteiset/dev
 	url = https://github.com/sykefi/ry-yhteiset.git
+[submodule "docs/rakennuskohteet/dev"]
+	path = docs/rakennuskohteet/dev
+	url = https://github.com/sykefi/rakennuskohteet.git

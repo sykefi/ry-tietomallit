@@ -21,7 +21,7 @@ Sivulle voidaan linkittää mitä tahansa julkisia git-repoja, ja GitHub Pages -
 | Kaavatiedot                | dev    | [docs/kaavatiedot/](../../tree/main/docs/kaavatiedot/)dev | [github.com/ilkkarinne/kaavatietomalli](https://github.com/ilkkarinne/kaavatietomalli) | develop | TODO: siirto ilkkarinne -> sykefi |
 | Tonttijakosuunnitelma      | 1.0    | [docs/tonttijakosuunnitelma/](../../tree/main/docs/tonttijakosuunnitelma/)v1.0 | [github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli](https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli) |  | TODO: siirto ilkkarinne -> sykefi |
 | Tonttijakosuunnitelma      | dev    | [docs/tonttijakosuunnitelma/](../../tree/main/docs/tonttijakosuunnitelma/)dev | [github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli](https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli) |  | TODO: siirto ilkkarinne -> sykefi |
-| Rakennuskohteet    | dev    | [docs/rakennuskohteet/](../../tree/main/docs/rakennuskohteet/)dev | [github.com/ilkkarinne/rakennuskohteet](https://github.com/ilkkarinne/rakennuskohteet) | develop | TODO: siirto ilkkarinne -> sykefi |
+| Rakennuskohteet    | dev    | [docs/rakennuskohteet/](../../tree/main/docs/rakennuskohteet/)dev | [github.com/sykefi/rakennuskohteet](https://github.com/sykefi/rakennuskohteet) | develop |  |
 | Rakentamista koskevat lupapäätökset    | dev    | [docs/rakentamisenluvat/](../../tree/main/docs/rakentamisenluvat/)dev | [github.com/ilkkarinne/rakentamisenluvat](https://github.com/ilkkarinne/rakentamisenluvat) | develop | TODO: siirto ilkkarinne -> sykefi |
 | Yhteiset Sisältömakrot | | [docs/_includes/](../../tree/main/docs/_includes/)common | [github.com/sykefi/rytm-jekyll-includes](https://github.com/sykefi/rytm-jekyll-includes) | main | 
 
