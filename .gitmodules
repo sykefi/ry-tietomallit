@@ -21,6 +21,12 @@
 [submodule "docs/ry-yhteiset/dev"]
 	path = docs/ry-yhteiset/dev
 	url = https://github.com/sykefi/ry-yhteiset.git
+	branch = develop
 [submodule "docs/rakennuskohteet/dev"]
 	path = docs/rakennuskohteet/dev
 	url = https://github.com/sykefi/rakennuskohteet.git
+	branch = develop
+[submodule "docs/rakentamisenluvat/dev"]
+	path = docs/rakentamisenluvat/dev
+	url = https://github.com/sykefi/rakentamisenluvat.git
+	branch = develop
