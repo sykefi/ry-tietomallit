@@ -15,45 +15,45 @@ Sivulle voidaan linkittää mitä tahansa julkisia git-repoja, ja GitHub Pages -
 
 | Nimi                       | versio | hakemistopolku          | linkitetty git-repo          | tagi / haara / commit  | huom     |
 -----------------------------|--------|-------------------------|------------------------------|------------------------|----------|
-| RY-yhteiset komponentit    | dev    | [docs/ry-yhteiset/](../../tree/main/docs/ry-yhteiset/)dev | [github.com/ilkkarinne/ry-yhteiset](https://github.com/ilkkarinne/ry-yhteiset) | develop | TODO: siirto ilkkarinne -> sykefi |
+| RY-yhteiset komponentit    | dev    | [docs/ry-yhteiset/](../../tree/main/docs/ry-yhteiset/)dev | [github.com/sykefi/ry-yhteiset](https://github.com/sykefi/ry-yhteiset) | develop | |
 | Kaavatiedot                | 1.0.1  | [docs/kaavatiedot/](../../tree/main/docs/kaavatiedot/)v1.0 | [github.com/ilkkarinne/kaavatietomalli](https://github.com/ilkkarinne/kaavatietomalli) | v1.0.1 | TODO: siirto ilkkarinne -> sykefi |
 | Asemakaavan soveltamisprofiili | 1.0 | [docs/kaavatiedot/soveltamisprofiili/asemakaava/](../../tree/main/docs/kaavatiedot/soveltamisprofiili/asemakaava/)v1.0 | [github.com/sykefi/sp-asemakaava](https://github.com/sykefi/sp-asemakaava) |  |  |
 | Kaavatiedot                | dev    | [docs/kaavatiedot/](../../tree/main/docs/kaavatiedot/)dev | [github.com/ilkkarinne/kaavatietomalli](https://github.com/ilkkarinne/kaavatietomalli) | develop | TODO: siirto ilkkarinne -> sykefi |
 | Tonttijakosuunnitelma      | 1.0    | [docs/tonttijakosuunnitelma/](../../tree/main/docs/tonttijakosuunnitelma/)v1.0 | [github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli](https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli) |  | TODO: siirto ilkkarinne -> sykefi |
 | Tonttijakosuunnitelma      | dev    | [docs/tonttijakosuunnitelma/](../../tree/main/docs/tonttijakosuunnitelma/)dev | [github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli](https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli) |  | TODO: siirto ilkkarinne -> sykefi |
-| Rakennuskohteet    | dev    | [docs/rakennuskohteet/](../../tree/main/docs/rakennuskohteet/)dev | [github.com/ilkkarinne/rakennuskohteet](https://github.com/ilkkarinne/rakennuskohteet) | develop | TODO: siirto ilkkarinne -> sykefi |
-| Rakentamista koskevat lupapäätökset    | dev    | [docs/rakentamisenluvat/](../../tree/main/docs/rakentamisenluvat/)dev | [github.com/ilkkarinne/rakentamisenluvat](https://github.com/ilkkarinne/rakentamisenluvat) | develop | TODO: siirto ilkkarinne -> sykefi |
+| Rakennuskohteet    | dev    | [docs/rakennuskohteet/](../../tree/main/docs/rakennuskohteet/)dev | [github.com/sykefi/rakennuskohteet](https://github.com/sykefi/rakennuskohteet) | develop |  |
+| Rakentamista koskevat lupapäätökset    | dev    | [docs/rakentamisenluvat/](../../tree/main/docs/rakentamisenluvat/)dev | [github.com/sykefi/rakentamisenluvat](https://github.com/sykefi/rakentamisenluvat) | develop |  |
 | Yhteiset Sisältömakrot | | [docs/_includes/](../../tree/main/docs/_includes/)common | [github.com/sykefi/rytm-jekyll-includes](https://github.com/sykefi/rytm-jekyll-includes) | main | 
 
 Kulloinkin linkatut git submodulet ja niiden tilan saa tulostettua (linux-tyyppisessä komentoriviympäristössä) seuraavalla loitsulla:
 ```sh
 $ git submodule foreach --quiet 'printf "\n$sm_path: linked to " && git remote get-url origin && printf "at " && git describe --tags --first-parent --dirty --always'
 
-docs/_includes/common: linked to https://github.com/ilkkarinne/rytm-jekyll-includes.git
+docs/_includes/common: linked to https://github.com/sykefi/rytm-jekyll-includes.git
 at 28f784a-dirty
 
-docs/kaavatiedot/dev: linked to https://github.com/ilkkarinne/kaavatietomalli-1.git
+docs/kaavatiedot/dev: linked to https://github.com/sykefi/kaavatietomalli-1.git
 at v1.0-43-g5c44c08-dirty
 
-docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0: linked to https://github.com/ilkkarinne/sp-asemakaava.git
+docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0: linked to https://github.com/sykefi/sp-asemakaava.git
 at 5bce9c1
 
-docs/kaavatiedot/v1.0: linked to https://github.com/ilkkarinne/kaavatietomalli-1.git
+docs/kaavatiedot/v1.0: linked to https://github.com/sykefi/kaavatietomalli-1.git
 at 1.0.1
 
-docs/rakennuskohteet/dev: linked to https://github.com/ilkkarinne/rakennuskohteet.git
+docs/rakennuskohteet/dev: linked to https://github.com/sykefi/rakennuskohteet.git
 at b68f2f9
 
-docs/rakentamisenluvat/dev: linked to https://github.com/ilkkarinne/rakentamisenluvat.git
+docs/rakentamisenluvat/dev: linked to https://github.com/sykefi/rakentamisenluvat.git
 at 95f8e49
 
-docs/ry-yhteiset/dev: linked to https://github.com/ilkkarinne/ry-yhteiset.git
+docs/ry-yhteiset/dev: linked to https://github.com/sykefi/ry-yhteiset.git
 at 04c89ea
 
-docs/tonttijakosuunnitelma/dev: linked to https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
+docs/tonttijakosuunnitelma/dev: linked to https://github.com/sykefi/Tonttijakosuunnitelman-tietomalli.git
 at v1.0-256-g405e7f2
 
-docs/tonttijakosuunnitelma/v1.0: linked to https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
+docs/tonttijakosuunnitelma/v1.0: linked to https://github.com/sykefi/Tonttijakosuunnitelman-tietomalli.git
 at 1.0.0
 ```
 

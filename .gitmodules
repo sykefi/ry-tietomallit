@@ -8,21 +8,9 @@
 	path = docs/kaavatiedot/dev
 	url = https://github.com/ilkkarinne/kaavatietomalli-1.git
 	branch = develop
-[submodule "docs/ry-yhteiset/dev"]
-	path = docs/ry-yhteiset/dev
-	url = https://github.com/ilkkarinne/ry-yhteiset.git
-	branch = develop
 [submodule "docs/tonttijakosuunnitelma/dev"]
 	path = docs/tonttijakosuunnitelma/dev
 	url = https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
-	branch = develop
-[submodule "docs/rakennuskohteet/dev"]
-	path = docs/rakennuskohteet/dev
-	url = https://github.com/ilkkarinne/rakennuskohteet.git
-	branch = develop
-[submodule "docs/rakentamisenluvat/dev"]
-	path = docs/rakentamisenluvat/dev
-	url = https://github.com/ilkkarinne/rakentamisenluvat.git
 	branch = develop
 [submodule "docs/_includes/common"]
 	path = docs/_includes/common
@@ -30,3 +18,15 @@
 [submodule "docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0"]
 	path = docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0
 	url = https://github.com/sykefi/sp-asemakaava.git
+[submodule "docs/ry-yhteiset/dev"]
+	path = docs/ry-yhteiset/dev
+	url = https://github.com/sykefi/ry-yhteiset.git
+	branch = develop
+[submodule "docs/rakennuskohteet/dev"]
+	path = docs/rakennuskohteet/dev
+	url = https://github.com/sykefi/rakennuskohteet.git
+	branch = develop
+[submodule "docs/rakentamisenluvat/dev"]
+	path = docs/rakentamisenluvat/dev
+	url = https://github.com/sykefi/rakentamisenluvat.git
+	branch = develop

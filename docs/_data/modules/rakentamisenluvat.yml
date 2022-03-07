@@ -1,7 +1,7 @@
 title: "Rakentamista koskevat lupapäätökset"
 ownership: "ympäristöministeriö"
 github:
-  owner_name: "ilkkarinne"
+  owner_name: "sykefi"
   repository_name: "rakentamisenluvat"
 versions:
   - id: "dev"
@@ -18,7 +18,7 @@ versions:
         version: "dev"
 basepath: "rakentamisenluvat"
 nav_items:
-  - pageId: "johdanto"
+  - pageId: "rakentamisenluvat"
     title: "Johdanto"
     path: ""
     gitHubFile: "index.md"
