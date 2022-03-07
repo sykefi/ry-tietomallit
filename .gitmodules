@@ -12,10 +12,6 @@
 	path = docs/tonttijakosuunnitelma/dev
 	url = https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
 	branch = develop
-[submodule "docs/rakennuskohteet/dev"]
-	path = docs/rakennuskohteet/dev
-	url = https://github.com/ilkkarinne/rakennuskohteet.git
-	branch = develop
 [submodule "docs/rakentamisenluvat/dev"]
 	path = docs/rakentamisenluvat/dev
 	url = https://github.com/ilkkarinne/rakentamisenluvat.git
