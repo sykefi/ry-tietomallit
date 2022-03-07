@@ -12,10 +12,6 @@
 	path = docs/tonttijakosuunnitelma/dev
 	url = https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
 	branch = develop
-[submodule "docs/rakentamisenluvat/dev"]
-	path = docs/rakentamisenluvat/dev
-	url = https://github.com/ilkkarinne/rakentamisenluvat.git
-	branch = develop
 [submodule "docs/_includes/common"]
 	path = docs/_includes/common
 	url = https://github.com/sykefi/rytm-jekyll-includes.git
