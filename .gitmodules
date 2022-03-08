@@ -30,3 +30,6 @@
 	path = docs/rakentamisenluvat/dev
 	url = https://github.com/sykefi/rakentamisenluvat.git
 	branch = develop
+[submodule "docs/kaavatiedot/soveltamisprofiili/yleiskaava/v1.0"]
+	path = docs/kaavatiedot/soveltamisprofiili/yleiskaava/v1.0
+	url = https://github.com/sykefi/sp-yleiskaava.git
