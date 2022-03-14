@@ -8,6 +8,9 @@ versions:
   - id: "v1.0"
     title: "Asema- ja yleiskaavan tietomallit -projektin lopputulos"
     path: "v1.0"
+  - id: "v1.1"
+    title: "Lisätty Kaavamääräysryhmä ja Kaavayksikkö"
+    path: "v1.1"
     default: true
   - id: "dev"
     title: "Seuraava kehitysversio"

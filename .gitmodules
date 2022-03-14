@@ -33,3 +33,7 @@
 [submodule "docs/kaavatiedot/soveltamisprofiili/yleiskaava/v1.0"]
 	path = docs/kaavatiedot/soveltamisprofiili/yleiskaava/v1.0
 	url = https://github.com/sykefi/sp-yleiskaava.git
+[submodule "docs/kaavatiedot/v1.1"]
+	path = docs/kaavatiedot/v1.1
+	url = https://github.com/ilkkarinne/kaavatietomalli.git
+	branch = branch-1.1
