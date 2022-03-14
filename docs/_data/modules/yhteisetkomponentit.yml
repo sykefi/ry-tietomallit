@@ -7,6 +7,7 @@ versions:
   - id: "dev"
     title: "Ensimmäinen kehitysversio"
     path: "dev"
+    git-branch: "develop"
     default: true
     development: true
 basepath: "ry-yhteiset"

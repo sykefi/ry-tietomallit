@@ -10,6 +10,7 @@ versions:
   - id: "dev"
     title: "Seuraava kehitysversio"
     path: "dev"
+    git-branch: "develop"
     development: true
     dependencies:
       - moduleId: "yhteisetkomponentit"
