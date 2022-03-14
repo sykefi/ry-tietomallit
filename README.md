@@ -93,8 +93,13 @@ GitHub Pages -sivugenerointia voi simuloida varsin uskottavasti paikallisella ty
    ```sh
    $ git clone https://github.com/<oma-gh-tunnus>/ry-tietomallit.git
    ```
-1. Siirry hakemistoon ```ry-tietomallit/docs```
-1. Käynnistä docker-github-pages -kontti porttiin 4000:
+1. Päivitä kaikki alimodulit ajantasalle:
+   ```sh
+   $ git submodule init;
+   $ git submodule update;
+   ```
+3. Siirry hakemistoon ```ry-tietomallit/docs```
+4. Käynnistä docker-github-pages -kontti porttiin 4000:
    ```sh
    $ docker run -it --rm -v "$PWD":/usr/src/app -p "4000:4000" starefossen/github-pages
    ```
