@@ -9,7 +9,7 @@
   </head>
     {%- if path and path != page.url -%}
       <!-- Treated as permanent redirect (301) by Google bot, implying strongly a new canonical URL: -->
-      <meta http-equiv="refresh" content="0; url='{{ site.url }}/{{ path }}'" />
+      <meta http-equiv="refresh" content="0; url='{{ baseUrl }}/{{ path }}'" />
     {%- endif -%}
   </head>
   <body>

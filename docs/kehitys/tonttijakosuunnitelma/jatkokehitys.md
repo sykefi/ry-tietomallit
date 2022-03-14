@@ -2,8 +2,7 @@
 layout: "default"
 title: "Tonttijakosuunnitelman jatkokehitys"
 description: ""
-page: "jatkokehitys"
-status: "Luonnos"
+id: "jatkokehitys"
 ---
 # Jatkokehitys
 

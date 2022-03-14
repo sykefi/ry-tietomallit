@@ -8,8 +8,12 @@ nav_items:
     default: true
   - pageId: "sparrausryhma"
     title: "Sparrausryhmä"
+    gitHubFile: "sparrausryhma.md"
+    path: "sparrausryhma.html"
   - pageId: "kyselyt"
     title: "Ota kantaa -kyselyt"
+    gitHubFile: "kyselyt.md"
+    path: "kyselyt.html"
   - groupId: "fyysiset-mallit"
     title: "Fyysiset tietomallit"
     nav_items:

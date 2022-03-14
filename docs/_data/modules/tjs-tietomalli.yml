@@ -1,0 +1,16 @@
+title: "Tonttijakosuunnitelman tietomalli 2021"
+basepath: "kehitys/tonttijakosuunnitelma"
+nav_items:
+  - pageId: "tjs-tietomalli"
+    title: "Projektin kuvaus"
+    path: ""
+    gitHubFile: "index.md"
+    default: true
+  - pageId: "projektitiimi"
+    title: "Projektitiimi"
+    gitHubFile: "projektitiimi.md"
+    path: "projektitiimi.html"
+  - pageId: "jatkokehitys"
+    title: "Jatkokehitys"
+    gitHubFile: "jatkokehitys.md"
+    path: "jatkokehitys.html"
