@@ -4,8 +4,6 @@
   - type: "module"
     moduleId: "ylaontologia"
   - type: "module"
-    moduleId: "kasitemalli"
-  - type: "module"
     moduleId: "yhteisetkomponentit"
 - groupId: "alueidenkaytto"
   title: "Alueidenkäytön suunnittelu"

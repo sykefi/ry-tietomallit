@@ -2,7 +2,7 @@
 layout: "default"
 title: "Tonttijakosuunnitelman tietomallin projektitiimi"
 description: ""
-page: "projektitiimi"
+id: "projektitiimi"
 ---
 
 # Projektitiimi
