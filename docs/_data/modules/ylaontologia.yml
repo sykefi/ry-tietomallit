@@ -1,1 +1,33 @@
 title: "Rakennetun ympäristön yläontologia"
+ownership: "ympäristöministeriö"
+github:
+  owner_name: "sykefi"
+  repository_name: "ry-ylaontologia"
+versions:
+  - id: "dev"
+    title: "RYTJ-vaatimusmäärittelyn tuottama kehitysversio"
+    path: "dev"
+    development: true
+    default: true
+    git-branch: "develop"
+basepath: "ry-ylaontologia"
+nav_items:
+  - pageId: "ylaontologia"
+    title: "Johdanto"
+    path: ""
+    gitHubFile: "index.md"
+    default: true
+  - groupId: "looginenmalli"
+    title: "Looginen tietomalli"
+    nav_items:
+      - pageId: "dokumentaatio"
+        title: "Dokumentaatio"
+        gitHubFile: "index.html"
+      - pageId: "owl"
+        title: "OWL-malli"
+        # tiedostona OWL, jotta muutosmetatiedot päivittyvät
+        gitHubFile: "owl/ry-ylaontologia.rdf"
+  - pageId: "muutosloki"
+    title: "Muutosloki"
+    path: "muutosloki.html"
+    gitHubFile: "muutosloki.md"

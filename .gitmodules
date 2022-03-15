@@ -1,13 +1,6 @@
 [submodule "docs/tonttijakosuunnitelma/v1.0"]
 	path = docs/tonttijakosuunnitelma/v1.0
 	url = https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
-[submodule "docs/kaavatiedot/v1.0"]
-	path = docs/kaavatiedot/v1.0
-	url = https://github.com/ilkkarinne/kaavatietomalli-1.git
-[submodule "docs/kaavatiedot/dev"]
-	path = docs/kaavatiedot/dev
-	url = https://github.com/ilkkarinne/kaavatietomalli-1.git
-	branch = develop
 [submodule "docs/tonttijakosuunnitelma/dev"]
 	path = docs/tonttijakosuunnitelma/dev
 	url = https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
@@ -33,7 +26,17 @@
 [submodule "docs/kaavatiedot/soveltamisprofiili/yleiskaava/v1.0"]
 	path = docs/kaavatiedot/soveltamisprofiili/yleiskaava/v1.0
 	url = https://github.com/sykefi/sp-yleiskaava.git
+[submodule "docs/ry-ylaontologia/dev"]
+	path = docs/ry-ylaontologia/dev
+	url = https://github.com/sykefi/ry-ylaontologia.git
+	branch = develop
+[submodule "docs/kaavatiedot/v1.0"]
+	path = docs/kaavatiedot/v1.0
+	url = https://github.com/sykefi/kaavatietomalli.git
 [submodule "docs/kaavatiedot/v1.1"]
 	path = docs/kaavatiedot/v1.1
-	url = https://github.com/ilkkarinne/kaavatietomalli.git
-	branch = branch-1.1
+	url = https://github.com/sykefi/kaavatietomalli.git
+[submodule "docs/kaavatiedot/dev"]
+	path = docs/kaavatiedot/dev
+	url = https://github.com/sykefi/kaavatietomalli.git
+	branch = develop
