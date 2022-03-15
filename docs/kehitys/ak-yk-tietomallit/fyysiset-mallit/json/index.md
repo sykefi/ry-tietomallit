@@ -12,7 +12,7 @@ status: "Ehdotus"
 {:toc}
 
 ## Mallinnusperiaatteet
-Kaava-JSON on [loogisen tason Kaavatietomallin](../../looginenmalli/dokumentaatio/) toteuttava [GeoJSON](https://tools.ietf.org/html/rfc7946)-formaattiin perustuva fyysinen tietomalli.
+Kaava-JSON on [loogisen tason Kaavatietomallin](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/) toteuttava [GeoJSON](https://tools.ietf.org/html/rfc7946)-formaattiin perustuva fyysinen tietomalli.
 
 Kohdetyypit kuvataan GeoJSON Feature -objekteiksi. GeoJSON-objektin ominaisuuden "properties" alle tulevat kaikki muut tietokohteen loogisen mallin mukaiset ominaisuudet paitsi ```paikallinenTunnus``` (GeoJSON Feature-objektin ```id```) ja geometria-ominaisuudet. Paikkatietokohteiden ensisijainen geometriatieto ilmaistaa GeoJSON-objektin "geometry"-omainaisuutena, ja sen koordinaatisto "crs"-ominaisuutena (ks. [NamedCooodinateReferenceSystem](##namedcooodinatereferencesystem)). Kohteilla, jolla ei ole geometriatietoa "geometry"-ominaisuuden arvoksi tulee aina ```coordinates```-taulukoltaan tyhjä Polygon, jolla ei ole "crs" ominaisuutta.
 
@@ -23,7 +23,7 @@ Kaava-JSON -formaatti ei rajoita koordinaatistojen käyttöä, mutta on hyvä ti
 
 ### SpatialPlan (Kaava)
 
-Toteuttaa loogisen tietomallin luokan [Kaava](../../looginenmalli/dokumentaatio/#kaava)
+Toteuttaa loogisen tietomallin luokan [Kaava](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaava)
 
 **Attribuutit**
 
@@ -217,7 +217,7 @@ yleissuositus  | Kaavasuositus [0..*]     | properties.generalGuidances | array 
 ```
 
 ### Document (Asiakirja)
-Toteuttaa loogisen tietomallin luokan [Asiakirja](../../looginenmalli/dokumentaatio/#asiakirja).
+Toteuttaa loogisen tietomallin luokan [Asiakirja](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#asiakirja).
 
 **Attribuutit**
 
@@ -282,7 +282,7 @@ liittyvaAsiakirja | Document[0..*]      | properties.relatedDocuments | array of
 ```
 
 ### InputDataset (Lahtotietoaineisto)
-Toteuttaa loogisen tietomallin luokan [Lahtotietoaineisto](../../looginenmalli/dokumentaatio/#lahtotietoaineisto)
+Toteuttaa loogisen tietomallin luokan [Lahtotietoaineisto](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#lahtotietoaineisto)
 
 **Attribuutit**
 
@@ -352,7 +352,7 @@ korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObje
 ```
 ### HandlingEvent (Kasittelytapahtuma)
 
-Toteuttaa loogisen tietomallin luokan [Kasittelytapahtuma](../../looginenmalli/dokumentaatio/#kasittelytapahtuma)
+Toteuttaa loogisen tietomallin luokan [Kasittelytapahtuma](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kasittelytapahtuma)
 
 **Attribuutit**
 
@@ -450,7 +450,7 @@ kasittelija   | Organisaatio [0..1]     | properties.handler    | object (Featur
 
 ### InteractionEvent (Vuorovaikutustapahtuma)
 
-Toteuttaa loogisen tietomallin luokan [Vuorovaikutustapahtuma](../../looginenmalli/dokumentaatio/#vuorovaikutustapahtuma)
+Toteuttaa loogisen tietomallin luokan [Vuorovaikutustapahtuma](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#vuorovaikutustapahtuma)
 
 **Attribuutit**
 
@@ -546,7 +546,7 @@ liittyvaAsiakirja | Asiakirja [0..*]  | properties.relatedDocuments    | array o
 
 ###  SpatialPlanCommentary (Kaavaselostus)
 
-Toteuttaa loogisen tietomallin luokan [Kaavaselostus](../../looginenmalli/dokumentaatio/#kaavaselostus)
+Toteuttaa loogisen tietomallin luokan [Kaavaselostus](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaavaselostus)
 
 **Attribuutit**
 
@@ -603,7 +603,7 @@ asiakirja     | Asiakirja [0..1]        | properties.document   | object (Featur
 
 ###  ParticipationAndEvaluationPlan (OsallistumisJaArviointisuunnitelma)
 
-Toteuttaa loogisen tietomallin luokan [OsallistumisJaArviointisuunnitelma](../../looginenmalli/dokumentaatio/#osallistumisjaarviointisuunnitelma)
+Toteuttaa loogisen tietomallin luokan [OsallistumisJaArviointisuunnitelma](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#osallistumisjaarviointisuunnitelma)
 
 **Attribuutit**
 
@@ -657,7 +657,7 @@ asiakirja     | Asiakirja [0..1]        | properties.document   | object (Featur
 
 ### Planner (KaavanLaatija)
 
-Toteuttaa loogisen tietomallin luokan [KaavanLaatija](../../looginenmalli/dokumentaatio/#kaavanlaatija)
+Toteuttaa loogisen tietomallin luokan [KaavanLaatija](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaavanlaatija)
 
 **Attribuutit**
 
@@ -715,7 +715,7 @@ korvattuObjektilla | AbstraktiVersioituObjekti[0..*] | properties.replacedByObje
 
 ### PlanObject (Kaavakohde)
 
-Toteuttaa loogisen tietomallin luokan [Kaavakohde](../../looginenmalli/dokumentaatio/#kaavakohde)
+Toteuttaa loogisen tietomallin luokan [Kaavakohde](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaavakohde)
 
 **Attribuutit**
 
@@ -831,7 +831,7 @@ suositus      | Kaavasuositus [0..*]     | properties.guidances  | array of obje
 
 ### PlanRegulation (Kaavamaarays)
 
-Toteuttaa loogisen tietomallin luokan [Kaavamaarays](../../looginenmalli/dokumentaatio/#kaavamaarays)
+Toteuttaa loogisen tietomallin luokan [Kaavamaarays](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaavamaarays)
 
 **Attribuutit**
 
@@ -912,7 +912,7 @@ liittyvaAsiakirja | Dokumentti [0..*] | properties.relatedDocuments | array of o
 
 ### PlanGuidance (Kaavasuositus)
 
-Toteuttaa loogisen tietomallin luokan [Kaavasuositus](../../looginenmalli/dokumentaatio/#kaavasuositus)
+Toteuttaa loogisen tietomallin luokan [Kaavasuositus](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaavasuositus)
 
 **Attribuutit**
 
@@ -997,7 +997,7 @@ Tietotyypit eivät kuvaudu omiksi GeoJSON-kohteikseen, vaan kohdetyyppien tai to
 
 ### CancellationInfo (KaavanKumoamistieto)
 
-Toteuttaa loogisen tietomallin luokan [KaavanKumoamistieto](../../looginenmalli/dokumentaatio/#kaavankumoamistieto)
+Toteuttaa loogisen tietomallin luokan [KaavanKumoamistieto](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaavankumoamistieto)
 
 **Attribuutit**
 
@@ -1030,7 +1030,7 @@ kumottavanSuosituksenTunnus | URI [0..*]    | planningGuidanceIdsToCancel | arra
 
 ### SupplementaryInformation (Lisatieto)
 
-Toteuttaa loogisen tietomallin luokan [Lisatieto](../../looginenmalli/dokumentaatio/#lisatieto)
+Toteuttaa loogisen tietomallin luokan [Lisatieto](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#lisatieto)
 
 **Attribuutit**
 
@@ -1070,7 +1070,7 @@ arvo          | AbstraktiArvo [0..*]    | values      | array of object (TimeIns
 
 ### TimeInstantValue (Ajanhetkiarvo)
 
-Toteuttaa loogisen tietomallin luokan [Ajanhetkiarvo](../../looginenmalli/dokumentaatio/#ajanhetkiarvo)
+Toteuttaa loogisen tietomallin luokan [Ajanhetkiarvo](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#ajanhetkiarvo)
 
 **Attribuutit**
 
@@ -1090,7 +1090,7 @@ arvo          | TM_Instant              | value                  | string (date-
 
 ### TimePeriodValue (Aikavaliarvo)
 
-Toteuttaa loogisen tietomallin luokan [Aikavaliarvo](../../looginenmalli/dokumentaatio/#aikavaliarvo)
+Toteuttaa loogisen tietomallin luokan [Aikavaliarvo](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#aikavaliarvo)
 
 **Attribuutit**
 
@@ -1118,7 +1118,7 @@ arvo          | TM_Period               | value_start, value_end  | string (date
 
 ### GeometryValue (GeometriaArvo)
 
-Toteuttaa loogisen tietomallin luokan [GeometriaArvo](../../looginenmalli/dokumentaatio/#geometriaarvo)
+Toteuttaa loogisen tietomallin luokan [GeometriaArvo](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#geometriaarvo)
 
 **Attribuutit**
 
@@ -1141,7 +1141,7 @@ arvo          | Geometry                | value              | object (GeoJSON G
 
 ### CodeValue (Koodiarvo)
 
-Toteuttaa loogisen tietomallin luokan [Koodiarvo](../../looginenmalli/dokumentaatio/#koodiarvo)
+Toteuttaa loogisen tietomallin luokan [Koodiarvo](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#koodiarvo)
 
 **Attribuutit**
 
@@ -1168,7 +1168,7 @@ otsikko       | LanguageString [0..*]   | title                 | object (Langua
 
 ### IntegerValue (NumeerinenArvo)
 
-Toteuttaa loogisen tietomallin luokan [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) siten, että ```arvo```-attribuutin tyyppi toteuttaa [Integer](../../looginenmalli/dokumentaatio/#integer)-rajapinnan.
+Toteuttaa loogisen tietomallin luokan [NumeerinenArvo](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#numeerinenarvo) siten, että ```arvo```-attribuutin tyyppi toteuttaa [Integer](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#integer)-rajapinnan.
 
 
 **Attribuutit**
@@ -1190,7 +1190,7 @@ mittayksikko  | CharacterString [0..1]  | unitOfMeasure     | string      |
 
 ### IntegerRange (NumeerinenArvovali)
 
-Toteuttaa loogisen tietomallin luokan [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali) siten, että ```minimiarvo```- ja ```maksimiarvo```-attribuuttien tyypit toteuttavat [Integer](../../looginenmalli/dokumentaatio/#integer)-rajapinnan.
+Toteuttaa loogisen tietomallin luokan [NumeerinenArvovali](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#numeerinenarvovali) siten, että ```minimiarvo```- ja ```maksimiarvo```-attribuuttien tyypit toteuttavat [Integer](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#integer)-rajapinnan.
 
 **Attribuutit**
 
@@ -1213,7 +1213,7 @@ mittayksikko  | CharacterString [0..1]  | unitOfMeasure         | string      |
 
 ### NumberValue (NumeerinenArvo)
 
-Toteuttaa loogisen tietomallin luokan [NumeerinenArvo](../../looginenmalli/dokumentaatio/#numeerinenarvo) siten, että ```arvo```-attribuutin tyyppi toteuttaa [Real](../../looginenmalli/dokumentaatio/#real)-rajapinnan.
+Toteuttaa loogisen tietomallin luokan [NumeerinenArvo](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#numeerinenarvo) siten, että ```arvo```-attribuutin tyyppi toteuttaa [Real](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#real)-rajapinnan.
 
 
 **Attribuutit**
@@ -1236,7 +1236,7 @@ mittayksikko  | CharacterString [0..1]  | unitOfMeasure         | string      |
 
 ### NumberRange (NumeerinenArvovali)
 
-Toteuttaa loogisen tietomallin luokan [NumeerinenArvovali](../../looginenmalli/dokumentaatio/#numeerinenarvovali) siten, että ```minimiarvo```- ja ```maksimiarvo```-attribuuttien tyypit toteuttavat [Real](../../looginenmalli/dokumentaatio/#real)-rajapinnan.
+Toteuttaa loogisen tietomallin luokan [NumeerinenArvovali](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#numeerinenarvovali) siten, että ```minimiarvo```- ja ```maksimiarvo```-attribuuttien tyypit toteuttavat [Real](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#real)-rajapinnan.
 
 **Attribuutit**
 
@@ -1260,7 +1260,7 @@ mittayksikko  | CharacterString [0..1]  | unitOfMeasure         | string      |
 
 ### ElevationPosition (Korkeuspiste)
 
-Toteuttaa loogisen tietomallin luokan [Korkeuspiste](../../looginenmalli/dokumentaatio/#korkeuspiste)
+Toteuttaa loogisen tietomallin luokan [Korkeuspiste](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#korkeuspiste)
 
 **Attribuutit**
 
@@ -1294,7 +1294,7 @@ referenssipiste | Point [0..1]          | referencePoint        | object (Coordi
 
 ### ElevationRange (Korkeusvali)
 
-Toteuttaa loogisen tietomallin luokan [Korkeusvali](../../looginenmalli/dokumentaatio/#korkeusvali)
+Toteuttaa loogisen tietomallin luokan [Korkeusvali](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#korkeusvali)
 
 **Attribuutit**
 
@@ -1329,7 +1329,7 @@ referenssipiste | Point [0..1]          | referencePoint        | object (Coordi
 
 ### TextValue (Tekstiarvo)
 
-Toteuttaa loogisen tietomallin luokan [Tekstiarvo](../../looginenmalli/dokumentaatio/#tekstiarvo)
+Toteuttaa loogisen tietomallin luokan [Tekstiarvo](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#tekstiarvo)
 
 **Attribuutit**
 
@@ -1354,7 +1354,7 @@ syntaksi      | CharacterString [0..1]  | syntax                | string      |
 
 ### IdentifierValue (Tunnusarvo)
 
-Toteuttaa loogisen tietomallin luokan [Tunnusarvo](../../looginenmalli/dokumentaatio/#tunnusarvo)
+Toteuttaa loogisen tietomallin luokan [Tunnusarvo](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#tunnusarvo)
 
 **Attribuutit**
 
