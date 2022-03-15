@@ -7,27 +7,27 @@ status: "Ehdotus"
 ---
 # PostgreSQL/PostGIS -tietokanta
 
-[Yleis- ja asemakaavan tietomallit -projektissa](../../../projektit/ak-yk-tietomallit/) laadittiin 
-[loogisen tason Kaavatietomallin](../../looginenmalli/dokumentaatio/) mukainen PostgreSQL-tietokanta [Kaava-JSON](../json/)-formaatissa olevien kaavojen testaamiseksi. Testauksessa käytettiin PostgreSQL-tietokannanhallintajärjestelmän versiota 13. Valittu tietokantarakenne perustui siihen, että kaavatiedot tallennetaan GeoJSON-formaatissa, ja siinä hyödynnettiin PostgreSQL:n [PostGIS](https://postgis.net/)-geometriatukea ja JSON-tukea. Testauksessa käytetty aineisto on kuvattu [omalla sivullaan](../../../projektit/ak-yk-tietomallit/aineistot/).
+[Yleis- ja asemakaavan tietomallit -projektissa](../../) laadittiin 
+[loogisen tason Kaavatietomallin](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/) mukainen PostgreSQL-tietokanta [Kaava-JSON](../json/)-formaatissa olevien kaavojen testaamiseksi. Testauksessa käytettiin PostgreSQL-tietokannanhallintajärjestelmän versiota 13. Valittu tietokantarakenne perustui siihen, että kaavatiedot tallennetaan GeoJSON-formaatissa, ja siinä hyödynnettiin PostgreSQL:n [PostGIS](https://postgis.net/)-geometriatukea ja JSON-tukea. Testauksessa käytetty aineisto on kuvattu [omalla sivullaan](../../../projektit/ak-yk-tietomallit/aineistot/).
 
 Tietokantauluina mallinnettiin seuraavat loogisen tietomallin luokat:
-* [Kaavatiedot::Kaava](../../looginenmalli/dokumentaatio/#kaava): ```spatial_plan```,
-* [Kaavakohde](../../looginenmalli/dokumentaatio/#kaavakohde): ```plan_regulation_object``` ja
-* [Kaavamaarays](../../looginenmalli/dokumentaatio/#kaavamaarays): ```plan_regulation```.
+* [Kaavatiedot::Kaava](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaava): ```spatial_plan```,
+* [Kaavakohde](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaavakohde): ```plan_regulation_object``` ja
+* [Kaavamaarays](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaavamaarays): ```plan_regulation```.
 
 Lisäksi kantaan luotiin taulu ```feature_collection```, johon tallennettiin kokonainen kaava kaikkine kaavakohteineen ja -määräyksineen.
 
 Tietokantaan ei mallinnettu seuraavia testauksen ulkopuolelle jätettyjä loogisen tietomallin luokkia:
-* [MKP-ydin::Asiakirja](../../looginenmalli/dokumentaatio/#asiakirja)
-* [MKP-ydin::Lahtotietoaineisto](../../looginenmalli/dokumentaatio/#lahtotietoaineisto)
-* [MKP-ydin::Kasittelytapahtuma](../../looginenmalli/dokumentaatio/#kasittelytapahtuma)
-* [MKP-ydin::Vuorovaikutustapahtuma](../../looginenmalli/dokumentaatio/#vuorovaikutustapahtuma)
-* [MKP-ydin::HallinnollinenAlue](../../looginenmalli/dokumentaatio/#hallinnollinenalue)
-* [MKP-ydin::Organisaatio](../../looginenmalli/dokumentaatio/#organisaatio)
-* [Kaavatiedot::Kaavaselostus](../../looginenmalli/dokumentaatio/#kaavaselostus)
-* [Kaavatiedot::OsallistumisJaArviointisuunnitelma](../../looginenmalli/dokumentaatio/#osallistumisjaarviointisuunnitelma)
-* [Kaavatiedot::KaavanLaatija](../../looginenmalli/dokumentaatio/#kaavanlaatija)
-* [Kaavatiedot::Kaavasuositus](../../looginenmalli/dokumentaatio/#kaavasuositus)
+* [MKP-ydin::Asiakirja](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#asiakirja)
+* [MKP-ydin::Lahtotietoaineisto](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#lahtotietoaineisto)
+* [MKP-ydin::Kasittelytapahtuma](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kasittelytapahtuma)
+* [MKP-ydin::Vuorovaikutustapahtuma](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#vuorovaikutustapahtuma)
+* [MKP-ydin::HallinnollinenAlue](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#hallinnollinenalue)
+* [MKP-ydin::Organisaatio](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#organisaatio)
+* [Kaavatiedot::Kaavaselostus](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaavaselostus)
+* [Kaavatiedot::OsallistumisJaArviointisuunnitelma](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#osallistumisjaarviointisuunnitelma)
+* [Kaavatiedot::KaavanLaatija](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaavanlaatija)
+* [Kaavatiedot::Kaavasuositus](/kaavatiedot/v1.0/looginenmalli/dokumentaatio/#kaavasuositus)
 
 Pois jätettyjen luokkien mallintamisessa ei nähdä mitään erityisiä haasteita, mutta niiden mukaisten testausaineistojen tuottaminen käsin käytössä olleista kaava-aineistoista ei ollut mahdollista projektin aikataulun puitteissa. Loogisen tietomallin tietotyypit (DataType-stereotyyppi) mallinnettiin osana luokkia, jota sisältävät niihin kohdistuvia assosiaatioita.
 

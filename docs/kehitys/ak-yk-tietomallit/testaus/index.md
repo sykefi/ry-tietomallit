@@ -142,7 +142,7 @@ Testauksen aikana keskusteltiin linkityksestä oliosta toiseen. Tunnistettiin, e
 
 [Github issue](https://github.com/YM-rakennettu-ymparisto/kaavatietomalli/issues/57)
 
-[Analyysi elinkaarisäännöissä](https://kaavatietomalli.fi/1.0/looginenmalli/elinkaarisaannot.html#muutosten-levi%C3%A4minen-viittausten-kautta)
+[Analyysi elinkaarisäännöissä](https://tietomallit.ymparisto.fi/kaavatiedot/v1.0/looginenmalli/elinkaarisaannot.html#muutosten-levi%C3%A4minen-viittausten-kautta)
 
 ## Puuttuvia koodilistojen arvoja
 
@@ -150,7 +150,7 @@ Testauksen aikana tunnistettiin 19 puuttunutt koodilistan arvoa. Havaitut puutte
 
 ## Tunnusten muoto - URI vs UUID
 
-Rajapintapalvelun kohdalla HTTP-muotoiset osoitteet aiheuttavat tarpeetonta hankaluutta käytössä. Tämä käytännössä siksi, että tällaiset tunnukset sisältävät merkkejä (mm. `:`, `/`, `?`, `&` ja `=`), joilla on  erityismerkitys HTTP-osoitteissa. Jos ja kun osoitteella linkataan tunnuksen avulla tiettyyn tunnukseen, tulee osoitteesta tarpeettoman vaikea ja hankala lukea. Tästä lisää [elinkaarisäännöissä](https://kaavatietomalli.fi/1.0/looginenmalli/elinkaarisaannot.html).
+Rajapintapalvelun kohdalla HTTP-muotoiset osoitteet aiheuttavat tarpeetonta hankaluutta käytössä. Tämä käytännössä siksi, että tällaiset tunnukset sisältävät merkkejä (mm. `:`, `/`, `?`, `&` ja `=`), joilla on  erityismerkitys HTTP-osoitteissa. Jos ja kun osoitteella linkataan tunnuksen avulla tiettyyn tunnukseen, tulee osoitteesta tarpeettoman vaikea ja hankala lukea. Tästä lisää [elinkaarisäännöissä](https://tietomallit.ymparisto.fi/kaavatiedot/v1.0/looginenmalli/elinkaarisaannot.html).
 
 ## Liikenne-aihepiirin käyttötarkoitukset
 
