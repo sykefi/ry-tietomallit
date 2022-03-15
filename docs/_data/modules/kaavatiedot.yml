@@ -2,7 +2,7 @@ title: "Kaavatiedot"
 ownership: "ympäristöministeriö"
 note: "Fyysiset mallit (Kaava-JSON ja Postgre) on siirretty Asema- ja yleiskaavojen tietomallit -kehitysprojektin alle"
 github:
-  owner_name: "ilkkarinne"
+  owner_name: "sykefi"
   repository_name: "kaavatietomalli"
 versions:
   - id: "v1.0"
