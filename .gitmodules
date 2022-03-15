@@ -37,3 +37,7 @@
 	path = docs/kaavatiedot/v1.1
 	url = https://github.com/ilkkarinne/kaavatietomalli.git
 	branch = branch-1.1
+[submodule "docs/ry-ylaontologia/dev"]
+	path = docs/ry-ylaontologia/dev
+	url = https://github.com/sykefi/ry-ylaontologia.git
+	branch = develop
