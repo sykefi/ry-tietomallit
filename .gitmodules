@@ -1,10 +1,3 @@
-[submodule "docs/tonttijakosuunnitelma/v1.0"]
-	path = docs/tonttijakosuunnitelma/v1.0
-	url = https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
-[submodule "docs/tonttijakosuunnitelma/dev"]
-	path = docs/tonttijakosuunnitelma/dev
-	url = https://github.com/ilkkarinne/Tonttijakosuunnitelman-tietomalli.git
-	branch = develop
 [submodule "docs/_includes/common"]
 	path = docs/_includes/common
 	url = https://github.com/sykefi/rytm-jekyll-includes.git
@@ -39,4 +32,12 @@
 [submodule "docs/kaavatiedot/dev"]
 	path = docs/kaavatiedot/dev
 	url = https://github.com/sykefi/kaavatietomalli.git
+	branch = develop
+[submodule "docs/tonttijakosuunnitelma/v1.0"]
+	path = docs/tonttijakosuunnitelma/v1.0
+	url = https://github.com/sykefi/Tonttijakosuunnitelman-tietomalli.git
+	branch = branch-1.0
+[submodule "docs/tonttijakosuunnitelma/dev"]
+	path = docs/tonttijakosuunnitelma/dev
+	url = https://github.com/sykefi/Tonttijakosuunnitelman-tietomalli.git
 	branch = develop
