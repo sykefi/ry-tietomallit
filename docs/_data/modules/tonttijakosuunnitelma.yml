@@ -48,6 +48,8 @@ nav_items:
         path: "laatusaannot.html"
   - pageId: "soveltamisohje-tjs"
     title: "Tietomallin soveltaminen"
+    path: "soveltamisohjeet"
+    gitHubFile: "soveltamisohjeet/index.md"
   - pageId: "muutosloki"
     title: "Muutosloki"
     gitHubFile: "muutosloki.md"
