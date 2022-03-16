@@ -15,7 +15,7 @@ Sivulle voidaan linkittää mitä tahansa julkisia git-repoja, ja GitHub Pages -
 
 | Nimi                       | versio | hakemistopolku          | linkitetty git-repo          | tagi / haara / commit  | huom     |
 -----------------------------|--------|-------------------------|------------------------------|------------------------|----------|
-| RY-yläontologia            | dev    | [docs/ry-yhteiset/](../../tree/main/docs/ry-ylaontologia/)dev | [github.com/sykefi/ry-ylaontologia](https://github.com/sykefi/ry-ylaontologia) | develop | |
+| RY-yläontologia            | dev    | [docs/ry-ylaontologia/](../../tree/main/docs/ry-ylaontologia/)dev | [github.com/sykefi/ry-ylaontologia](https://github.com/sykefi/ry-ylaontologia) | develop | |
 | RY-yhteiset komponentit    | dev    | [docs/ry-yhteiset/](../../tree/main/docs/ry-yhteiset/)dev | [github.com/sykefi/ry-yhteiset](https://github.com/sykefi/ry-yhteiset) | develop | |
 | Kaavatiedot                | 1.0.2  | [docs/kaavatiedot/](../../tree/main/docs/kaavatiedot/)v1.0 | [github.com/sykefi/kaavatietomalli](https://github.com/sykefi/kaavatietomalli) | |  |
 | Asemakaavan soveltamisprofiili | 1.0 | [docs/kaavatiedot/soveltamisprofiili/asemakaava/](../../tree/main/docs/kaavatiedot/soveltamisprofiili/asemakaava/)v1.0 | [github.com/sykefi/sp-asemakaava](https://github.com/sykefi/sp-asemakaava) |  |  |
@@ -39,7 +39,6 @@ Seuraavassa listassa on lueteltu [rakennetun ympäristön yhteentoimivuustyöss�
 
 * Useita sovellusalueita koskevat tietomallit
    * RYTJ-soveltamisprofiili (yhdistelmä RYTJ:ssä toteutettavista loogisista ry-tietomalleista)
-   * Rakennetun ympäristön yläontologia
 * Alueiden käytön suunnittelu
    * Yleisten alueiden suunnitelmat
    * Kaavatietomallin soveltamisprofiili maakuntakaavoille
