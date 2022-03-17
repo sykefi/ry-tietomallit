@@ -225,6 +225,7 @@ b {
         padding-top: 0.5em;
         padding-left: 1em;
         padding-bottom: 1em;
+        padding-right: 1em;
         width: 100%;
         border-bottom-style: solid;
         border-bottom-width: 1px;
@@ -245,6 +246,13 @@ b {
           color: #505772;
           background-color: #c8d6e6;
           border-color: #b4c0cb;
+        }
+
+        #moduleInfoCard {
+          margin: 0.5em;
+          .card {
+            background-color: inherit;
+          }
         }
       }
 
