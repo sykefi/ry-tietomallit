@@ -15,3 +15,4 @@ Tietomallien kehittämisestä ja niiden hallinnasta vastaa [ympäristöministeri
 {% include common/note.html content="Rakennetun ympäristön tietomallit -sivusto on vielä keskeneräinen, ensimmäinen versio valmistuu vuoden 2022 keväällä." %}
 
 
+Lisään tänne tekstiä testin vuoksi
