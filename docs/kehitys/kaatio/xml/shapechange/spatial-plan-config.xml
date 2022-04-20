@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShapeChangeConfiguration xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1" xmlns:sc="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.interactive-instruments.de/ShapeChange/Configuration/1.1 http://shapechange.net/resources/schema/ShapeChangeConfiguration.xsd">
+	<input>
+        <parameter name="inputModelType" value="EA7"/>
+        <parameter name="inputFile" value="../../../kaavatiedot/v1.1/looginenmalli/uml/kaavatietomalli.eap"/>
+        <parameter name="appSchemaNameRegex" value="Kaavatiedot|MKP-ydin"/>
+        <parameter name="publicOnly" value="true"/>
+        <parameter name="addTaggedValues" value="extensibility, vocabulary"/>
+        <xi:include href="https://shapechange.net/resources/config/StandardAliases.xml"/>
+	</input>
+	<targets>
+		<TargetXmlSchema class="de.interactive_instruments.ShapeChange.Target.XmlSchema.XmlSchema" mode="enabled">
+			<xi:include href="http://shapechange.net/resources/config/StandardNamespaces.xml"/>
+			<xi:include href="http://shapechange.net/resources/config/StandardMapEntries.xml"/>
+			<xsdMapEntries>
+				<XsdMapEntry type="URI" xsdEncodingRules="iso19136_2007 gml33" xmlPropertyType="anyURI" xmlType="anyURI" xmlTypeType="simple" xmlTypeContent="simple"/>
+				<XsdMapEntry type="boolean" xsdEncodingRules="iso19136_2007 gml33" xmlPropertyType="boolean" xmlType="boolean" xmlTypeType="simple" xmlTypeContent="simple"/>
+				<XsdMapEntry type="int" xsdEncodingRules="iso19136_2007 gml33" xmlPropertyType="int" xmlType="int" xmlTypeType="simple" xmlTypeContent="simple"/>
+				<XsdMapEntry type="Geometry" xsdEncodingRules="iso19136_2007 gml33" xmlPropertyType="gml:GeometryPropertyType" xmlType="gml:AbstractGeometryType" xmlTypeContent="complex" xmlTypeNilReason="false"/>
+				<XsdMapEntry type="Point" xsdEncodingRules="iso19136_2007 gml33" xmlPropertyType="gml:PointPropertyType" xmlType="gml:PointType" xmlTypeContent="complex" xmlTypeNilReason="false"/>
+				<XsdMapEntry type="LanguageString" xsdEncodingRules="iso19136_2007 gml33" xmlPropertyType="lsp:languageStringType" xmlType="lsp:languageStringType" xmlTypeType="complex" xmlTypeContent="simple"/>
+			</xsdMapEntries>
+			<xmlNamespaces>
+ 				<XmlNamespace nsabr="lsp" ns="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki" location="localization.xsd"/>
+				<XmlNamespace nsabr="splan" ns="http://tietomallit.ymparisto.fi/kaavatiedot/v1.1" location="spatial-plan.xsd"/>
+				<XmlNamespace nsabr="lud-core" ns="http://tietomallit.ymparisto.fi/mkp-ydin/v1.1" location="land-use-decision-core.xsd"/>
+			</xmlNamespaces>
+		</TargetXmlSchema>
+	</targets>
+</ShapeChangeConfiguration>

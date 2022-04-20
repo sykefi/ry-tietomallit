@@ -30,7 +30,7 @@ body {
   background: #fafafa;
   font-family: "Barlow",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
-  &.ea-uml {
+  &.ea-uml, &.oxygen-xml {
     #main_content {
       max-width: none;
       width: 100%;

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" 
+  xmlns:lsp="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" 
+  xmlns:lud-core="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1"
+  elementFormDefault="qualified"
+  targetNamespace="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1"
+  version="1.1">
+  <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" schemaLocation="localization.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <!-- Edited and translated by Ilkka Rinne / Spatineo 2022 -->
+  
+  <element abstract="true" name="AbstractVersionedObject" substitutionGroup="gml:AbstractFeature" type="lud-core:AbstractVersionedObjectType">
+  <!-- =================================================================================================================================== --> 
+    <annotation>
+      <documentation>AbstraktiVersioituKohde</documentation>
+      <documentation>
+        The following attributes are mapped to GML identifiers:
+          * localIdentifier -> gml:id attribute
+          * referenceIdentifier + namespace -> gml:identifier (use the codeSpace attribute for the namespace)
+        
+        See XML Schema source for an example.
+ 
+        See Kaavatietomalli / Elinkaarisäännöt (https://tietomallit.ymparisto.fi/kaavatiedot/v1.1/looginenmalli/elinkaarisaannot.html#tunnukset-ja-niiden-hallinta) for more information about the use if various identifiers (in Finnish).
+        <!--
+        Example:
+        
+        <SpatialPlan gml:id="640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e">
+          <gml:identifier codeSpace="http://uri.suomi.fi/object/rytj/kaava">SpatialPlan/640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e</gml:identifier>
+          <splan:objectIdenfier>640bff6b-c16a-4947-af8d-d86f89106be1</splan:objectIdentifier>
+          <splan:producerSpecificIdentifier>oma-asemakaava123345</splan:producerSpecificIdentifier>
+           ...
+        </SpatialPlan>
+        -->
+      </documentation>
+    </annotation>
+  </element>
+  <complexType abstract="true" name="AbstractVersionedObjectType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element minOccurs="0" name="objectIdentifier" type="string"/>
+          <element minOccurs="0" name="producerSpecificIdentifier" type="string"/>
+          <element minOccurs="0" name="latestChange" type="gml:TimeInstantPropertyType"/>
+          <element minOccurs="0" name="storageTime" type="gml:TimeInstantPropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="replacesObject" type="lud-core:AbstractVersionedObjectPropertyType">
+            <annotation>
+              <appinfo>
+                <reversePropertyName xmlns="http://www.opengis.net/gml/3.2">lud-core:replacedByObject</reversePropertyName>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="replacedByObject" type="lud-core:AbstractVersionedObjectPropertyType">
+            <annotation>
+              <appinfo>
+                <reversePropertyName xmlns="http://www.opengis.net/gml/3.2">lud-core:replacesObject</reversePropertyName>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AbstractVersionedObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="lud-core:AbstractVersionedObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+
+  <element abstract="true" name="AbstractLandUseMatter" substitutionGroup="lud-core:AbstractVersionedObject" type="lud-core:AbstractLandUseMatterType">
+  <!-- ============================================================================================================================================ --> 
+    <annotation>
+      <documentation>AbstraktiMaankayttoasia</documentation>
+    </annotation>
+  </element>
+  <complexType abstract="true" name="AbstractLandUseMatterType">
+    <complexContent>
+      <extension base="lud-core:AbstractVersionedObjectType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="loc_name" type="lsp:languageStringType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="loc_description" type="lsp:languageStringType"/>
+          <element minOccurs="0" name="boundary" type="gml:GeometryPropertyType"/>
+          <element minOccurs="0" name="legalEffectiveness" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">OikeusvaikutteisuudenLaji</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="metadata" type="anyURI"/>
+          <element minOccurs="0" name="validityTime" type="gml:TimePeriodPropertyType"/>
+          <element minOccurs="0" name="responsibleOrganisation" type="gml:ReferenceType">
+            <annotation>
+              <documentation>Link to Organization</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="relatedMatter" type="gml:ReferenceType">
+            <annotation>
+              <documentation>Link to AbstractLandUseMatter</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="annex" type="lud-core:DocumentPropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="usedInputDataset" type="lud-core:InputDatasetPropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="administrativeArea" type="gml:ReferenceType">
+            <annotation>
+              <documentation>Link to AdministrativeArea</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AbstractLandUseMatterPropertyType">
+    <sequence minOccurs="0">
+      <element ref="lud-core:AbstractLandUseMatter"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element abstract="true" name="AbstractEvent" substitutionGroup="lud-core:AbstractVersionedObject" type="lud-core:AbstractEventType">
+  <!-- ============================================================================================================================ --> 
+    <annotation>
+      <documentation>AbstraktiTapahtuma</documentation>
+    </annotation>
+  </element>
+  <complexType abstract="true" name="AbstractEventType">
+    <complexContent>
+      <extension base="lud-core:AbstractVersionedObjectType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="loc_name" type="lsp:languageStringType"/>
+          <element minOccurs="0" name="eventTime">
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractMemberType">
+                  <sequence minOccurs="0">
+                    <element ref="gml:AbstractTimeObject"/>
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="loc_description" type="lsp:languageStringType"/>
+          <element minOccurs="0" name="location" type="gml:GeometryPropertyType"/>
+          <element minOccurs="0" name="additionalInformationLink" type="anyURI"/>
+          <element name="cancelled" type="boolean"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="relatedMatter" type="lud-core:AbstractLandUseMatterPropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="relatedDocument" type="lud-core:DocumentPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AbstractEventPropertyType">
+    <sequence minOccurs="0">
+      <element ref="lud-core:AbstractEvent"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  
+  
+  <element name="Document" substitutionGroup="lud-core:AbstractVersionedObject" type="lud-core:DocumentType">
+  <!-- ================================================================================================== --> 
+    <annotation>
+      <documentation>Asiakirja</documentation>
+    </annotation>
+  </element>
+  <complexType name="DocumentType">
+    <complexContent>
+      <extension base="lud-core:AbstractVersionedObjectType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="documentIdentifier" type="anyURI"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="loc_name" type="lsp:languageStringType"/>
+          <element name="type" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AsiakirjanLaji</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="additionalInformationLink" type="anyURI"/>
+          <element minOccurs="0" name="metadata" type="anyURI"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="relatedDocument" type="lud-core:DocumentPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="DocumentPropertyType">
+    <sequence minOccurs="0">
+      <element ref="lud-core:Document"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element name="HandlingEvent" substitutionGroup="lud-core:AbstractEvent" type="lud-core:HandlingEventType">
+  <!-- ================================================================================================== --> 
+    <annotation>
+      <documentation>Kasittelytapahtuma</documentation>
+    </annotation>
+  </element>
+  <complexType name="HandlingEventType">
+    <complexContent>
+      <extension base="lud-core:AbstractEventType">
+        <sequence>
+          <element name="type" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AbstraktiKasittelytapahtumanLaji</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="handler" type="gml:ReferenceType">
+            <annotation>
+              <documentation>Link to Organization</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="HandlingEventPropertyType">
+    <sequence minOccurs="0">
+      <element ref="lud-core:HandlingEvent"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element name="InputDataset" substitutionGroup="lud-core:AbstractVersionedObject" type="lud-core:InputDatasetType">
+  <!-- ========================================================================================================== --> 
+    <annotation>
+      <documentation>Lahtotietoaineisto</documentation>
+    </annotation>
+  </element>
+  <complexType name="InputDatasetType">
+    <complexContent>
+      <extension base="lud-core:AbstractVersionedObjectType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="datasetIdentifier" type="anyURI"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="loc_name" type="lsp:languageStringType"/>
+          <element name="type" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">LahtotietoaineistonLaji</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="boundary" type="gml:GeometryPropertyType"/>
+          <element minOccurs="0" name="additionalInformationLink" type="anyURI"/>
+          <element minOccurs="0" name="metadata" type="anyURI"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="InputDatasetPropertyType">
+    <sequence minOccurs="0">
+      <element ref="lud-core:InputDataset"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element name="InteractionEvent" substitutionGroup="lud-core:AbstractEvent" type="lud-core:InteractionEventType">
+  <!-- ======================================================================================================== --> 
+    <annotation>
+      <documentation>Vuorovaikutustapahtuma</documentation>
+    </annotation>
+  </element>
+  <complexType name="InteractionEventType">
+    <complexContent>
+      <extension base="lud-core:AbstractEventType">
+        <sequence>
+          <element name="type" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AbstraktiVuorovaikutustapahtumanLaji</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="InteractionEventPropertyType">
+    <sequence minOccurs="0">
+      <element ref="lud-core:InteractionEvent"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+</schema>
