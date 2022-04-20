@@ -2,12 +2,12 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema" 
   xmlns:gml="http://www.opengis.net/gml/3.2" 
   xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" 
-  xmlns:lsp="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki" 
-  xmlns:lud-core="http://tietomallit.ymparisto.fi/mkp-ydin/v1.1" 
-  xmlns:splan="http://tietomallit.ymparisto.fi/kaavatiedot/v1.1" 
-  elementFormDefault="qualified" targetNamespace="http://tietomallit.ymparisto.fi/kaavatiedot/v1.1" version="1.1">
-  <import namespace="http://tietomallit.ymparisto.fi/mkp-ydin/v1.1" schemaLocation="land-use-decision-core.xsd"/>
-  <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki" schemaLocation="localization.xsd"/>
+  xmlns:lsp="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" 
+  xmlns:lud-core="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1" 
+  xmlns:splan="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.1" 
+  elementFormDefault="qualified" targetNamespace="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.1" version="1.1">
+  <import namespace="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1" schemaLocation="land-use-decision-core.xsd"/>
+  <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" schemaLocation="localization.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
@@ -545,8 +545,8 @@
       <extension base="splan:AbstractValueType">
         <sequence>
           <element name="value" type="anyURI"/>
-          <element minOccurs="0" name="registryIdentifier" type="anyURI"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="registryName" type="lsp:languageStringType"/>
+          <element minOccurs="0" name="systemIdentifier" type="anyURI"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="systemName" type="lsp:languageStringType"/>
         </sequence>
       </extension>
     </complexContent>

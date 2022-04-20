@@ -15,9 +15,9 @@ Alla on kuvattu KAATIO-hankkeessa tuotetuissa XML-skeemoissa käytetyt Kaavatiet
 
 | Luokka                     | Ominaisuus                      | Name                           |
 |----------------------------|---------------------------------|--------------------------------|
-| AbstraktiVersioituObjekti  | | AbstractVersionedObject |
-| | paikallinenTunnus        | versionIdentifier |
-| | nimiavaruus              | namespace
+| **AbstraktiVersioituObjekti**  | | **AbstractVersionedObject** |
+| | paikallinenTunnus        | gml:id (attribuutti) |
+| | nimiavaruus              | gml:identifier/@codeSpace
 | | viittausTunnus           | gml:identifier |
 | | identiteettiTunnus       | objectIdentifier |
 | | tuottajakohtainenTunnus  | producerSpecificIdentifier |
@@ -25,7 +25,7 @@ Alla on kuvattu KAATIO-hankkeessa tuotetuissa XML-skeemoissa käytetyt Kaavatiet
 | | tallennusAika            | storageTime  |
 | | korvaaObjektin           | replacesObject |
 | | korvattuObjektilla       | replacedByObject |
-| AbstraktiMaankayttoasia    | | AbstractLandUseMatter   |
+| **AbstraktiMaankayttoasia**    | | **AbstractLandUseMatter**   |
 | | nimi                     | loc_name |
 | | kuvaus                   | loc_description |
 | | aluerajaus               | boundary |
@@ -37,21 +37,21 @@ Alla on kuvattu KAATIO-hankkeessa tuotetuissa XML-skeemoissa käytetyt Kaavatiet
 | | vastuullinenOrganisaatio | responsibleOrganisation |
 | | hyodynnettyAineisto      | usedInputDataset |
 | | liittyvaAsia             | relatedMatter |
-| Asiakirja                  | | Document |
+| **Asiakirja**                  | | **Document** |
 | | asiakirjanTunnus         | documentIdentifier |
 | | nimi                     | loc_name |
 | | laji                     | type |
 | | lisatietolinkki          | additionalInformationLink |
 | | metatietokuvaus          | metadata |
 | | liittyvaAsiakirja        | relatedDocument |
-| Lahtotietoaineisto         | | InputDataset |
+| **Lahtotietoaineisto**         | | **InputDataset** |
 | | aineistoTunnus           | datasetIdentifier |
 | | nimi                     | loc_name |
 | | laji                     | type |
 | | aluerajaus               | boundary |
 | | lisatietolinkki          | additionalInformationLink |
 | | metatietokuvaus          | metadata |
-| Abstraktitapahtuma         | | AbstractEvent |
+| **Abstraktitapahtuma**         | | **AbstractEvent** |
 | | nimi                     | loc_name |
 | | kuvaus                   | loc_description |
 | | tapahtumaAika            | eventTime |
@@ -60,17 +60,17 @@ Alla on kuvattu KAATIO-hankkeessa tuotetuissa XML-skeemoissa käytetyt Kaavatiet
 | | peruttu                  | cancelled |
 | | liittyvaAsia             | relatedMatter |
 | | liittyvaAsiakirja        | relatedDocument |
-| Kasittelytapahtuma         | | HandlingEvent |
+| **Kasittelytapahtuma**         | | **HandlingEvent** |
 | | laji                     | type |
 | | kasittelija              | handler |
-| Vuorovaikutustapahtuma     | | InteractionEvent |
+| **Vuorovaikutustapahtuma**     | | **InteractionEvent** |
 | | laji                     | type
 
 ## Kaavatiedot-paketti
 
 | Luokka                     | Ominaisuus                      | Name                           |
 |----------------------------|---------------------------------|--------------------------------|
-| Kaava | | SpatialPlan
+| **Kaava** | | **SpatialPlan**
 | | laji | type
 | | kaavaTunnus | planIdentifier
 | | elinkaaritila | lifecycleStatus
@@ -84,18 +84,18 @@ Alla on kuvattu KAATIO-hankkeessa tuotetuissa XML-skeemoissa käytetyt Kaavatiet
 | | kaavakohde | planObject
 | | yleissuositus | generalRecommendation
 | | osallistumisJaArviointisuunnitelma | participationAndEvaluationPlan
-| AbstraktiKaavakohde | | AbstractPlanObject
+| **AbstraktiKaavakohde** | | **AbstractPlanObject**
 | | nimi | loc_name
 | | geometria | geometry
 | | pystysuuntainenRajaus | verticalLimit
 | | kaava | spatialPlan
 | | liittyvaKohde | relatedObject
-| AbstraktiTietoyksikko | | AbstractInformationUnit
+| **AbstraktiTietoyksikko** | | **AbstractInformationUnit**
 | | nimi | loc_name
 | | arvo | value
 | | kaava | spatialPlan
 | | kohdistus | target
-| Kaavakohde | | PlanObject
+| **Kaavakohde** | | **PlanObject**
 | | laji | type
 | | sijainninSitovuus | bindingnessOfLocation
 | | liittyvanLahtotietokohteenTunnus | relatedInputDataObjectIdentifier
@@ -103,68 +103,71 @@ Alla on kuvattu KAATIO-hankkeessa tuotetuissa XML-skeemoissa käytetyt Kaavatiet
 | | maanalaisuus | groundRelativePosition
 | | maarays | order
 | | suositus | recommendation
-| Kaavamaarays | | PlanOrder
+| **Kaavamaarays** | | **PlanOrder**
 | | laji | type
 | | elinkaariTila | lifecycleStatus
 | | teema | theme
 | | lisatieto | supplementaryInfo
 | | voimassaoloAika | validityTime
 | | liittyvaAsiakirja | relatedDocument
-| Kaavamaaraysryhma | | PlanOrderGroup
+| **Kaavamaaraysryhma** | | **PlanOrderGroup**
 | | ryhmanumero | groupNumber
 | | jasen | member
-| Kaavasuositus | | PlanRecommendation
+| **Kaavasuositus** | | **PlanRecommendation**
 | | elinkaaritila | lifecycleStatus
 | | teema | theme
 | | voimassaoloAika | validityTime
 | | liittyvaAsiakirja | relatedDocument
-| Kaavayksikko | | PlanUnit
+| **Kaavayksikko** | | **PlanUnit**
 | | kiinteisto | property
-| Muodostajakiinteisto | | FormingProperty
+| **Muodostajakiinteisto** | | **FormingProperty**
 | | kiinteistoTunnus | propertyIdentifier
 | | sisaltyyKokonaan | includedCompletely
 | | sisaltyvaPintaAla | includedArea
-| Lisatieto | | SupplementaryInformation
-| KaavanKumoamistieto | | CancellationInformation
+| **Lisatieto** | | **SupplementaryInformation**
+| | laji | type
+| | nimi | loc_name
+| | arvo | value
+| **KaavanKumoamistieto** | | **CancellationInformation**
 | | kumottavanKaavanTunnus | cancelledPlanIdentifier
 | | kumoaaKaavanKokonaan | cancelsEntirePlan
 | | kumottavaKaavanAlue | areaToCancel
 | | kumottavanMaarayksenTunnus | cancelledPlanOrderIdentifier
 | | kumottavanSuosituksenTunnus | cancelledPlanRecommendationIdentifier
-| KaavanLaatija | | Planner
+| **KaavanLaatija** | | **Planner**
 | | nimi | personName
 | | nimike | professionTitle
 | | rooli | role
-| OsallistumisJaArviointisuunnitelma | | ParticipationAndEvaluationPlan
+| **OsallistumisJaArviointisuunnitelma** | | **ParticipationAndEvaluationPlan**
 | | asiakirja | document 
-| Kaavaselostus | | SpatialPlanCommentary
+| **Kaavaselostus** | | **SpatialPlanCommentary**
 | | asiakirja | document
-| AbstraktiArvo | | AbstractValue |
-| TekstiArvo | | TextValue
+| **AbstraktiArvo** | | **AbstractValue** |
+| **TekstiArvo** | | **TextValue**
 | | arvo | value
 | | syntaksi | syntax
-| TunnusArvo | | IdentifierValue
+| **TunnusArvo** | | **IdentifierValue**
 | | arvo | value
-| | rekisterinTunnus | registryIdentifier
-| | rekisterinNimi | registryName | 
-| Aikavaliarvo | | TimePeriodValue
+| | rekisterinTunnus | systemIdentifier
+| | rekisterinNimi | systemName | 
+| **Aikavaliarvo** | | **TimePeriodValue**
 | | arvo | value
-| Ajanhetkiarvo | | TimeInstantValue
+| **Ajanhetkiarvo** | | **TimeInstantValue**
 | | arvo | value
-| GeometriaArvo | | GeometryValue
+| **GeometriaArvo** | | **GeometryValue**
 | | arvo | value
-| Koodiarvo | | CodeValue
+| **Koodiarvo** | | **CodeValue**
 | | arvo | value
 | | koodistonTunnus | codelistIdentifier
 | | otsikko | label
-| NumeerinenArvo | | NumericValue
+| **NumeerinenArvo** | | **NumericValue**
 | | arvo | value
 | | mittayksikko | unitOfMeasure
-| NumeerinenArvovali | | NumericRange
+| **NumeerinenArvovali** | | **NumericRange**
 | | minimiarvo | minimumValue
 | | maksimiarvo | maximumValue
 | | mittayksikko | unitOfMeasure
-| Korkeuspiste | | ElevationPoint
+| **Korkeuspiste** | | **ElevationPoint**
 | | referenssipiste | referencePoint
-| Korkeusvali | | ElevationRange
+| **Korkeusvali** | | **ElevationRange**
 | | referenssipiste | referencePoint

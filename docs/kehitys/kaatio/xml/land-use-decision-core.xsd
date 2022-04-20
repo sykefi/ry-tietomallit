@@ -2,16 +2,76 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema" 
   xmlns:gml="http://www.opengis.net/gml/3.2" 
   xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" 
-  xmlns:lsp="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki" 
-  xmlns:lud-core="http://tietomallit.ymparisto.fi/mkp-ydin/v1.1" 
+  xmlns:lsp="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" 
+  xmlns:lud-core="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1"
   elementFormDefault="qualified"
-  targetNamespace="http://tietomallit.ymparisto.fi/mkp-ydin/v1.1"
+  targetNamespace="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1"
   version="1.1">
-  <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki" schemaLocation="localization.xsd"/>
+  <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" schemaLocation="localization.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  <!-- Edited and translated by Ilkka Rinne / Spatineo 2022 -->
   
+  <element abstract="true" name="AbstractVersionedObject" substitutionGroup="gml:AbstractFeature" type="lud-core:AbstractVersionedObjectType">
+  <!-- =================================================================================================================================== --> 
+    <annotation>
+      <documentation>AbstraktiVersioituKohde</documentation>
+      <documentation>
+        The following attributes are mapped to GML identifiers:
+          * localIdentifier -> gml:id attribute
+          * referenceIdentifier + namespace -> gml:identifier (use the codeSpace attribute for the namespace)
+        
+        See XML Schema source for an example.
+ 
+        See Kaavatietomalli / Elinkaarisäännöt (https://tietomallit.ymparisto.fi/kaavatiedot/v1.1/looginenmalli/elinkaarisaannot.html#tunnukset-ja-niiden-hallinta) for more information about the use if various identifiers (in Finnish).
+        <!--
+        Example:
+        
+        <SpatialPlan gml:id="640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e">
+          <gml:identifier codeSpace="http://uri.suomi.fi/object/rytj/kaava">SpatialPlan/640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e</gml:identifier>
+          <splan:objectIdenfier>640bff6b-c16a-4947-af8d-d86f89106be1</splan:objectIdentifier>
+          <splan:producerSpecificIdentifier>oma-asemakaava123345</splan:producerSpecificIdentifier>
+           ...
+        </SpatialPlan>
+        -->
+      </documentation>
+    </annotation>
+  </element>
+  <complexType abstract="true" name="AbstractVersionedObjectType">
+    <complexContent>
+      <extension base="gml:AbstractFeatureType">
+        <sequence>
+          <element minOccurs="0" name="objectIdentifier" type="string"/>
+          <element minOccurs="0" name="producerSpecificIdentifier" type="string"/>
+          <element minOccurs="0" name="latestChange" type="gml:TimeInstantPropertyType"/>
+          <element minOccurs="0" name="storageTime" type="gml:TimeInstantPropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="replacesObject" type="lud-core:AbstractVersionedObjectPropertyType">
+            <annotation>
+              <appinfo>
+                <reversePropertyName xmlns="http://www.opengis.net/gml/3.2">lud-core:replacedByObject</reversePropertyName>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="replacedByObject" type="lud-core:AbstractVersionedObjectPropertyType">
+            <annotation>
+              <appinfo>
+                <reversePropertyName xmlns="http://www.opengis.net/gml/3.2">lud-core:replacesObject</reversePropertyName>
+              </appinfo>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AbstractVersionedObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="lud-core:AbstractVersionedObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+
   <element abstract="true" name="AbstractLandUseMatter" substitutionGroup="lud-core:AbstractVersionedObject" type="lud-core:AbstractLandUseMatterType">
   <!-- ============================================================================================================================================ --> 
     <annotation>
@@ -104,47 +164,7 @@
     <attributeGroup ref="gml:OwnershipAttributeGroup"/>
   </complexType>
   
-  <element abstract="true" name="AbstractVersionedObject" substitutionGroup="gml:AbstractFeature" type="lud-core:AbstractVersionedObjectType">
-  <!-- =================================================================================================================================== --> 
-    <annotation>
-      <documentation>Proposed English name: AbstractVersionedObject</documentation>
-    </annotation>
-  </element>
-  <complexType abstract="true" name="AbstractVersionedObjectType">
-    <complexContent>
-      <extension base="gml:AbstractFeatureType">
-        <sequence>
-          <element minOccurs="0" name="versionIdentifier" type="string"/>
-          <element minOccurs="0" name="namespace" type="anyURI"/>
-          <element minOccurs="0" name="objectIdentifier" type="string"/>
-          <element minOccurs="0" name="producerSpecificIdentifier" type="string"/>
-          <element minOccurs="0" name="latestChange" type="gml:TimeInstantPropertyType"/>
-          <element minOccurs="0" name="storageTime" type="gml:TimeInstantPropertyType"/>
-          <element maxOccurs="unbounded" minOccurs="0" name="replacesObject" type="lud-core:AbstractVersionedObjectPropertyType">
-            <annotation>
-              <appinfo>
-                <reversePropertyName xmlns="http://www.opengis.net/gml/3.2">lud-core:replacedByObject</reversePropertyName>
-              </appinfo>
-            </annotation>
-          </element>
-          <element maxOccurs="unbounded" minOccurs="0" name="replacedByObject" type="lud-core:AbstractVersionedObjectPropertyType">
-            <annotation>
-              <appinfo>
-                <reversePropertyName xmlns="http://www.opengis.net/gml/3.2">lud-core:replacesObject</reversePropertyName>
-              </appinfo>
-            </annotation>
-          </element>
-        </sequence>
-      </extension>
-    </complexContent>
-  </complexType>
-  <complexType name="AbstractVersionedObjectPropertyType">
-    <sequence minOccurs="0">
-      <element ref="lud-core:AbstractVersionedObject"/>
-    </sequence>
-    <attributeGroup ref="gml:AssociationAttributeGroup"/>
-    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
-  </complexType>
+  
   
   <element name="Document" substitutionGroup="lud-core:AbstractVersionedObject" type="lud-core:DocumentType">
   <!-- ================================================================================================== --> 

@@ -81,3 +81,5 @@
       moduleId: "ak-yk-tietomallit"
     - type: "module"
       moduleId: "tjs-tietomalli"
+    - type: "module"
+      moduleId: "kaatio"

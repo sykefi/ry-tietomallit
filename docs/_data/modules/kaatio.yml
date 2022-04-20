@@ -1,0 +1,16 @@
+title: "KAATIO-hanke 2021-23"
+basepath: "kehitys/kaatio"
+nav_items:
+  - pageId: "kaatio"
+    title: "Hankkeen kuvaus"
+    path: ""
+    gitHubFile: "index.md"
+    default: true
+  - pageId: "kaannos"
+    title: "Käännökset"
+    path: "kaannos.html"
+    gitHubFile: "kaannos.md"
+  - pageId: "xml-doc"
+    title: "XML-skeema"
+    path: "xml/doc/"
+    gitHubFile: "xml/spatialplan.xsd"
