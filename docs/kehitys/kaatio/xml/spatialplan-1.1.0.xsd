@@ -5,7 +5,7 @@
   xmlns:lsp="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" 
   xmlns:lud-core="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1" 
   xmlns:splan="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.1" 
-  elementFormDefault="qualified" targetNamespace="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.1" version="1.1">
+  elementFormDefault="qualified" targetNamespace="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.1" version="1.1.0">
   <import namespace="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1" schemaLocation="land-use-decision-core.xsd"/>
   <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" schemaLocation="localization.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
