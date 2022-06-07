@@ -1,4 +1,4 @@
-title: "Tonttijakosuunnitelma"
+title: "Sitova tonttijako"
 ownership: "ympäristöministeriö"
 github:
   owner_name: "sykefi"
@@ -20,7 +20,7 @@ versions:
 basepath: "tonttijakosuunnitelma"
 nav_items:
   - pageId: "tonttijakosuunnitelma"
-    title: "Tonttijakosuunnitelma"
+    title: "Sitova tonttijako"
     path: ""
     gitHubFile: "index.md"
     default: true
