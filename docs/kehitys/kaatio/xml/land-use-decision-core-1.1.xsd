@@ -6,13 +6,20 @@
   xmlns:lud-core="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1"
   elementFormDefault="qualified"
   targetNamespace="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1"
-  version="1.1.0">
-  <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" schemaLocation="localization.xsd"/>
+  version="1.1.1">
+  <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" schemaLocation="localization-1.0.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
   <!-- Edited and translated by Ilkka Rinne / Spatineo 2022 -->
-  
+  <!-- 
+    Change history
+    ==============
+
+    1.1.1: Fixed the schemaLocation path of http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0 from localization.xsd -> localization-1.0.xsd
+
+    
+  -->
   <element abstract="true" name="AbstractVersionedObject" substitutionGroup="gml:AbstractFeature" type="lud-core:AbstractVersionedObjectType">
   <!-- =================================================================================================================================== --> 
     <annotation>
@@ -28,9 +35,9 @@
         <!--
         Example:
         
-        <SpatialPlan gml:id="640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e">
-          <gml:identifier codeSpace="http://uri.suomi.fi/object/rytj/kaava">SpatialPlan/640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e</gml:identifier>
-          <splan:objectIdenfier>640bff6b-c16a-4947-af8d-d86f89106be1</splan:objectIdentifier>
+        <SpatialPlan gml:id="id-640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e">
+          <gml:identifier codeSpace="http://uri.suomi.fi/object/rytj/kaava">SpatialPlan/id-640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e</gml:identifier>
+          <splan:objectIdenfier>id-640bff6b-c16a-4947-af8d-d86f89106be1</splan:objectIdentifier>
           <splan:producerSpecificIdentifier>oma-asemakaava123345</splan:producerSpecificIdentifier>
            ...
         </SpatialPlan>
