@@ -19,8 +19,23 @@
     1.2.0:
           * Updated lud-core to version 1.2
           
+          * Removed the optional elements PlanObjectType.order and PlanObjectType.recommendation to break the problematic bidirectional associations 
+              between PlanObjects and PlanOrder/PlanRecommendations. Bidirectional linking of PlanObjects and PlanOrders / PlanRecommendations would 
+              be a problem in practice: It would only be possible to link PlanOrderGroups in one direction (by the PlanOrderGroup.target attribute), so
+              PlanObjects would only contain links to the directly linked PlanOrders.
+              
+              Instead design the APIs to enable fetching PlanOrders, PlanOrderGroups and PlanRecommendations by their "target" attibute value
+              (first fetch PlanObjects, then fetch orders & recommandations on demand using the received PlanObject IDs) or altenatively return
+              orders, groups and recommandations preemptively in the same LandUseFeatureCollection as the PlanObjects they are linked to.
+              
+          * Removed the optional element SpatialPlan.planObject with the same justification as removing the PlanObjectType.order and 
+              PlanObjectType.recommendation: the bidirectional links between SpatialPlan and its PlanObjects are not necessary, the PlanObjects always 
+              have the mandatory link to their SpatialPlan which is enough for fetching the PlanObjects included in a particial SpatialPlan. This also
+              allows for linking any future concrete realizations of AbstractPlanObject to a SpatialPlan.
+          
     1.1.1 / 2.8.2022
           * Fixed the schemaLocation path of http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0 from localization.xsd -> localization-1.0.xsd
+          
           * Fixed the schemaLocation path of http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1 from land-use-decision-core.xsd land-use-decision-core-1.1.xsd
     
   -->
@@ -84,6 +99,7 @@
             </complexType>
           </element>
           <element maxOccurs="unbounded" minOccurs="0" name="planner" type="splan:PlannerPropertyType"/>
+          <!-- 
           <element maxOccurs="unbounded" minOccurs="0" name="planObject">
             <complexType>
               <complexContent>
@@ -96,6 +112,7 @@
               </complexContent>
             </complexType>
           </element>
+           -->
           <element maxOccurs="unbounded" minOccurs="0" name="generalRecommendation">
             <complexType>
               <complexContent>
