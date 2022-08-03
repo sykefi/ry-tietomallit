@@ -6,7 +6,7 @@
   xmlns:lud-core="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.2" 
   xmlns:splan="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.2" 
   elementFormDefault="qualified" targetNamespace="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.2"
-  version="1.2.0s">
+  version="1.2.0">
   <import namespace="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.2" schemaLocation="land-use-decision-core-1.2.xsd"/>
   <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" schemaLocation="localization-1.0.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
@@ -225,8 +225,18 @@
               </appinfo>
             </annotation>
           </element>
+          <!-- Bidirectional linking of PlanObjects and PlanOrders / PlanRecommendations would be a problem in practice:
+              It would only be possible to link PlanOrderGroups in one direction (by the PlanOrderGroup.target attribute), so
+              PlanObjects would only contain links to the directly linked PlanOrders.
+              
+              Instead design the APIs to enable fetching PlanOrders, PlanOrderGroups and PlanRecommendations by their "target" attibute value
+              (first fetch PlanObjects, then fetch orders & recommandations on demand using the received PlanObject IDs) or altenatively return
+              orders, groups and recommandations preemptively in the same LandUseFeatureCollection as the PlanObjects they are linked to.
+          -->
+          <!--
           <element maxOccurs="unbounded" minOccurs="0" name="order" type="splan:PlanOrderPropertyType"/>
           <element maxOccurs="unbounded" minOccurs="0" name="recommendation" type="splan:PlanRecommendationPropertyType"/>
+          -->
         </sequence>
       </extension>
     </complexContent>
