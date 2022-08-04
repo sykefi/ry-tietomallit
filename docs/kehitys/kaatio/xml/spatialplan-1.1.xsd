@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+  xmlns:gml="http://www.opengis.net/gml/3.2" 
+  xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" 
+  xmlns:lsp="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" 
+  xmlns:lud-core="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1" 
+  xmlns:splan="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.1" 
+  elementFormDefault="qualified" targetNamespace="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.1"
+  version="1.1.1">
+  <import namespace="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1" schemaLocation="land-use-decision-core-1.1.xsd"/>
+  <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" schemaLocation="localization-1.0.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
+  <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
+  <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
+  
+  <!-- 
+    Change history
+    ==============
+
+    1.1.1 / 2.8.2022
+    * Fixed the schemaLocation path of http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0 from localization.xsd -> localization-1.0.xsd
+    * Fixed the schemaLocation path of http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.1 from land-use-decision-core.xsd land-use-decision-core-1.1.xsd
+    
+  -->
+
+  <element name="SpatialPlan" substitutionGroup="lud-core:AbstractLandUseMatter" type="splan:SpatialPlanType">
+  <!-- =================================================================================================== -->
+    <annotation>
+      <documentation>Kaava</documentation>
+    </annotation>
+  </element>
+  <complexType name="SpatialPlanType">
+    <complexContent>
+      <extension base="lud-core:AbstractLandUseMatterType">
+        <sequence>
+          <element name="type" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Kaavalaji</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="planIdentifier" type="string">
+            <annotation>
+              <documentation>Kaavatunnuksen arvo on sama kuin Kaava-luokan identiteettitunnuksen arvo</documentation>
+            </annotation>
+          </element>
+          <element name="lifecycleStatus" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">KaavanElinkaaritila</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="cancellationInfo" type="splan:CancellationInformationPropertyType"/>
+          <element minOccurs="0" name="groundRelativePosition" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">MaanalaisuudenLaji</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="initiationTime" type="gml:TimeInstantPropertyType"/>
+          <element minOccurs="0" name="approvalTime" type="gml:TimeInstantPropertyType"/>
+          <element minOccurs="0" name="digitalOrigin" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">DigitaalinenAlkupera</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="generalOrder">
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractFeatureMemberType">
+                  <sequence minOccurs="0">
+                    <element ref="splan:PlanOrder"/>
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="planner" type="splan:PlannerPropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="planObject">
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractFeatureMemberType">
+                  <sequence minOccurs="0">
+                    <element ref="splan:PlanObject"/>
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="generalRecommendation">
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractFeatureMemberType">
+                  <sequence minOccurs="0">
+                    <element ref="splan:PlanRecommendation"/>
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+          <element minOccurs="0" name="participationAndEvalutionPlan" type="splan:ParticipationAndEvaluationPlanPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SpatialPlanPropertyType">
+    <sequence minOccurs="0">
+      <element ref="splan:SpatialPlan"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element abstract="true" name="AbstractPlanObject" substitutionGroup="lud-core:AbstractVersionedObject" type="splan:AbstractPlanObjectType">
+  <!-- =================================================================================================================================== -->
+    <annotation>
+      <documentation>AbstraktiKaavakohde</documentation>
+    </annotation>
+  </element>
+  <complexType abstract="true" name="AbstractPlanObjectType">
+    <complexContent>
+      <extension base="lud-core:AbstractVersionedObjectType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="loc_name" type="lsp:languageStringType"/>
+          <element name="geometry" type="gml:GeometryPropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="verticalLimit" type="splan:ElevationRangePropertyType"/>
+          <element name="spatialPlan" type="gml:ReferenceType">
+            <annotation>
+              <documentation>Link to SpatialPlan</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="relatedObject" type="gml:ReferenceType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AbstractPlanObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="splan:AbstractPlanObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element abstract="true" name="AbstractInformationUnit" substitutionGroup="lud-core:AbstractVersionedObject" type="splan:AbstractInformationUnitType">
+  <!-- ============================================================================================================================================= -->
+    <annotation>
+      <documentation>AbstraktiTietoyksikko</documentation>
+    </annotation>
+  </element>
+  <complexType abstract="true" name="AbstractInformationUnitType">
+    <complexContent>
+      <extension base="lud-core:AbstractVersionedObjectType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="loc_name" type="lsp:languageStringType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="value" type="splan:AbstractValuePropertyType"/>
+          <element name="spatialPlan" type="gml:ReferenceType">
+            <annotation>
+              <documentation>Link to SpatialPlan</documentation>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="target" type="gml:ReferenceType">
+            <annotation>
+              <documentation>Link to AbstractPlanObject</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="AbstractInformationUnitPropertyType">
+    <sequence minOccurs="0">
+      <element ref="splan:AbstractInformationUnit"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element name="PlanObject" substitutionGroup="splan:AbstractPlanObject" type="splan:PlanObjectType">
+  <!-- =========================================================================================== --> 
+    <annotation>
+      <documentation>Proposed English name: PlanObject</documentation>
+    </annotation>
+  </element>
+  <complexType name="PlanObjectType">
+    <complexContent>
+      <extension base="splan:AbstractPlanObjectType">
+        <sequence>
+          <element minOccurs="0" name="type" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AbstraktiKaavakohdeLaji</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="bindingnessOfLocation" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">Sitovuuslaji</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="relatedInputDataObjectIdentifier" type="anyURI"/>
+          <element minOccurs="0" name="environmentalChangeType" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AbstraktiYmparistomuutoksenLaji</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="groundRelativePosition" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">MaanalaisuudenLaji</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="order" type="splan:PlanOrderPropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="recommendation" type="splan:PlanRecommendationPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PlanObjectPropertyType">
+    <sequence minOccurs="0">
+      <element ref="splan:PlanObject"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element name="PlanOrder" substitutionGroup="splan:AbstractInformationUnit" type="splan:PlanOrderType">
+  <!-- ============================================================================================== -->
+    <annotation>
+      <documentation>Proposed English name: PlanRegulation</documentation>
+    </annotation>
+  </element>
+  <complexType name="PlanOrderType">
+    <complexContent>
+      <extension base="splan:AbstractInformationUnitType">
+        <sequence>
+          <element name="type" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AbstraktiKaavamaaraysLaji</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element name="lifecycleStatus" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">KaavanElinkaaritila</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="theme" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AbstraktiKaavoitusteema</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="supplementaryInfo" type="splan:SupplementaryInformationPropertyType"/>
+          <element minOccurs="0" name="validityTime" type="gml:TimePeriodPropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="relatedDocument" type="gml:ReferenceType">
+            <annotation>
+              <documentation>Link to Document</documentation>
+            </annotation>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PlanOrderPropertyType">
+    <sequence minOccurs="0">
+      <element ref="splan:PlanOrder"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element name="PlanOrderGroup" substitutionGroup="splan:AbstractInformationUnit" type="splan:PlanOrderGroupType"/>
+  <!-- ========================================================================================================= -->
+  <complexType name="PlanOrderGroupType">
+    <complexContent>
+      <extension base="splan:AbstractInformationUnitType">
+        <sequence>
+          <element name="groupNumber" type="int"/>
+          <element maxOccurs="unbounded" name="member">
+            <complexType>
+              <complexContent>
+                <extension base="gml:AbstractFeatureMemberType">
+                  <sequence minOccurs="0">
+                    <element ref="splan:AbstractInformationUnit"/>
+                  </sequence>
+                  <attributeGroup ref="gml:AssociationAttributeGroup"/>
+                </extension>
+              </complexContent>
+            </complexType>
+          </element>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PlanOrderGroupPropertyType">
+    <sequence minOccurs="0">
+      <element ref="splan:PlanOrderGroup"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element name="PlanRecommendation" substitutionGroup="splan:AbstractInformationUnit" type="splan:PlanRecommendationType"/>
+  <!-- ================================================================================================================= -->
+  <complexType name="PlanRecommendationType">
+    <complexContent>
+      <extension base="splan:AbstractInformationUnitType">
+        <sequence>
+          <element name="lifecycleStatus" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">KaavanElinkaaritila</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element maxOccurs="unbounded" minOccurs="0" name="theme" type="gml:ReferenceType">
+            <annotation>
+              <appinfo>
+                <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AbstraktiKaavoitusteema</targetCodeList>
+              </appinfo>
+            </annotation>
+          </element>
+          <element minOccurs="0" name="validityTime" type="gml:TimePeriodPropertyType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="relatedDocument" type="lud-core:DocumentPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PlanRecommendationPropertyType">
+    <sequence minOccurs="0">
+      <element ref="splan:PlanRecommendation"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element name="PlanUnit" substitutionGroup="splan:PlanObject" type="splan:PlanUnitType"/>
+  <!-- ================================================================================ -->
+  <complexType name="PlanUnitType">
+    <complexContent>
+      <extension base="splan:PlanObjectType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="property" type="splan:FormingPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PlanUnitPropertyType">
+    <sequence minOccurs="0">
+      <element ref="splan:PlanUnit"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+ 
+  <element name="SupplementaryInformation" substitutionGroup="gml:AbstractObject" type="splan:SupplementaryInformationType">
+  <!-- ================================================================================================================= -->
+    <annotation>
+      <documentation>Lisatieto</documentation>
+    </annotation>
+  </element>
+  <complexType name="SupplementaryInformationType">
+    <sequence>
+      <element name="type" type="gml:ReferenceType">
+        <annotation>
+          <appinfo>
+            <targetCodeList xmlns="http://www.opengis.net/gml/3.3/exr">AbstraktiLisatiedonLaji</targetCodeList>
+          </appinfo>
+        </annotation>
+      </element>
+      <element maxOccurs="unbounded" minOccurs="0" name="loc_name" type="lsp:languageStringType"/>
+      <element maxOccurs="unbounded" minOccurs="0" name="value" type="splan:AbstractValuePropertyType"/>
+    </sequence>
+  </complexType>
+  <complexType name="SupplementaryInformationPropertyType">
+    <sequence>
+      <element ref="splan:SupplementaryInformation"/>
+    </sequence>
+  </complexType>
+  
+  <element name="CancellationInformation" substitutionGroup="gml:AbstractObject" type="splan:CancellationInformationType">
+  <!-- =============================================================================================================== -->
+    <annotation>
+      <documentation>Proposed English name: CancelationInformation</documentation>
+    </annotation>
+  </element>
+  <complexType name="CancellationInformationType">
+    <sequence>
+      <element name="cancelledPlanIdentifier" type="anyURI"/>
+      <element name="cancelsEntirePlan" type="boolean"/>
+      <element minOccurs="0" name="areaToCancel" type="gml:GeometryPropertyType"/>
+      <element maxOccurs="unbounded" minOccurs="0" name="cancelledPlanOrderIdentifier" type="anyURI"/>
+      <element maxOccurs="unbounded" minOccurs="0" name="cancelledPlanRecommendationIdentifier" type="anyURI"/>
+    </sequence>
+  </complexType>
+  <complexType name="CancellationInformationPropertyType">
+    <sequence>
+      <element ref="splan:CancellationInformation"/>
+    </sequence>
+  </complexType>
+  
+  <element name="Planner" substitutionGroup="lud-core:AbstractVersionedObject" type="splan:PlannerType">
+  <!-- ============================================================================================= -->
+    <annotation>
+      <documentation>KaavanLaatija</documentation>
+    </annotation>
+  </element>
+  <complexType name="PlannerType">
+    <complexContent>
+      <extension base="lud-core:AbstractVersionedObjectType">
+        <sequence>
+          <element name="personName" type="string"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="professionTitle" type="lsp:languageStringType"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="role" type="lsp:languageStringType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="PlannerPropertyType">
+    <sequence minOccurs="0">
+      <element ref="splan:Planner"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element name="FormingProperty" substitutionGroup="gml:AbstractObject" type="splan:FormingPropertyType">
+  <!-- =============================================================================================== --> 
+    <annotation>
+      <documentation>Muodostajakiinteisto</documentation>
+    </annotation>
+  </element>
+  <complexType name="FormingPropertyType">
+    <sequence>
+      <element name="propertyIdentifier" type="string"/>
+      <element name="includedCompletely" type="boolean"/>
+      <element minOccurs="0" name="includedArea" type="gml:MeasureType"/>
+    </sequence>
+  </complexType>
+  <complexType name="FormingPropertyPropertyType">
+    <sequence>
+      <element ref="splan:FormingProperty"/>
+    </sequence>
+  </complexType>
+  
+  <element name="ParticipationAndEvaluationPlan" substitutionGroup="lud-core:AbstractVersionedObject" type="splan:ParticipationAndEvaluationPlanType">
+  <!-- =========================================================================================================================================== --> 
+    <annotation>
+      <documentation>OsallistumisJaArviointisuunnitelma</documentation>
+    </annotation>
+  </element>
+  <complexType name="ParticipationAndEvaluationPlanType">
+    <complexContent>
+      <extension base="lud-core:AbstractVersionedObjectType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="document" type="lud-core:DocumentPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ParticipationAndEvaluationPlanPropertyType">
+    <sequence minOccurs="0">
+      <element ref="splan:ParticipationAndEvaluationPlan"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element name="SpatialPlanCommentary" substitutionGroup="lud-core:AbstractVersionedObject" type="splan:SpatialPlanCommentaryType">
+  <!-- ========================================================================================================================= --> 
+    <annotation>
+      <documentation>Kaavaselostus</documentation>
+    </annotation>
+  </element>
+  <complexType name="SpatialPlanCommentaryType">
+    <complexContent>
+      <extension base="lud-core:AbstractVersionedObjectType">
+        <sequence>
+          <element maxOccurs="unbounded" minOccurs="0" name="document" type="lud-core:DocumentPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="SpatialPlanCommentaryPropertyType">
+    <sequence minOccurs="0">
+      <element ref="splan:SpatialPlanCommentary"/>
+    </sequence>
+    <attributeGroup ref="gml:AssociationAttributeGroup"/>
+    <attributeGroup ref="gml:OwnershipAttributeGroup"/>
+  </complexType>
+  
+  <element abstract="true" name="AbstractValue" substitutionGroup="gml:AbstractObject" type="splan:AbstractValueType">
+  <!-- =========================================================================================================== --> 
+    <annotation>
+      <documentation>AbstraktiArvo</documentation>
+    </annotation>
+  </element>
+  <complexType abstract="true" name="AbstractValueType">
+    <sequence/>
+  </complexType>
+  <complexType name="AbstractValuePropertyType">
+    <sequence>
+      <element ref="splan:AbstractValue"/>
+    </sequence>
+  </complexType>
+  
+  <element name="TextValue" substitutionGroup="splan:AbstractValue" type="splan:TextValueType">
+  <!-- ==================================================================================== --> 
+    <annotation>
+      <documentation>Tekstiarvo</documentation>
+    </annotation>
+  </element>
+  <complexType name="TextValueType">
+    <complexContent>
+      <extension base="splan:AbstractValueType">
+        <sequence>
+          <element maxOccurs="unbounded" name="value" type="lsp:languageStringType"/>
+          <element minOccurs="0" name="syntax" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TextValuePropertyType">
+    <sequence>
+      <element ref="splan:TextValue"/>
+    </sequence>
+  </complexType>
+  
+  <element name="IdentifierValue" substitutionGroup="splan:AbstractValue" type="splan:IdentifierValueType">
+  <!-- ================================================================================================ --> 
+    <annotation>
+      <documentation>Tunnusarvo</documentation>
+    </annotation>
+  </element>
+  <complexType name="IdentifierValueType">
+    <complexContent>
+      <extension base="splan:AbstractValueType">
+        <sequence>
+          <element name="value" type="anyURI"/>
+          <element minOccurs="0" name="systemIdentifier" type="anyURI"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="systemName" type="lsp:languageStringType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="IdentifierValuePropertyType">
+    <sequence>
+      <element ref="splan:IdentifierValue"/>
+    </sequence>
+  </complexType>
+  
+  <element name="TimePeriodValue" substitutionGroup="splan:AbstractValue" type="splan:TimePeriodValueType">
+  <!-- ================================================================================================ --> 
+    <annotation>
+      <documentation>Aikavaliarvo</documentation>
+    </annotation>
+  </element>
+  <complexType name="TimePeriodValueType">
+    <complexContent>
+      <extension base="splan:AbstractValueType">
+        <sequence>
+          <element name="value" type="gml:TimePeriodPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TimePeriodValuePropertyType">
+    <sequence>
+      <element ref="splan:TimePeriodValue"/>
+    </sequence>
+  </complexType>
+  
+  <element name="TimeInstantValue" substitutionGroup="splan:AbstractValue" type="splan:TimeInstantValueType">
+  <!-- ================================================================================================== --> 
+    <annotation>
+      <documentation>Ajanhetkiarvo</documentation>
+    </annotation>
+  </element>
+  <complexType name="TimeInstantValueType">
+    <complexContent>
+      <extension base="splan:AbstractValueType">
+        <sequence>
+          <element name="value" type="gml:TimeInstantPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="TimeInstantValuePropertyType">
+    <sequence>
+      <element ref="splan:TimeInstantValue"/>
+    </sequence>
+  </complexType>
+  
+  <element name="GeometryValue" substitutionGroup="splan:AbstractValue" type="splan:GeometryValueType">
+  <!-- ============================================================================================ --> 
+    <annotation>
+      <documentation>GeometriaArvo</documentation>
+    </annotation>
+  </element>
+  <complexType name="GeometryValueType">
+    <complexContent>
+      <extension base="splan:AbstractValueType">
+        <sequence>
+          <element name="value" type="gml:GeometryPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="GeometryValuePropertyType">
+    <sequence>
+      <element ref="splan:GeometryValue"/>
+    </sequence>
+  </complexType>
+  
+  <element name="CodeValue" substitutionGroup="splan:AbstractValue" type="splan:CodeValueType">
+  <!-- ==================================================================================== --> 
+    <annotation>
+      <documentation>Koodiarvo</documentation>
+    </annotation>
+  </element>
+  <complexType name="CodeValueType">
+    <complexContent>
+      <extension base="splan:AbstractValueType">
+        <sequence>
+          <element name="value" type="anyURI"/>
+          <element minOccurs="0" name="codelistIdentifier" type="anyURI"/>
+          <element maxOccurs="unbounded" minOccurs="0" name="label" type="lsp:languageStringType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="CodeValuePropertyType">
+    <sequence>
+      <element ref="splan:CodeValue"/>
+    </sequence>
+  </complexType>
+  
+  <element name="NumericValue" substitutionGroup="splan:AbstractValue" type="splan:NumericValueType">
+  <!-- ========================================================================================== --> 
+    <annotation>
+      <documentation>NumeerinenArvo</documentation>
+    </annotation>
+  </element>
+  <complexType name="NumericValueType">
+    <complexContent>
+      <extension base="splan:AbstractValueType">
+        <sequence>
+          <element name="value" type="double"/>
+          <element minOccurs="0" name="unitOfMeasure" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NumericValuePropertyType">
+    <sequence>
+      <element ref="splan:NumericValue"/>
+    </sequence>
+  </complexType>
+  
+  <element name="NumericRange" substitutionGroup="splan:AbstractValue" type="splan:NumericRangeType">
+  <!-- ========================================================================================== --> 
+    <annotation>
+      <documentation>NumeerinenArvovali</documentation>
+    </annotation>
+  </element>
+  <complexType name="NumericRangeType">
+    <complexContent>
+      <extension base="splan:AbstractValueType">
+        <sequence>
+          <element minOccurs="0" name="minimumValue" type="double"/>
+          <element minOccurs="0" name="maximumValue" type="double"/>
+          <element minOccurs="0" name="unitOfMeasure" type="string"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="NumericRangePropertyType">
+    <sequence>
+      <element ref="splan:NumericRange"/>
+    </sequence>
+  </complexType>
+  
+  <element name="ElevationPoint" substitutionGroup="splan:NumericValue" type="splan:ElevationPointType">
+  <!-- ============================================================================================= --> 
+    <annotation>
+      <documentation>Korkeuspiste</documentation>
+    </annotation>
+  </element>
+  <complexType name="ElevationPointType">
+    <complexContent>
+      <extension base="splan:NumericValueType">
+        <sequence>
+          <element minOccurs="0" name="referencePoint" type="gml:PointPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElevationPointPropertyType">
+    <sequence>
+      <element ref="splan:ElevationPoint"/>
+    </sequence>
+  </complexType>
+  
+  <element name="ElevationRange" substitutionGroup="splan:NumericRange" type="splan:ElevationRangeType">
+  <!-- ============================================================================================= --> 
+    <annotation>
+      <documentation>Korkeusvali</documentation>
+    </annotation>
+  </element>
+  <complexType name="ElevationRangeType">
+    <complexContent>
+      <extension base="splan:NumericRangeType">
+        <sequence>
+          <element minOccurs="0" name="referencePoint" type="gml:PointPropertyType"/>
+        </sequence>
+      </extension>
+    </complexContent>
+  </complexType>
+  <complexType name="ElevationRangePropertyType">
+    <sequence>
+      <element ref="splan:ElevationRange"/>
+    </sequence>
+  </complexType>
+  
+</schema>
