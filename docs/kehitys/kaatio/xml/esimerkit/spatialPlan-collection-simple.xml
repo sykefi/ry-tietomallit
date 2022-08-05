@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lud-core:LandUseFeatureCollection 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:gmlexr="http://www.opengis.net/gml/3.3/exr" 
+    xmlns:lsp="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0"
+    xmlns:lud-core="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.2"
+    xmlns:splan="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.2"
+    xsi:schemaLocation="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.2 https://tietomallit.ymparisto.fi/kehitys/kaatio/xml/spatialplan-1.2.xsd"
+    gml:id="KAAVA-kaava-sipoo-nevasgard-upload">
+    <lud-core:featureMember>
+        <splan:SpatialPlan gml:id="KAAVA-kaava-sipoo-nevasgard">
+            <lud-core:producerSpecificIdentifier>AK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.0</lud-core:producerSpecificIdentifier>
+            <lud-core:loc_name xml:lang="fin">Asemakaava NE 1 Nevas gård</lud-core:loc_name>
+            <lud-core:loc_name xml:lang="swe">Detaljplan NE 1 Nevas gård</lud-core:loc_name>
+            <lud-core:loc_description xml:lang="fin">Nevas Gård asemakaavahanke pohjautuu kunnan ja maanomistajien aloitteeseen.
+                Kaavan tavoitteena on mahdollistaa uuden korkeatasoisen matkailupalvelujen aluekokonaisuuden rakentaminen kylpylähotelleineen
+                ja vapaa-ajan palveluineen sekä osoittaa aluevarauksia lomarakentamiselle ja nykyisten golf-toimintojen laajentamiselle ja kehittämiselle.
+                
+                Kunnan tavoitteena on edistää alueen elinkeinotoimintaa sekä muodostaa alueelle laadukasta ja hyvää ympäristöä.</lud-core:loc_description>
+            <lud-core:loc_description xml:lang="swe">Nevas Gårds detaljplaneprojekt grundar sig på kommunens och markägarnas initiativ.
+                Markägarnas syfte är att utveckla området till en högklassig fritidsby i närheten av välmående- och fritidstjänster samt anvisa
+                områdesreserveringar för semesterbyggande och för utvidgning och utveckling av befintliga golffunktioner.
+                
+                Kommunens syfte är att främja områdets näringsverksam­het samt att skapa en högklassig miljö i området.</lud-core:loc_description>
+            <lud-core:boundary>
+                <gml:Polygon srsName="urn:ogc:def:crs:EPSG::4326"
+                    gml:id="AK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.geom.0">
+                    <gml:exterior>
+                        <gml:LinearRing>
+                            <gml:posList>60.2866968 25.4092981 60.2865559 25.4093685 60.2864689
+                                25.4093936 60.2863735 25.4093942 60.2862826 25.4093922 60.2862374
+                                25.4093911 60.2861781 25.4093733 60.2860769 25.409343 60.2859371
+                                25.4093103 60.2857582 25.409354 60.2856942 25.4094483 60.2856309
+                                25.4095973 60.2855256 25.4098999 60.2855014 25.409915 60.2854155
+                                25.4099685 60.2854449 25.4101158 60.2854484 25.4103279 60.2854299
+                                25.4105728 60.2854007 25.4108465 60.285365 25.4109795 60.2853174
+                                25.4110609 60.2852489 25.4111387 60.2850926 25.4112702 60.2849461
+                                25.4113674 60.2848395 25.4114537 60.2848164 25.4114724 60.2847049
+                                25.4115668 60.2846042 25.411614 60.2845067 25.4116213 60.2843631
+                                25.4116319 60.2841704 25.4116633 60.2840024 25.4116995 60.2838686
+                                25.4117568 60.2837137 25.4118642 60.2836106 25.4120046 60.2835433
+                                25.4121605 60.2834778 25.4123046 60.2834423 25.4123248 60.2833853
+                                25.4122971 60.2833265 25.412247 60.2832509 25.4121329 60.2831986
+                                25.4120367 60.2831298 25.4121547 60.2829666 25.4124345 60.2825397
+                                25.4131661 60.2818868 25.4130926 60.2810697 25.4130322 60.2803989
+                                25.4118827 60.2778561 25.4156642 60.2795379 25.4166939 60.278871
+                                25.4176281 60.2797966 25.4200067 60.2802414 25.4193142 60.2810642
+                                25.416536 60.2821763 25.4157578 60.2821655 25.4160493 60.2820659
+                                25.4187271 60.2810494 25.4226717 60.2809514 25.4255494 60.2835
+                                25.4257289 60.2847687 25.4278922 60.2850435 25.4283609 60.2857146
+                                25.4295051 60.2858259 25.429695 60.2857977 25.4305406 60.2857934
+                                25.4306698 60.2857345 25.4324358 60.2856502 25.4349613 60.2856091
+                                25.4361919 60.2866171 25.4372453 60.2869202 25.4362797 60.2869632
+                                25.4363146 60.2871424 25.4364603 60.2874598 25.4367187 60.2876158
+                                25.4368456 60.2881376 25.4372701 60.2881998 25.4373205 60.2893551
+                                25.4382607 60.2893745 25.4379297 60.2892589 25.4369713 60.2895089
+                                25.4356582 60.2896778 25.4347516 60.2896995 25.4339951 60.2897873
+                                25.4332463 60.2899921 25.43242 60.290011 25.4323378 60.2900549
+                                25.4318136 60.2901104 25.431 60.2901965 25.4308067 60.2901229
+                                25.4306944 60.2894865 25.4297048 60.2895544 25.4292472 60.2884814
+                                25.4264566 60.2881795 25.424426 60.2900339 25.4217699 60.2901026
+                                25.4202517 60.2896864 25.4188832 60.289296 25.4172214 60.288613
+                                25.4168411 60.2878446 25.418474 60.2878372 25.419704 60.288116
+                                25.4207199 60.2872664 25.4218451 60.2865849 25.4219063 60.2857938
+                                25.4219771 60.2849426 25.4199124 60.2848861 25.4197735 60.2843295
+                                25.4184049 60.2839358 25.417447 60.2834463 25.4182171 60.2830292
+                                25.4173861 60.283557 25.4160113 60.2841479 25.4144721 60.2845679
+                                25.4154124 60.2846525 25.4151374 60.2846789 25.4150566 60.2847388
+                                25.4148733 60.2847759 25.4147594 60.286232 25.4151643 60.2861711
+                                25.4137086 60.285878 25.4141872 60.2855957 25.4143652 60.2852058
+                                25.4143648 60.2846972 25.4137835 60.2847059 25.4133147 60.2849014
+                                25.412602 60.2851705 25.4123426 60.2855606 25.412775 60.2858471
+                                25.4125678 60.2856334 25.4118205 60.2856421 25.4113611 60.2857203
+                                25.4112941 60.2857956 25.4114323 60.2859118 25.4114632 60.2861313
+                                25.4110963 60.2861981 25.4109406 60.2862464 25.4108334 60.2862699
+                                25.4107788 60.2862808 25.4107501 60.2862823 25.4107455 60.2862922
+                                25.4107152 60.2863012 25.4106841 60.2863094 25.4106518 60.2863169
+                                25.410619 60.2863238 25.4105856 60.286354 25.4104154 60.2863558
+                                25.4104054 60.2863807 25.4102698 60.286386 25.4102352 60.2863907
+                                25.4102003 60.2863945 25.4101651 60.2863975 25.4101294 60.2863984
+                                25.4101147 60.286403 25.4100069 60.2864054 25.4099709 60.2864091
+                                25.4099355 60.2864146 25.4099011 60.2864234 25.4098641 60.2864333
+                                25.4098342 60.286445 25.4098067 60.2864585 25.4097829 60.2864612
+                                25.4097787 60.2864762 25.4097592 60.2864924 25.4097437 60.2865092
+                                25.4097311 60.2865435 25.4097096 60.2866264 25.4096631 60.2866853
+                                25.4095811 60.2866968 25.4092981</gml:posList>
+                        </gml:LinearRing>
+                    </gml:exterior>
+                </gml:Polygon>
+            </lud-core:boundary>
+            <lud-core:legalEffectiveness xlink:href="http://uri.suomi.fi/codelist/rytj/RY_OikeusvaikutteisuudenLaji/code/01" xlink:title="Oikeusvaikutteinen"/>
+            <lud-core:validityTime>
+                <gml:TimePeriod gml:id="tp-1">
+                    <gml:beginPosition>2016-08-18</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown" />
+                </gml:TimePeriod>
+            </lud-core:validityTime>
+            <!-- TODO: vastuullinen organisaatio, linkki Sipoon kunnan pysyvään URI-tunnukseen-->
+            <lud-core:responsibleOrganisation />
+            
+            <lud-core:annex></lud-core:annex>
+            <lud-core:usedInputDataset/>
+            
+            <!-- TODO: hallinollinen alue linkki Sipoon kunnan hallintoalueen URI-tunnukseen-->
+            <lud-core:administrativeArea />
+            
+            <splan:type xlink:href="http://uri.suomi.fi/codelist/rytj/RY_Kaavalaji/code/3" xlink:title="Asemakaava"/>
+            
+            <!-- TODO: mitä muotoa kaavatunnus on? UUID vai joku muu? -->
+            <splan:planIdentifier>753/ne-1</splan:planIdentifier>
+            
+            <splan:lifecycleStatus xlink:href="http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaaritila/code/10" xlink:title="Voimassa"/>
+            <splan:groundRelativePosition  xlink:href="http://uri.suomi.fi/codelist/rytj/RY_MaanalaisuudenLaji/code/01" xlink:title="Maanpäällinen"/>
+            <splan:initiationTime>
+                <gml:TimeInstant gml:id="ti-1">
+                    <gml:timePosition>2013-01-30</gml:timePosition>
+                </gml:TimeInstant>
+            </splan:initiationTime>
+            <splan:approvalTime>
+                <gml:TimeInstant gml:id="t1-2">
+                    <gml:timePosition>2016-08-18</gml:timePosition>
+                </gml:TimeInstant>
+            </splan:approvalTime>
+            <splan:digitalOrigin xlink:href="http://uri.suomi.fi/codelist/rytj/RY_DigitaalinenAlkupera/code/01" xlink:title="Tietomallin mukaan laadittu"/>
+            
+            <!-- Kaikki feature-assosiaatiot viittauksina, joko 
+                * paikallisiin GML-ID-kenttiin (#id, tallennuspalveluun lähetettäessä) tai
+                * kokonaisina, pysyvinä HTTP URI -tunnuksina (tallenuspalvelusta palautettaessa) -->
+            
+            <splan:generalOrder xlink:href="#KAAVA-kaava-sipoo-nevasgard-MAARAYS-1" />
+            <splan:planner xlink:href="#planner-mka" />
+            <splan:participationAndEvalutionPlan xlink:href="#KAAVA-kaava-sipoo-nevasgard-OAS" />
+            
+        </splan:SpatialPlan>
+    </lud-core:featureMember>
+    <lud-core:featureMember>
+        <splan:PlanObject gml:id="KAAVAKOHDE-AJO-12">
+            <lud-core:producerSpecificIdentifier>AK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.7</lud-core:producerSpecificIdentifier>
+            <splan:geometry>
+                <gml:Polygon srsName="urn:ogc:def:crs:EPSG::4326"
+                    gml:id="AK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.geom.7">
+                    <gml:exterior>
+                        <gml:LinearRing>
+                            <gml:posList>60.2893418 25.430357 60.2894259 25.4304633 60.2894444
+                                25.4303376 60.2895416 25.4298993 60.2895686 25.4298493 60.2894865
+                                25.4297044 60.2893418 25.430357</gml:posList>
+                        </gml:LinearRing>
+                    </gml:exterior>
+                </gml:Polygon>
+            </splan:geometry>
+            <splan:spatialPlan xlink:href="#KAAVA-kaava-sipoo-nevasgard"/>
+            <splan:bindingnessOfLocation xlink:href="http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02" xlink:title="Ohjeellinen"/>
+        </splan:PlanObject>
+    </lud-core:featureMember>
+    <lud-core:featureMember>
+        <splan:PlanOrder gml:id="KAAVAKOHDE-AJO-12-MAARAYS-1">
+            <lud-core:producerSpecificIdentifier>AK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.6</lud-core:producerSpecificIdentifier>
+            <splan:spatialPlan xlink:href="#KAAVA-kaava-sipoo-nevasgard" />
+            <splan:target xlink:href="#KAAVAKOHDE-AJO-12" />
+            <splan:type xlink:href="http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/020302" xlink:title="Ajoyhteys"/>
+            <splan:lifecycleStatus xlink:href="http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaaritila/code/10" xlink:title="Voimassa"/>
+            <splan:theme xlink:href="http://uri.suomi.fi/codelist/rytj/RY_Kaavoitusteema_AK/code/06" xlink:title="Kadut"/>
+            <splan:theme xlink:href="http://uri.suomi.fi/codelist/rytj/RY_Kaavoitusteema_AK/code/08" xlink:title="Liikenneverkko"/>
+            <splan:validityTime>
+                <gml:TimePeriod gml:id="tp-2">
+                    <gml:beginPosition>2016-08-18</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown" />
+                </gml:TimePeriod>
+            </splan:validityTime>
+        </splan:PlanOrder>
+    </lud-core:featureMember>
+    <lud-core:featureMember>
+        <splan:PlanOrder gml:id="KAAVA-kaava-sipoo-nevasgard-MAARAYS-1">
+            <lud-core:producerSpecificIdentifier>AK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.1</lud-core:producerSpecificIdentifier>
+            <splan:loc_name></splan:loc_name>
+            <splan:value>
+                <splan:TextValue>
+                    <splan:value xml:lang="fin">Korttelialueittain ja rakennusryhmittäin tulee rakennusten muodostaa massoiltaan, julkisivuiltaan, katto- muodoiltaan, materiaaleiltaan ja väreiltään sopusuhtainen yhtenäinen kokonaisuus.</splan:value>
+                    <splan:value xml:lang="swe">Byggnaderna i kvartersområdena och byggnadsgrupperna bör vara enhetliga vad gäller massa, fasad, takformer, material och färgsättning.</splan:value>
+                </splan:TextValue>
+            </splan:value>
+            <splan:spatialPlan xlink:href="#KAAVA-kaava-sipoo-nevasgard" />
+            <splan:type xlink:href="http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1101" xlink:title="Yleismääräys"/>
+            <splan:lifecycleStatus xlink:href="http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaaritila/code/10" xlink:title="Voimassa"/>
+            <splan:validityTime>
+                <gml:TimePeriod gml:id="tp-3">
+                    <gml:beginPosition>2016-08-18</gml:beginPosition>
+                    <gml:endPosition indeterminatePosition="unknown" />
+                </gml:TimePeriod>
+            </splan:validityTime>
+        </splan:PlanOrder>
+    </lud-core:featureMember>
+    
+    <!-- Esim. tähän väliin kaikki muut kaavakohteet, määärykset, suositukset ja määräysryhmät -->
+    
+    <lud-core:featureMember>
+        <splan:ParticipationAndEvaluationPlan gml:id="KAAVA-kaava-sipoo-nevasgard-OAS">
+            <lud-core:producerSpecificIdentifier>nAK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.2</lud-core:producerSpecificIdentifier>
+            <splan:document>
+                <lud-core:Document gml:id="d-1">
+                    <lud-core:loc_name xml:lang="fin">NE 1 Nevas gård
+                        Asemakaavan selostus, ehdotus</lud-core:loc_name>
+                    <lud-core:loc_name xml:lang="swe">NE 1 Nevas gård
+                        Detaljplanebeskrivning, förslag</lud-core:loc_name>
+                    <lud-core:type xlink:href="http://uri.suomi.fi/codelist/rytj/RY_AsiakirjanLaji_YKAK/code/05"/>
+                    <lud-core:additionalInformationLink>https://www.sipoo.fi/wp-content/uploads/2020/12/NE-1-sel-lv.pdf</lud-core:additionalInformationLink>
+                </lud-core:Document>
+            </splan:document>
+        </splan:ParticipationAndEvaluationPlan>
+    </lud-core:featureMember>
+    <lud-core:featureMember>
+        <splan:Planner gml:id="planner-mka">
+            <lud-core:producerSpecificIdentifier>MKa</lud-core:producerSpecificIdentifier>
+            <splan:personName>Matti Kanerva</splan:personName>
+            <splan:professionTitle>arkkitehti SAFA</splan:professionTitle>
+            <splan:role>Kaavan laatija</splan:role>
+        </splan:Planner>
+    </lud-core:featureMember>
+</lud-core:LandUseFeatureCollection> 
