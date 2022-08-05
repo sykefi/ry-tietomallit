@@ -6,8 +6,8 @@
   xmlns:lud-core="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.2"
   elementFormDefault="qualified"
   targetNamespace="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.2"
-  version="1.2.0">
-  <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" schemaLocation="localization-1.0.xsd"/>
+  version="1.2.1">
+  <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" schemaLocation="https://tietomallit.ymparisto.fi/kehitys/kaatio/xml/localization-1.0.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
@@ -15,6 +15,9 @@
   <!-- 
     Change history
     ==============
+    1.2.1:
+          * fixed substitutionGroup of LandUseFeatureCollection from gml:AbstractGML to gml:AbstractFeature (as required by GML 3.2 Standard)
+          * now uses absolute URL for importing localization schema
     1.2.0:
           * Added new LandUseFeatureCollection container type and element.
 
@@ -25,7 +28,7 @@
     
   -->
   
-  <element name="LandUseFeatureCollection" type="lud-core:LandUseFeatureCollectionType" substitutionGroup="gml:AbstractGML">
+  <element name="LandUseFeatureCollection" type="lud-core:LandUseFeatureCollectionType" substitutionGroup="gml:AbstractFeature">
     <annotation>
       <documentation>
         A generic FeatureCollection to be used as a container for related Land Use features
