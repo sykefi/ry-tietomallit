@@ -6,9 +6,9 @@
   xmlns:lud-core="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.2" 
   xmlns:splan="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.2" 
   elementFormDefault="qualified" targetNamespace="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.2"
-  version="1.2.0">
-  <import namespace="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.2" schemaLocation="land-use-decision-core-1.2.xsd"/>
-  <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" schemaLocation="localization-1.0.xsd"/>
+  version="1.2.1">
+  <import namespace="http://tietomallit.ymparisto.fi/mkp-ydin/xml/1.2" schemaLocation="https://tietomallit.ymparisto.fi/kehitys/kaatio/xml/land-use-decision-core-1.2.xsd"/>
+  <import namespace="http://tietomallit.ymparisto.fi/ry-yhteiset/kielituki/xml/1.0" schemaLocation="https://tietomallit.ymparisto.fi/kehitys/kaatio/xml/localization-1.0.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.2" schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
   <import namespace="http://www.opengis.net/gml/3.3/exr" schemaLocation="http://schemas.opengis.net/gml/3.3/extdEncRule.xsd"/>
   <!--XML Schema document created by ShapeChange - http://shapechange.net/-->
@@ -16,6 +16,10 @@
   <!-- 
     Change history
     ==============
+    1.2.1:
+          * Removed PlanObject.type element, does not have any defined codelist in the model, so cannot be used in practice.
+          * now uses absolute URL for importing localization and lud-core schemas
+          
     1.2.0:
           * Updated lud-core to version 1.2
           
@@ -213,6 +217,7 @@
     <complexContent>
       <extension base="splan:AbstractPlanObjectType">
         <sequence>
+          <!--
           <element minOccurs="0" name="type" type="gml:ReferenceType">
             <annotation>
               <appinfo>
@@ -220,6 +225,7 @@
               </appinfo>
             </annotation>
           </element>
+          -->
           <element minOccurs="0" name="bindingnessOfLocation" type="gml:ReferenceType">
             <annotation>
               <appinfo>
