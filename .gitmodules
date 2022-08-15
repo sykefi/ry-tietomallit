@@ -41,3 +41,7 @@
 	path = docs/tonttijakosuunnitelma/dev
 	url = https://github.com/sykefi/Tonttijakosuunnitelman-tietomalli.git
 	branch = develop
+[submodule "docs/tonttijakosuunnitelma/v1.1"]
+	path = docs/tonttijakosuunnitelma/v1.1
+	url = https://github.com/sykefi/Tonttijakosuunnitelman-tietomalli.git
+	branch = branch-1.1
