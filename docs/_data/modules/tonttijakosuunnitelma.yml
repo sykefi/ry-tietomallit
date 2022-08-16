@@ -10,6 +10,7 @@ versions:
   - id: "v1.1"
     title: "Sitovan tonttijaon tietomalli -projektin lopputulos"
     path: "v1.1"
+    default: true
   - id: "dev"
     title: "Seuraava kehitysversio"
     path: "dev"
