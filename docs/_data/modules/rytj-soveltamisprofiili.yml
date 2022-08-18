@@ -1,0 +1,31 @@
+title: "RYTJ-soveltamisprofiili"
+ownership: "ympäristöministeriö"
+github:
+  owner_name: "sykefi"
+  repository_name: "rytj-soveltamisprofiili"
+versions:
+  - id: "dev"
+    title: "RYTJ-vaatimusmäärittelyn tuottama kehitysversio"
+    path: "dev"
+    development: true
+    default: true
+    git-branch: "develop"
+basepath: "rytj-soveltamisprofiili"
+nav_items:
+  - pageId: "rytj-soveltamisprofiili"
+    title: "Johdanto"
+    path: ""
+    gitHubFile: "index.md"
+    default: true
+  - groupId: "looginenmalli"
+    title: "Looginen tietomalli"
+    nav_items:
+      - pageId: "uml-doc"
+        title: "UML-kaaviot"
+        path: "uml/doc/"
+         # tiedostona XMI, jotta muutosmetatiedot päivittyvät
+        gitHubFile: "uml/rytj-soveltamisprofiili.xml"
+  - pageId: "muutosloki"
+    title: "Muutosloki"
+    path: "muutosloki.html"
+    gitHubFile: "muutosloki.md"
