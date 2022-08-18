@@ -5,6 +5,8 @@
     moduleId: "ylaontologia"
   - type: "module"
     moduleId: "yhteisetkomponentit"
+  - type: "module"
+    moduleId: "rytj-soveltamisprofiili"
 - groupId: "alueidenkaytto"
   title: "Alueidenkäytön suunnittelu"
   nav_items:
