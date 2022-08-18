@@ -49,3 +49,7 @@
 	path = docs/rytj-soveltamisprofiili/dev
 	url = https://github.com/sykefi/rytj-soveltamisprofiili.git
 	branch = develop
+[submodule "docs/rakennusjarjestys/dev"]
+	path = docs/rakennusjarjestys/dev
+	url = https://github.com/Kuntaliitto/rakennusjarjestys.git
+	branch = develop
