@@ -28,7 +28,8 @@ Sivulle voidaan linkittää mitä tahansa julkisia git-repoja, ja GitHub Pages -
 | Tonttijakosuunnitelma      | dev    | [docs/tonttijakosuunnitelma/](../../tree/main/docs/tonttijakosuunnitelma/)dev | [github.com/sykefi/Tonttijakosuunnitelman-tietomalli](https://github.com/sykefi/Tonttijakosuunnitelman-tietomalli) | develop |  |
 | Rakennuskohteet    | dev    | [docs/rakennuskohteet/](../../tree/main/docs/rakennuskohteet/)dev | [github.com/sykefi/rakennuskohteet](https://github.com/sykefi/rakennuskohteet) | develop |  |
 | Rakentamista koskevat lupapäätökset    | dev    | [docs/rakentamisenluvat/](../../tree/main/docs/rakentamisenluvat/)dev | [github.com/sykefi/rakentamisenluvat](https://github.com/sykefi/rakentamisenluvat) | develop |  |
-| Yhteiset Sisältömakrot | | [docs/_includes/](../../tree/main/docs/_includes/)common | [github.com/sykefi/rytm-jekyll-includes](https://github.com/sykefi/rytm-jekyll-includes) | main | 
+| Yhteiset Sisältömakrot | | [docs/_includes/](../../tree/main/docs/_includes/)common | [github.com/sykefi/rytm-jekyll-includes](https://github.com/sykefi/rytm-jekyll-includes) | main |
+| Rakennusjärjestys      | dev    | [docs/rakennusjarjestys/](../../tree/main/docs/rakennusjarjestys/)dev | [github.com/Kuntaliitto/rakennusjarjestys](https://github.com/Kuntaliitto/rakennusjarjestys) | develop |  | 
 
 Kulloinkin linkatut git submodulet ja niiden tilan saa tulostettua (linux-tyyppisessä komentoriviympäristössä) seuraavalla loitsulla:
 ```sh
@@ -39,8 +40,6 @@ $ git submodule foreach --quiet 'printf "\n$sm_path: linked to " && git remote g
 
 Seuraavassa listassa on lueteltu [rakennetun ympäristön yhteentoimivuustyössä](https://ym.fi/yhteentoimivuus) tunnistettuja tietomalleja, jotka on tarkoitus tuoda sivustolle omina moduleinaan tulevaisuudessa:
 
-* Useita sovellusalueita koskevat tietomallit
-   * RYTJ-soveltamisprofiili (yhdistelmä RYTJ:ssä toteutettavista loogisista ry-tietomalleista)
 * Alueiden käytön suunnittelu
    * Yleisten alueiden suunnitelmat
    * Kaavatietomallin soveltamisprofiili maakuntakaavoille
