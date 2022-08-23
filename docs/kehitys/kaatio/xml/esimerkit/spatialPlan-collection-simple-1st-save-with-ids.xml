@@ -10,13 +10,20 @@
     xsi:schemaLocation="http://tietomallit.ymparisto.fi/kaavatiedot/xml/1.2 https://tietomallit.ymparisto.fi/kehitys/kaatio/xml/spatialplan-1.2.xsd"
     gml:id="KAAVA-kaava-sipoo-nevasgard-upload">
     <lud-core:featureMember>
-        <splan:SpatialPlan gml:id="KAAVA-kaava-sipoo-nevasgard">
+        <splan:SpatialPlan gml:id="id-640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e">
+            <gml:identifier codeSpace="http://uri.suomi.fi/object/rytj/kaava">SpatialPlan/id-640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e</gml:identifier>
+            <lud-core:objectIdentifier>id-640bff6b-c16a-4947-af8d-d86f89106be1</lud-core:objectIdentifier>
             <lud-core:producerSpecificIdentifier>AK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.0</lud-core:producerSpecificIdentifier>
             <lud-core:latestChange>
                 <gml:TimeInstant>
                     <gml:timePosition>2022-08-22T14:32:00+03:00</gml:timePosition>
                 </gml:TimeInstant>
             </lud-core:latestChange>
+            <lud-core:storageTime>
+                <gml:TimeInstant>
+                    <gml:timePosition>2022-08-22T15:00:00+03:00</gml:timePosition>
+                </gml:TimeInstant>
+            </lud-core:storageTime>
             <lud-core:loc_name xml:lang="fin">Asemakaava NE 1 Nevas gård</lud-core:loc_name>
             <lud-core:loc_name xml:lang="swe">Detaljplan NE 1 Nevas gård</lud-core:loc_name>
             <lud-core:loc_description xml:lang="fin">Nevas Gård asemakaavahanke pohjautuu kunnan ja maanomistajien aloitteeseen.
@@ -29,6 +36,7 @@
                 områdesreserveringar för semesterbyggande och för utvidgning och utveckling av befintliga golffunktioner.
                 
                 Kommunens syfte är att främja områdets näringsverksam­het samt att skapa en högklassig miljö i området.</lud-core:loc_description>
+            
             <lud-core:boundary>
                 <gml:Polygon srsName="urn:ogc:def:crs:EPSG::4326"
                     gml:id="AK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.geom.0">
@@ -134,15 +142,27 @@
                 * paikallisiin GML-ID-kenttiin (#id, tallennuspalveluun lähetettäessä) tai
                 * kokonaisina, pysyvinä HTTP URI -tunnuksina (tallenuspalvelusta palautettaessa) -->
             
-            <splan:generalOrder xlink:href="#KAAVA-kaava-sipoo-nevasgard-MAARAYS-1" />
-            <splan:planner xlink:href="#planner-mka" />
-            <splan:participationAndEvalutionPlan xlink:href="#KAAVA-kaava-sipoo-nevasgard-OAS" />
+            <splan:generalOrder xlink:href="#id-24fa6e04-220d-11ed-861d-0242ac120002.2d31b078-220d-11ed-861d-0242ac120002" />
+            <splan:planner xlink:href="#id-b0775a14-220d-11ed-861d-0242ac120002.b6b37b6a-220d-11ed-861d-0242ac120002" />
+            <splan:participationAndEvalutionPlan xlink:href="#id-536a29d2-220d-11ed-861d-0242ac120002.5871e960-220d-11ed-861d-0242ac120002" />
             
         </splan:SpatialPlan>
     </lud-core:featureMember>
     <lud-core:featureMember>
-        <splan:PlanObject gml:id="KAAVAKOHDE-AJO-12">
+        <splan:PlanObject gml:id="id-91e0d022-220c-11ed-861d-0242ac120002.9e991036-220c-11ed-861d-0242ac120002">
+            <gml:identifier codeSpace="http://uri.suomi.fi/object/rytj/kaava">PlanObject/id-91e0d022-220c-11ed-861d-0242ac120002.9e991036-220c-11ed-861d-0242ac120002</gml:identifier>
+            <lud-core:objectIdentifier>id-91e0d022-220c-11ed-861d-0242ac120002</lud-core:objectIdentifier>
             <lud-core:producerSpecificIdentifier>AK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.7</lud-core:producerSpecificIdentifier>
+            <lud-core:latestChange>
+                <gml:TimeInstant>
+                    <gml:timePosition>2022-08-22T14:32:00+03:00</gml:timePosition>
+                </gml:TimeInstant>
+            </lud-core:latestChange>
+            <lud-core:storageTime>
+                <gml:TimeInstant>
+                    <gml:timePosition>2022-08-22T15:00:00+03:00</gml:timePosition>
+                </gml:TimeInstant>
+            </lud-core:storageTime>
             <splan:geometry>
                 <gml:Polygon srsName="urn:ogc:def:crs:EPSG::4326"
                     gml:id="AK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.geom.7">
@@ -155,20 +175,27 @@
                     </gml:exterior>
                 </gml:Polygon>
             </splan:geometry>
-            <splan:spatialPlan xlink:href="#KAAVA-kaava-sipoo-nevasgard"/>
+            <splan:spatialPlan xlink:href="#id-640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e"/>
             <splan:bindingnessOfLocation xlink:href="http://uri.suomi.fi/codelist/rytj/RY_Sitovuuslaji/code/02" xlink:title="Ohjeellinen"/>
         </splan:PlanObject>
     </lud-core:featureMember>
     <lud-core:featureMember>
-        <splan:PlanOrder gml:id="KAAVAKOHDE-AJO-12-MAARAYS-1">
+        <splan:PlanOrder gml:id="id-f1fbc0c0-220c-11ed-861d-0242ac120002.f75b4a04-220c-11ed-861d-0242ac120002">
+            <gml:identifier codeSpace="http://uri.suomi.fi/object/rytj/kaava">PlanOrder/id-f1fbc0c0-220c-11ed-861d-0242ac120002.f75b4a04-220c-11ed-861d-0242ac120002</gml:identifier>
+            <lud-core:objectIdentifier>id-f1fbc0c0-220c-11ed-861d-0242ac120002</lud-core:objectIdentifier>
             <lud-core:producerSpecificIdentifier>AK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.6</lud-core:producerSpecificIdentifier>
             <lud-core:latestChange>
                 <gml:TimeInstant>
                     <gml:timePosition>2022-08-22T14:32:00+03:00</gml:timePosition>
                 </gml:TimeInstant>
             </lud-core:latestChange>
-            <splan:spatialPlan xlink:href="#KAAVA-kaava-sipoo-nevasgard" />
-            <splan:target xlink:href="#KAAVAKOHDE-AJO-12" />
+            <lud-core:storageTime>
+                <gml:TimeInstant>
+                    <gml:timePosition>2022-08-22T15:00:00+03:00</gml:timePosition>
+                </gml:TimeInstant>
+            </lud-core:storageTime>
+            <splan:spatialPlan xlink:href="#id-640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e" />
+            <splan:target xlink:href="#id-91e0d022-220c-11ed-861d-0242ac120002.9e991036-220c-11ed-861d-0242ac120002" />
             <splan:type xlink:href="http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/020302" xlink:title="Ajoyhteys"/>
             <splan:lifecycleStatus xlink:href="http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaaritila/code/10" xlink:title="Voimassa"/>
             <splan:theme xlink:href="http://uri.suomi.fi/codelist/rytj/RY_Kaavoitusteema_AK/code/06" xlink:title="Kadut"/>
@@ -182,13 +209,20 @@
         </splan:PlanOrder>
     </lud-core:featureMember>
     <lud-core:featureMember>
-        <splan:PlanOrder gml:id="KAAVA-kaava-sipoo-nevasgard-MAARAYS-1">
+        <splan:PlanOrder gml:id="id-24fa6e04-220d-11ed-861d-0242ac120002.2d31b078-220d-11ed-861d-0242ac120002">
+            <gml:identifier codeSpace="http://uri.suomi.fi/object/rytj/kaava">PlanOrder/id-24fa6e04-220d-11ed-861d-0242ac120002.2d31b078-220d-11ed-861d-0242ac120002</gml:identifier>
+            <lud-core:objectIdentifier>id-24fa6e04-220d-11ed-861d-0242ac120002</lud-core:objectIdentifier>
             <lud-core:producerSpecificIdentifier>AK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.1</lud-core:producerSpecificIdentifier>
             <lud-core:latestChange>
                 <gml:TimeInstant>
                     <gml:timePosition>2022-08-22T14:32:00+03:00</gml:timePosition>
                 </gml:TimeInstant>
             </lud-core:latestChange>
+            <lud-core:storageTime>
+                <gml:TimeInstant>
+                    <gml:timePosition>2022-08-22T15:00:00+03:00</gml:timePosition>
+                </gml:TimeInstant>
+            </lud-core:storageTime>
             <splan:loc_name></splan:loc_name>
             <splan:value>
                 <splan:TextValue>
@@ -196,7 +230,7 @@
                     <splan:value xml:lang="swe">Byggnaderna i kvartersområdena och byggnadsgrupperna bör vara enhetliga vad gäller massa, fasad, takformer, material och färgsättning.</splan:value>
                 </splan:TextValue>
             </splan:value>
-            <splan:spatialPlan xlink:href="#KAAVA-kaava-sipoo-nevasgard" />
+            <splan:spatialPlan xlink:href="#id-640bff6b-c16a-4947-af8d-d86f89106be1.b05cf48d46d8c905c54522f44b0a12daff11604e" />
             <splan:type xlink:href="http://uri.suomi.fi/codelist/rytj/RY_KaavamaaraysLaji_AK/code/1101" xlink:title="Yleismääräys"/>
             <splan:lifecycleStatus xlink:href="http://uri.suomi.fi/codelist/rytj/RY_KaavanElinkaaritila/code/10" xlink:title="Voimassa"/>
             <splan:validityTime>
@@ -211,13 +245,20 @@
     <!-- Esim. tähän väliin kaikki muut kaavakohteet, määärykset, suositukset ja määräysryhmät -->
     
     <lud-core:featureMember>
-        <splan:ParticipationAndEvaluationPlan gml:id="KAAVA-kaava-sipoo-nevasgard-OAS">
+        <splan:ParticipationAndEvaluationPlan gml:id="id-536a29d2-220d-11ed-861d-0242ac120002.5871e960-220d-11ed-861d-0242ac120002">
+            <gml:identifier codeSpace="http://uri.suomi.fi/object/rytj/kaava">ParticipationAndEvaluationPlan/id-536a29d2-220d-11ed-861d-0242ac120002.5871e960-220d-11ed-861d-0242ac120002</gml:identifier>
+            <lud-core:objectIdentifier>id-536a29d2-220d-11ed-861d-0242ac120002</lud-core:objectIdentifier>
             <lud-core:producerSpecificIdentifier>nAK_SIPOO_5_lainvoimainen_kaava_sipoo_nevasgard.2</lud-core:producerSpecificIdentifier>
             <lud-core:latestChange>
                 <gml:TimeInstant>
                     <gml:timePosition>2022-08-22T14:32:00+03:00</gml:timePosition>
                 </gml:TimeInstant>
             </lud-core:latestChange>
+            <lud-core:storageTime>
+                <gml:TimeInstant>
+                    <gml:timePosition>2022-08-22T15:00:00+03:00</gml:timePosition>
+                </gml:TimeInstant>
+            </lud-core:storageTime>
             <splan:document>
                 <lud-core:Document gml:id="d-1">
                     <lud-core:loc_name xml:lang="fin">NE 1 Nevas gård
@@ -231,13 +272,20 @@
         </splan:ParticipationAndEvaluationPlan>
     </lud-core:featureMember>
     <lud-core:featureMember>
-        <splan:Planner gml:id="planner-mka">
+        <splan:Planner gml:id="id-b0775a14-220d-11ed-861d-0242ac120002.b6b37b6a-220d-11ed-861d-0242ac120002">
+            <gml:identifier codeSpace="http://uri.suomi.fi/object/rytj/kaava">Planner/id-b0775a14-220d-11ed-861d-0242ac120002.b6b37b6a-220d-11ed-861d-0242ac120002</gml:identifier>
+            <lud-core:objectIdentifier>id-b0775a14-220d-11ed-861d-0242ac120002</lud-core:objectIdentifier>
             <lud-core:producerSpecificIdentifier>MKa</lud-core:producerSpecificIdentifier>
             <lud-core:latestChange>
                 <gml:TimeInstant>
                     <gml:timePosition>2022-08-22T14:32:00+03:00</gml:timePosition>
                 </gml:TimeInstant>
             </lud-core:latestChange>
+            <lud-core:storageTime>
+                <gml:TimeInstant>
+                    <gml:timePosition>2022-08-22T15:00:00+03:00</gml:timePosition>
+                </gml:TimeInstant>
+            </lud-core:storageTime>
             <splan:personName>Matti Kanerva</splan:personName>
             <splan:professionTitle>arkkitehti SAFA</splan:professionTitle>
             <splan:role>Kaavan laatija</splan:role>
