@@ -49,6 +49,10 @@
 	path = docs/rytj-soveltamisprofiili/dev
 	url = https://github.com/sykefi/rytj-soveltamisprofiili.git
 	branch = develop
+[submodule "docs/maankayttorajoitukset/dev"]
+	path = docs/maankayttorajoitukset/dev
+	url = https://github.com/sykefi/maankayttorajoitusten-tietomalli.git
+  branch = develop
 [submodule "docs/rakennusjarjestys/dev"]
 	path = docs/rakennusjarjestys/dev
 	url = https://github.com/Kuntaliitto/rakennusjarjestys.git
