@@ -7,16 +7,12 @@ versions:
   - id: "v1.0"
     title: "Maankäyttörajoitusten tietomalli -projektin lopputulos"
     path: "v1.0"
-    development: true
+    default: true    
   - id: "dev"
     title: "Seuraava kehitysversio"
     path: "dev"
-    git-branch: "develop"    
-    dependencies:
-      - moduleId: "yhteisetkomponentit"
-        version: "dev"
-      - moduleId: "kaavatiedot"
-        version: "dev"
+    git-branch: "develop"
+    development: true           
 basepath: "maankayttorajoitukset"
 nav_items:
   - pageId: "maankayttorajoitukset"
