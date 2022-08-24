@@ -1,2 +1,39 @@
 title: "Rakennusjärjestys"
 ownership: "kuntaliitto"
+github:
+  owner_name: "Kuntaliitto"
+  repository_name: "rakennusjarjestys"
+versions:
+  - id: "dev"
+    title: "Seuraava kehitysversio"
+    path: "dev"
+    default: true
+    development: true
+    git-branch: "develop"
+    dependencies:
+      - moduleId: "yhteisetkomponentit"
+        version: "dev"
+basepath: "rakennusjarjestys"
+nav_items:
+  - pageId: "johdanto"
+    title: "Johdanto"
+    path: ""
+    gitHubFile: "index.md"
+    default: true
+  - pageId: "kasitemalli"
+    title: "Käsitemalli"
+  - groupId: "looginenmalli"
+    title: "Looginen tietomalli"
+    nav_items:
+      - pageId: "dokumentaatio"
+        title: "Dokumentaatio"
+      - pageId: "uml-doc"
+        title: "UML-kaaviot"
+        path: "uml/doc/"
+        # tiedostona XMI/zip, jotta muutosmetatiedot päivittyvät
+        gitHubFile: "uml/rakennusjarjestys.xml"
+  - pageId: "muutosloki"
+    title: "Muutosloki"
+    path: "muutosloki.html"
+    gitHubFile: "muutosloki.md"
+
