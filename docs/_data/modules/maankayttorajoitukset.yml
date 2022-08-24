@@ -2,7 +2,7 @@ title: "Maankäyttörajoitukset"
 ownership: "ympäristöministeriö"
 github:
   owner_name: "sykefi"
-  repository_name: "Maankäyttörajoitusten-tietomalli"
+  repository_name: "maankayttorajoitusten-tietomalli"
 versions:
   - id: "v1.0"
     title: "Maankäyttörajoitusten tietomalli -projektin lopputulos"
