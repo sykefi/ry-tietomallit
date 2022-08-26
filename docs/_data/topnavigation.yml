@@ -46,7 +46,7 @@
   - type: "module"
     moduleId: "rakentamisenluvat"
   - type: "module"
-    moduleId: "rajoitukset"
+    moduleId: "maankayttorajoitukset"
   - type: "module"
     moduleId: "rakennusjarjestys"
 - groupId: "kulttuuriymp"
