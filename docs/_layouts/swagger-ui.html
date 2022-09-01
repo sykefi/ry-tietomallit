@@ -1,0 +1,21 @@
+---
+style: "ea-uml"
+---
+{% include header-spatineo.html %}
+    {% include common/navbar.html %}
+    {%- if current_module_version.development -%}
+      <div class="container-fluid dev-alert" role="alert">Huom: Katselet kehitysversiota modulista {{ current_module.title }}. Muutokset sisältöön ovat vielä todennäköisiä</div>
+    {%- endif -%}
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <div class="d-flex inner">
+        {%- include common/modulenav.html module=current_module -%}
+        <section id="main_content">
+          {% include common/pagemeta.html %}
+          {{ content }}
+          <div id="swagger-ui">
+          </div>
+        </section>
+      </div>
+    </div>
+{% include common/footer.html %}
