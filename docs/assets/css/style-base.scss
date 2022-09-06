@@ -675,4 +675,10 @@ ol#markdown-toc > li:before {
     }
   }
 
+  &.no-heading-numbers {
+    h2:before, h3:before, h4:before {
+      content: normal;
+    }
+  }
+
 }

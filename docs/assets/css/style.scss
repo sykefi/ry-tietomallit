@@ -33,6 +33,20 @@
   }
  }
 
+ #swagger-ui { 
+  small {
+    pre {
+      background-color: #7d8492;
+    }
+  }
+
+  small.version-stamp {
+    pre {
+      background-color: #89bf04;
+    }
+  }
+ }
+
 #header_bar {
   background: #253746;
 }

@@ -23,3 +23,5 @@ nav_items:
     - pageId: "esimerkit"
       title: "Esimerkkejä"
       path: "esimerkit"
+    - pageId: "testeri"
+      title: "Simuloitu tallennuspalvelu"
