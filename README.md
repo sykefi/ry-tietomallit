@@ -31,8 +31,8 @@ Sivulle voidaan linkittää mitä tahansa julkisia git-repoja, ja GitHub Pages -
 | Yhteiset Sisältömakrot | | [docs/_includes/](../../tree/main/docs/_includes/)common | [github.com/sykefi/rytm-jekyll-includes](https://github.com/sykefi/rytm-jekyll-includes) | main |
 | Rakennusjärjestys      | dev    | [docs/rakennusjarjestys/](../../tree/main/docs/rakennusjarjestys/)dev | [github.com/Kuntaliitto/rakennusjarjestys](https://github.com/Kuntaliitto/rakennusjarjestys) | develop |  | 
 | Rakennusjärjestys      | 1.0.0    | [docs/rakennusjarjestys/](../../tree/main/docs/rakennusjarjestys/)v1.0 | [github.com/Kuntaliitto/rakennusjarjestys](https://github.com/Kuntaliitto/rakennusjarjestys) | |  |
-| Maankäyttörajoitukset | 1.0    | [docs/maankayttorajoitukset/](../../tree/main/docs/maankayttorajoitukset/)v1.0 | [github.com/sykefi/maankayttorajoitusten-tietomalli](https://github.com/sykefi//maankayttorajoitusten-tietomalli) | |  ei tagiä v1.0.0! | 
-| Maankäyttörajoitukset | dev    | [docs/maankayttorajoitukset/](../../tree/main/docs/maankayttorajoitukset/)dev | [github.com/Kuntaliitto/rakennusjarjestys](https://github.com/Ksykefi//maankayttorajoitusten-tietomalli) | develop |  | 
+| Maankäyttörajoitukset | 1.0    | [docs/maankayttorajoitukset/](../../tree/main/docs/maankayttorajoitukset/)v1.0 | [github.com/sykefi/maankayttorajoitusten-tietomalli](https://github.com/sykefi/maankayttorajoitusten-tietomalli) | |  ei tagiä v1.0.0! | 
+| Maankäyttörajoitukset | dev    | [docs/maankayttorajoitukset/](../../tree/main/docs/maankayttorajoitukset/)dev | [github.com/sykefi/maankayttorajoitusten-tietomalli](https://github.com/sykefi/maankayttorajoitusten-tietomalli) | develop |  | 
 
 Kulloinkin linkatut git submodulet ja niiden tilan saa tulostettua (linux-tyyppisessä komentoriviympäristössä) seuraavalla loitsulla:
 ```sh
