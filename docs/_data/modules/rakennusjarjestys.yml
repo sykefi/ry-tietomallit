@@ -4,7 +4,7 @@ github:
   owner_name: "Kuntaliitto"
   repository_name: "rakennusjarjestys"
 versions:
- - id: "v1.0"
+  - id: "v1.0"
     title: "Ensimmäinen julkaisuversio"
     path: "v1.0"
     default: true
