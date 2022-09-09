@@ -4,10 +4,16 @@ github:
   owner_name: "Kuntaliitto"
   repository_name: "rakennusjarjestys"
 versions:
+ - id: "v1.0"
+    title: "Ensimmäinen julkaisuversio"
+    path: "v1.0"
+    default: true
+    dependencies:
+      - moduleId: "yhteisetkomponentit"
+        version: "dev"
   - id: "dev"
     title: "Seuraava kehitysversio"
     path: "dev"
-    default: true
     development: true
     git-branch: "develop"
     dependencies:
