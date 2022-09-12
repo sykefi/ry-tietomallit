@@ -64,6 +64,3 @@
 [submodule "docs/rakennusjarjestys/v1.0"]
 	path = docs/rakennusjarjestys/v1.0
 	url = https://github.com/Kuntaliitto/rakennusjarjestys.git
-[submodule "docs/kaupunkiseutusuunnitelma/dev"]
-	path = docs/kaupunkiseutusuunnitelma/dev
-	url = https://github.com/sykefi/kaupunkiseutusuunnitelma.git
