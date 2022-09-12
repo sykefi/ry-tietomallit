@@ -67,3 +67,4 @@
 [submodule "docs/kaupunkiseutusuunnitelma/dev"]
 	path = docs/kaupunkiseutusuunnitelma/dev
 	url = https://github.com/sykefi/kaupunkiseutusuunnitelma.git
+	branch = develop
