@@ -1,1 +1,46 @@
 title: "Kaupunkiseutusuunnitelma"
+ownership: "ympäristöministeriö"
+github:
+  owner_name: "sykefi"
+  repository_name: "kaupunkiseutusuunnitelma"
+versions:
+  - id: "dev"
+    title: "Seuraava kehitysversio"
+    path: "dev"
+    default: true
+    development: true
+    git-branch: "develop"
+    dependencies:
+      - moduleId: "yhteisetkomponentit"
+        version: "dev"
+basepath: "kaupunkiseutusuunnitelma"
+nav_items:
+  - pageId: "johdanto"
+    title: "Johdanto"
+    path: ""
+    gitHubFile: "index.md"
+    default: true
+  - pageId: "kasitemalli"
+    title: "Käsitemalli"
+  - groupId: "looginenmalli"
+    title: "Looginen tietomalli"
+    nav_items:
+      - pageId: "dokumentaatio"
+        title: "Dokumentaatio"
+      - pageId: "uml-doc"
+        title: "UML-kaaviot"
+        path: "uml/doc/"
+        # tiedostona XMI/zip, jotta muutosmetatiedot päivittyvät
+        gitHubFile: "uml/kaupunkiseutusuunnitelma.xml"
+      - pageId: "elinkaarisaannot"
+        title: "Elinkaarisäännöt"
+        gitHubFile: "elinkaarisaannot.md"
+        path: "elinkaarisaannot.html"
+      - pageId: "laatusaannot"
+        title: "Laatusäännöt"
+        gitHubFile: "laatusaannot.md"
+        path: "laatusaannot.html"
+  - pageId: "muutosloki"
+    title: "Muutosloki"
+    path: "muutosloki.html"
+    gitHubFile: "muutosloki.md"
