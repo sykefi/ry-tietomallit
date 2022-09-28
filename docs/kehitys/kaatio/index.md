@@ -14,4 +14,6 @@ Oulun kaupunki toimii hankkeessa päähakijana. Hankkeessa on Oulun lisäksi muk
 
 KAATIO-hankkeelle on myönnetty vuosille 2021–2023 valtiovarainministeriön avustusta kuntien digitalisaatiota edistäviin hankkeisiin. Hanke alkoi syksyllä 2021 ja se päättyy syksyllä 2023.
 
-[Lue lisää hankkeesta](https://www.ouka.fi/oulu/kaupunkisuunnittelu/kaatio-hanke), Ouka.fi
+## Lue lisää hankkeesta
+- [Hankeblogissa](https://kaatio.wordpress.com) raportoidaan KAATIO-hankkeen etenemisestä ja kerrotaan kokemuksia tietomallin soveltamisesta.
+- [KAATIOn hankesivu](https://www.ouka.fi/oulu/kaupunkisuunnittelu/kaatio-hanke), Ouka.fi
