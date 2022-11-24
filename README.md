@@ -34,6 +34,7 @@ Sivulle voidaan linkittää mitä tahansa julkisia git-repoja, ja GitHub Pages -
 | Maankäyttörajoitukset | 1.0    | [docs/maankayttorajoitukset/](../../tree/main/docs/maankayttorajoitukset/)v1.0 | [github.com/sykefi/maankayttorajoitusten-tietomalli](https://github.com/sykefi/maankayttorajoitusten-tietomalli) | |  ei tagiä v1.0.0! | 
 | Maankäyttörajoitukset | dev    | [docs/maankayttorajoitukset/](../../tree/main/docs/maankayttorajoitukset/)dev | [github.com/sykefi/maankayttorajoitusten-tietomalli](https://github.com/sykefi/maankayttorajoitusten-tietomalli) | develop |  |
 | Kaupunkiseutusuunnitelma      | dev    | [docs/kaupunkiseutusuunnitelma/](../../tree/main/docs/kaupunkiseutusuunnitelma/)dev | [github.com/sykefi/kaupunkiseutusuunnitelma](https://github.com/sykefi/kaupunkiseutusuunnitelma) | develop |  |
+| Kaupunkiseutusuunnitelma      | 1.0.0    | [docs/kaupunkiseutusuunnitelma/](../../tree/main/docs/kaupunkiseutusuunnitelma/)v1.0 | [github.com/sykefi/kaupunkiseutusuunnitelma](https://github.com/sykefi/kaupunkiseutusuunnitelma) | |  |
 
 Kulloinkin linkatut git submodulet ja niiden tilan saa tulostettua (linux-tyyppisessä komentoriviympäristössä) seuraavalla loitsulla:
 ```sh
