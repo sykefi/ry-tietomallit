@@ -11,14 +11,6 @@ versions:
     dependencies:
       - moduleId: "yhteisetkomponentit"
         version: "dev"
-  - id: "dev"
-    title: "Seuraava kehitysversio"
-    path: "dev"
-    development: true
-    git-branch: "develop"
-    dependencies:
-      - moduleId: "yhteisetkomponentit"
-        version: "dev"
 basepath: "kaupunkiseutusuunnitelma"
 nav_items:
   - pageId: "johdanto"
