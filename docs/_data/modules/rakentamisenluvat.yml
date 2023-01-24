@@ -4,6 +4,15 @@ github:
   owner_name: "sykefi"
   repository_name: "rakentamisenluvat"
 versions:
+  - id: "v1.0"
+    title: "Ensimmäinen julkaisuversio"
+    path: "v1.0"
+    default: true
+    dependencies:
+      - moduleId: "yhteisetkomponentit"
+        version: "v1.0"
+      - moduleId: "rakennuskohteet"
+        version: "v1.0"
   - id: "dev"
     title: "Ensimmäinen kehitysversio"
     path: "dev"
@@ -12,11 +21,9 @@ versions:
     development: true
     dependencies:
       - moduleId: "yhteisetkomponentit"
-        version: "dev"
+        version: "v1.0"
       - moduleId: "rakennuskohteet"
-        version: "dev"
-      - moduleId: "kaavatiedot"
-        version: "dev"
+        version: "v1.0"
 basepath: "rakentamisenluvat"
 nav_items:
   - pageId: "rakentamisenluvat"

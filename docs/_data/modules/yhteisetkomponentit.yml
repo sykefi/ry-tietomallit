@@ -4,11 +4,14 @@ github:
   owner_name: "sykefi"
   repository_name: "ry-yhteiset"
 versions:
+  - id: "v1.0"
+    title: "Ensimmäinen julkaisuversio"
+    path: "v1.0"
+    default: true
   - id: "dev"
-    title: "Ensimmäinen kehitysversio"
+    title: "Seuraava kehitysversio"
     path: "dev"
     git-branch: "develop"
-    default: true
     development: true
 basepath: "ry-yhteiset"
 nav_items:

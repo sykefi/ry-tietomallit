@@ -17,6 +17,7 @@ Sivulle voidaan linkittää mitä tahansa julkisia git-repoja, ja GitHub Pages -
 -----------------------------|--------|-------------------------|------------------------------|------------------------|----------|
 | RY-yläontologia            | dev    | [docs/ry-ylaontologia/](../../tree/main/docs/ry-ylaontologia/)dev | [github.com/sykefi/ry-ylaontologia](https://github.com/sykefi/ry-ylaontologia) | develop | |
 | RY-yhteiset komponentit    | dev    | [docs/ry-yhteiset/](../../tree/main/docs/ry-yhteiset/)dev | [github.com/sykefi/ry-yhteiset](https://github.com/sykefi/ry-yhteiset) | develop | |
+| RY-yhteiset komponentit    | 1.0.0    | [docs/ry-yhteiset/](../../tree/main/docs/ry-yhteiset/)dev | [github.com/sykefi/ry-yhteiset](https://github.com/sykefi/ry-yhteiset) | | |
 | RYTJ-soveltamisprofiili    | dev    | [docs/rytj-soveltamisprofiili/](../../tree/main/docs/rytj-soveltamisprofiili/)dev | [github.com/sykefi/rytj-soveltamisprofiili](https://github.com/sykefi/rytj-soveltamisprofiili) | develop | |
 | Kaavatiedot                | 1.0.2  | [docs/kaavatiedot/](../../tree/main/docs/kaavatiedot/)v1.0 | [github.com/sykefi/kaavatietomalli](https://github.com/sykefi/kaavatietomalli) | |  |
 | Asemakaavan soveltamisprofiili | 1.0 | [docs/kaavatiedot/soveltamisprofiili/asemakaava/](../../tree/main/docs/kaavatiedot/soveltamisprofiili/asemakaava/)v1.0 | [github.com/sykefi/sp-asemakaava](https://github.com/sykefi/sp-asemakaava) |  |  |
@@ -27,7 +28,9 @@ Sivulle voidaan linkittää mitä tahansa julkisia git-repoja, ja GitHub Pages -
 | Tonttijakosuunnitelma      | 1.0.1    | [docs/tonttijakosuunnitelma/](../../tree/main/docs/tonttijakosuunnitelma/)v1.0 | [github.com/sykefi/Tonttijakosuunnitelman-tietomalli](https://github.com/sykefi/Tonttijakosuunnitelman-tietomalli) |  |  |
 | Tonttijakosuunnitelma      | dev    | [docs/tonttijakosuunnitelma/](../../tree/main/docs/tonttijakosuunnitelma/)dev | [github.com/sykefi/Tonttijakosuunnitelman-tietomalli](https://github.com/sykefi/Tonttijakosuunnitelman-tietomalli) | develop |  |
 | Rakennuskohteet    | dev    | [docs/rakennuskohteet/](../../tree/main/docs/rakennuskohteet/)dev | [github.com/sykefi/rakennuskohteet](https://github.com/sykefi/rakennuskohteet) | develop |  |
-| Rakentamista koskevat lupapäätökset    | dev    | [docs/rakentamisenluvat/](../../tree/main/docs/rakentamisenluvat/)dev | [github.com/sykefi/rakentamisenluvat](https://github.com/sykefi/rakentamisenluvat) | develop |  |
+| Rakennuskohteet    | 1.0.1    | [docs/rakennuskohteet/](../../tree/main/docs/rakennuskohteet/)dev | [github.com/sykefi/rakennuskohteet](https://github.com/sykefi/rakennuskohteet) |  |  |
+| Rakentamisen lupapäätökset    | dev    | [docs/rakentamisenluvat/](../../tree/main/docs/rakentamisenluvat/)dev | [github.com/sykefi/rakentamisenluvat](https://github.com/sykefi/rakentamisenluvat) | develop |  |
+| Rakentamisen lupapäätökset    | 1.0.0    | [docs/rakentamisenluvat/](../../tree/main/docs/rakentamisenluvat/)dev | [github.com/sykefi/rakentamisenluvat](https://github.com/sykefi/rakentamisenluvat) |  |  |
 | Yhteiset Sisältömakrot | | [docs/_includes/](../../tree/main/docs/_includes/)common | [github.com/sykefi/rytm-jekyll-includes](https://github.com/sykefi/rytm-jekyll-includes) | main |
 | Rakennusjärjestys      | dev    | [docs/rakennusjarjestys/](../../tree/main/docs/rakennusjarjestys/)dev | [github.com/Kuntaliitto/rakennusjarjestys](https://github.com/Kuntaliitto/rakennusjarjestys) | develop |  | 
 | Rakennusjärjestys      | 1.0.1    | [docs/rakennusjarjestys/](../../tree/main/docs/rakennusjarjestys/)v1.0 | [github.com/Kuntaliitto/rakennusjarjestys](https://github.com/Kuntaliitto/rakennusjarjestys) | |  |

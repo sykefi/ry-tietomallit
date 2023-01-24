@@ -4,14 +4,24 @@ github:
   owner_name: "sykefi"
   repository_name: "rakennuskohteet"
 versions:
+  - id: "v1.0"
+    title: "Ensimmäinen julkaisuversio"
+    path: "v1.0"
+    default: true
+    dependencies:
+      - moduleId: "yhteisetkomponentit"
+        version: "v1.0"
+      - moduleId: "kaavatiedot"
+        version: "dev"
   - id: "dev"
-    title: "Ensimmäinen kehitysversio"
+    title: "Seuraava kehitysversio"
     path: "dev"
     git-branch: "develop"
-    default: true
     development: true
     dependencies:
       - moduleId: "yhteisetkomponentit"
+        version: "v1.0"
+      - moduleId: "kaavatiedot"
         version: "dev"
 basepath: "rakennuskohteet"
 nav_items:
