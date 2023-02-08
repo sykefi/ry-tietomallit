@@ -4,6 +4,9 @@
 [submodule "docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0"]
 	path = docs/kaavatiedot/soveltamisprofiili/asemakaava/v1.0
 	url = https://github.com/sykefi/sp-asemakaava.git
+[submodule "docs/kaavatiedot/soveltamisprofiili/asemakaava/dev"]
+	path = docs/kaavatiedot/soveltamisprofiili/asemakaava/dev
+	url = https://github.com/ubigu/sp-asemakaava/tree/feature-kaavamaaraykset
 [submodule "docs/ry-yhteiset/dev"]
 	path = docs/ry-yhteiset/dev
 	url = https://github.com/sykefi/ry-yhteiset.git
