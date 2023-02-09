@@ -11,6 +11,13 @@ versions:
     dependencies:
       - moduleId: "kaavatiedot"
         version: "v1.0"
+  - id: "dev"
+    title: "Kaavamääräyskokoelmatyön lopputulokset"
+    path: "dev"
+    default: true
+    dependencies:
+      - moduleId: "kaavatiedot"
+        version: "dev"
 basepath: "kaavatiedot/soveltamisprofiili/yleiskaava"
 nav_items:
   - pageId: "johdanto"
