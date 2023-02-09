@@ -79,3 +79,9 @@
 [submodule "docs/rakentamisenluvat/v1.0"]
 	path = docs/rakentamisenluvat/v1.0
 	url = https://github.com/sykefi/rakentamisenluvat.git
+[submodule "docs/kaavatiedot/soveltamisprofiili/asemakaava/dev"]
+	path = docs/kaavatiedot/soveltamisprofiili/asemakaava/dev
+	url = https://github.com/ubigu/sp-asemakaava
+[submodule "docs/kaavatiedot/soveltamisprofiili/yleiskaava/dev"]
+	path = docs/kaavatiedot/soveltamisprofiili/yleiskaava/dev
+	url = https://github.com/ubigu/sp-yleiskaava
