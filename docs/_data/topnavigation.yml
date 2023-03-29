@@ -85,3 +85,5 @@
       moduleId: "tjs-tietomalli"
     - type: "module"
       moduleId: "kaatio"
+    - type: "module"
+      moduleId: "akykkmk"
