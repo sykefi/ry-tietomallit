@@ -1,0 +1,2258 @@
+<head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin-top: 0px !important;
+}
+
+p {
+  margin-top: 0px;
+  font-weight: 600 !important;
+  font-size: 15px;
+}
+
+span {
+  font-size: 13px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.merkinta {
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 50px !important;
+  width: 100px !important;
+  min-height: 50px;
+  min-width: 100px !important;
+  margin-right: 50px !important; 
+}
+
+.kayttotarkoitus {
+  border: #000000 solid;
+  border-width: 1px;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 22px;
+}
+
+.kohde {
+  border-radius: 50%;
+  width: 50px !important;
+  height: 50px !important;
+  min-width: 50px !important;
+  min-height: 50px !important;
+  align-items: center;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0px 75px 0px 25px;
+}
+
+.minikohde {
+  border-radius: 50%;
+  width: 25px !important;
+  height: 25px !important;
+  min-width: 25px !important;
+  min-height: 25px !important;
+  align-items: center;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0px 87.5px 0px 37.5px;
+}
+
+.asuminen {
+  background-color: #e2c096;
+}
+
+.keskusta {
+  background-color: #d63648;
+}
+
+.palvelu {
+  background-color: #faab53;
+}
+
+.yleinen {
+  background-color: #ddd4e9;
+}
+
+.tuotanto {
+  background-color: #c1c3c5;
+}
+
+.viher {
+  background-color: #58ad41;
+}
+
+.vapaaaika {
+  background-color: #ffcf45;
+}
+
+.pysakointi {
+  background-color: #f9c6d1;
+}
+
+.liikenne {
+  position: relative;
+  border: #000 solid !important;
+   border-width: 2px !important;
+}
+
+.liikenne:before {
+  background: none;
+  border-width: 4px !important;
+  border: #ff0000 solid !important;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  pointer-events: none;
+}
+
+.liikenneosa {
+  border: #000 solid !important;
+  border-width: 2px !important;
+}
+
+.tontti {
+  border: #000 solid !important;
+  border-width: 2px !important;
+}
+
+.katu {
+  border: #000 solid !important;
+  border-width: 2px !important;
+}
+
+.erityis {
+  background-color: #e6adcf;
+ }
+ 
+.erityisviher {
+   background-color: #74ccd3;
+}
+
+.maametsa {
+  background-color: #dbdb55;
+}
+
+.maametsaviher {
+  background-color: #bcdeb2;
+}
+
+.tyhja {
+   fill: none;
+}
+
+.suojelu {
+    background-color: #b6e2e3;
+}
+
+.vesi {
+  background-color: #b3d7f1;
+}
+
+.label {
+   align-items: flex-end;
+}
+
+.osabox {
+  width: 40px !important;
+  height: 50px !important;
+  min-width: 40px !important;
+  min-height: 50px !important;
+  align-items: center;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  margin: 0px 77.5px 0px 27.5px;
+   border: #000000 solid;
+}
+
+.helmet {
+  position: relative;
+  border-style: dotted;
+  border-color: rgba(66, 66, 66, 1);
+  border-width: 6px;
+}
+
+.helmet::before {
+  content: " ";
+    z-index: -1;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  position: absolute;
+  border-style: solid;
+  border-color: rgba(66, 66, 66, 1);
+  border-width: 1px;
+}
+
+.pallot {
+  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle r='20' cx='21' cy='21' fill='white' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
+  border-image-repeat: round;
+  width: 100px;
+  min-width: 100px;
+  height: 1px;
+  margin-right: 50px !important; 
+}
+
+.osa {
+background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='2' stroke-dasharray='15%2c 5%2c 3%2c 5' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+}
+
+.luo {
+background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='green' stroke-width='2' stroke-dasharray='15%2c 5%2c 3%2c 5' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+}
+
+.maa {
+  opacity: 0.5;
+}
+
+.tyhja {
+  border: none;
+}
+
+.iso {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.semiiso {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.snadi {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.snadimpi {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.pv {
+background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='blue' stroke-width='2' stroke-dasharray='15%2c 5%2c 3%2c 5' stroke-dashoffset='0' stroke-linecap='round'/%3e%3c/svg%3e");
+}
+</style>
+</head>
+
+<body>
+
+<h1>Kaavamääräyskokoelma (demo)</h1>
+<p>
+Kaavatasokohtaisten suodattimien rakentaminen tämänkaltaiseen esitystapaluetteloon tehtävä Ryhti-järjestelmän toteutuksen yhteydessä.
+<br/><br/>
+Luettelo täydentyy ajan myötä <a href="https://github.com/ubigu/vooka/blob/master/sld/kaavakohde.sld">SLD</a>-formaatissa laadituista esitystavoista. Kaikkia piirtoteknisesti haastavimpia merkintöjä ei ole saatu vielä konvertoitua tämän sivuston käyttämään webin standardityyliteknologiaan (CSS), mutta luettelo sisältää jo pääosan merkinnöistä. Huom! Tämä on työstösivusto, ei esitystapaesimerkkien lopullinen verkkosijainti.
+</p>
+<br/>
+
+<section>
+<h2>
+Asumisen alue
+</h2>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus asuminen">
+  A
+  </span>
+  <span><p strong>Asumisen alue / Muu asumisen alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus asuminen">
+  AP
+  </span>
+  <span><p strong>Asuinpientaloalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus asuminen">
+  AO
+  </span>
+  <span><p strong>Erillisten asuinpientalojen alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus asuminen">
+  AR
+  </span>
+  <span><p strong>Rivitalojen ja muiden kytkettyjen asuinpientalojen alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus asuminen">
+  AL
+  </span>
+  <span><p strong>Asumisen alue + Toimitilojen alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus asuminen">
+  AK
+  </span>
+  <span><p strong>Asuinkerrostaloalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus asuminen">
+  AH
+  </span>
+  <span><p strong>Asumista palveleva yhteiskäyttöinen alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus asuminen">
+  AM
+  </span>
+  <span><p strong>Maatilan talouskeskuksen alue</p>
+    Ilmaisee, että kaavakohteen geometria kuvaa paikkaa, jolla on tai johon voidaan rakentaa tilan päärakennuksen ja sen yhteydessä olevien talousrakennusten muodostama kokonaisuus.
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus asuminen">
+  AT
+  </span>
+  <span><p strong>Kyläalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+</section>
+
+<section>
+<h2>
+Taajamatoimintojen alue
+</h2>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus asuminen">
+  A
+  </span>
+  <span><p strong>Taajamatoimintojen alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus keskusta">
+  C
+  </span>
+  <span><p strong>Keskustatoimintojen alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="kohde kayttotarkoitus keskusta">
+  ca
+  </span>
+  <span><p strong>Keskustatoimintojen alakeskus (pistemäinen geometria)</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+</section>
+
+<section>
+<h2>
+Toimitilojen alue
+</h2>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus palvelu">
+  KTY
+  </span>
+  <span><p strong>Toimitilojen alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus palvelu">
+  KL
+  </span>
+  <span><p strong>Liikerakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus palvelu">
+  KLM
+  </span>
+  <span><p strong>Myymälärakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus palvelu">
+  KM
+  </span>
+  <span><p strong>Vähittäiskaupan suuryksikkö</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus palvelu">
+  KMK
+  </span>
+  <span><p strong>Vähittäiskaupan myymäläkeskittymä</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus palvelu">
+  KT
+  </span>
+  <span><p strong>Toimistorakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus palvelu">
+  P
+  </span>
+  <span><p strong>Palvelurakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="kohde kayttotarkoitus palvelu">
+  p
+  </span>
+  <span><p strong>Palvelurakennusten alue (pistemäinen geometria)</p>
+    Koodin kuvaus.
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus palvelu">
+  PV
+  </span>
+  <span><p strong>Huvi- ja viihdepalvelujen rakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus yleinen">
+  Y
+  </span>
+  <span><p strong>Yleisten rakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus yleinen">
+  YH
+  </span>
+  <span><p strong>Hallintorakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus yleinen">
+  YS
+  </span>
+  <span><p strong>Hoitoalan rakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus yleinen">
+  YY
+  </span>
+  <span><p strong>Kulttuurirakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus yleinen">
+  YM
+  </span>
+  <span><p strong>Museorakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus yleinen">
+  YK
+  </span>
+  <span><p strong>Uskonnollisten yhteisöjen rakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus yleinen">
+  YU
+  </span>
+  <span><p strong>Urheilu- ja liikuntarakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus yleinen">
+  YO
+  </span>
+  <span><p strong>Opetusrakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus tuotanto">
+  T
+  </span>
+  <span><p strong>Tuotantorakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus tuotanto">
+  TY
+  </span>
+  <span><p strong>Tuotantorakennusten alue + Ympäristö asettaa toiminnan laadulle erityisiä vaatimuksia</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus tuotanto">
+  T/kem
+  </span>
+  <span><p strong>Tuotantorakennusten alue + Vaarallisten kemikaalien valmistukselle ja varastoinnille sallittu alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus tuotanto">
+  TV
+  </span>
+  <span><p strong>Varastorakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+</section>
+
+<section>
+<h2>
+Virkistysalue
+</h2>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus viher">
+  V
+  </span>
+  <span><p strong>Virkistysalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="minikohde kayttotarkoitus viher">
+  </span>
+  <span><p strong>Virkistysalue (pistemäinen geometria)</p>
+    Ympyrämäiset kohteet (circle) ovat yleisimmin eri piirtoteknologioissa tuettuja vs. aiemmat neliöt.
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="minikohde kayttotarkoitus viher">
+  vv
+  </span>
+  <span><p strong>Uimaranta (pistemäinen geometria)</p>
+    Ympyrämäiset kohteet (circle) ovat yleisimmin eri piirtoteknologioissa tuettuja vs. aiemmat neliöt.
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus viher">
+  VL
+  </span>
+  <span><p strong>Lähivirkistysalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus viher">
+  VV
+  </span>
+  <span><p strong>Uimaranta</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus viher">
+  VP
+  </span>
+  <span><p strong>Puisto</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus viher">
+  VK
+  </span>
+  <span><p strong>Leikkipuisto</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus viher">
+  VU
+  </span>
+  <span><p strong>Urheilupalvelujen alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus viher">
+  VR
+  </span>
+  <span><p strong>Retkeily- ja ulkoilualue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus viher">
+  VI
+  </span>
+  <span><p strong>Viheralue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 50" style="enable-background:new 0 0 100 50;" xml:space="preserve">
+<style type="text/css">
+	.st0a{fill:none;stroke:#21B24B;stroke-width:5;stroke-miterlimit:10;}
+	.st1a{fill:none;stroke:#21B24B;stroke-width:5;stroke-miterlimit:10;stroke-dasharray:8.2514,4.1257;}
+	.st2a{fill:#21B24B;}
+</style>
+<g>
+	<g>
+		<line class="st0a" x1="80.9" y1="25" x2="76.9" y2="25"/>
+		<line class="st1a" x1="72.8" y1="25" x2="25.4" y2="25"/>
+		<line class="st0a" x1="23.3" y1="25" x2="19.3" y2="25"/>
+		<g>
+			<polygon class="st2a" points="79.1,18.8 89.9,25 79.1,31.2 			"/>
+		</g>
+		<g>
+			<polygon class="st2a" points="21.1,18.8 10.3,25 21.1,31.2 			"/>
+		</g>
+	</g>
+</g>
+</svg>
+
+  </span>
+  <span><p strong>Viheryhteys + yhteystarve (lisätieto)</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+</section>
+
+<section>
+<h2>
+Vapaa-ajan asumisen ja matkailun alue
+</h2>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus vapaaaika">
+  R
+  </span>
+  <span><p strong>Vapaa-ajan asumisen ja matkailun alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus vapaaaika">
+  RA
+  </span>
+  <span><p strong>Vapaa-ajan asuinrakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus vapaaaika">
+  RM
+  </span>
+  <span><p strong>Matkailua palvelevien rakennusten alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus vapaaaika">
+  RL
+  </span>
+  <span><p strong>Leirintäalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus vapaaaika">
+  RV
+  </span>
+  <span><p strong>Asuntovaunualue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus vapaaaika">
+  RP
+  </span>
+  <span><p strong>Siirtolapuutarha-alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus vapaaaika">
+  RP  </span>
+  <span><p strong>Palstaviljelyalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+</section>
+
+<section>
+<h2>
+Liikennealue
+</h2>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus liikenne">
+  L
+  </span>
+  <span><p strong>Liikennealue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus liikenne">
+  LT
+  </span>
+  <span><p strong>Maantie</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta">
+<svg height="50" width="100">
+  <text x="45" y="12.5">vt</text>
+  <line x1="0" y1="25" x2="100" y2="25" style="stroke:rgb(0,0,0);stroke-width:10" />
+  <line x1="0" y1="40" x2="100" y2="40" style="stroke:rgb(0,0,0);stroke-width:10" />
+</svg>
+  </span>
+  <span><p strong>Maantie (tai jokin sen alakoodeista) + Ajoratojen määrä = 2</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta">
+<svg height="50" width="100">
+  <text x="35" y="12.5">vt / par</text>
+  <line x1="0" y1="25" x2="100" y2="25" style="stroke:rgb(0,0,0);stroke-width:15" />
+</svg>
+  </span>
+  <span><p strong>Valtatie / Kantatie</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta">
+<svg height="50" width="100">
+  <text x="35" y="12.5">st/pk</text>
+  <line x1="0" y1="25" x2="100" y2="25" style="stroke:rgb(0,0,0);stroke-width:10" />
+</svg>
+  </span>
+  <span><p strong>Seututie / Pääkatu</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta">
+<svg height="50" width="100">
+  <text x="35" y="12.5">yt/kk</text>
+  <line x1="0" y1="25" x2="100" y2="25" style="stroke:rgb(0,0,0);stroke-width:7.5" />
+</svg>
+  </span>
+  <span><p strong>Yhdystie / Kokoojakatu</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta">
+<svg height="50" width="100">
+  <text x="45" y="12.5">jl</text>
+  <line x1="0" y1="25" x2="100" y2="25" style="stroke:rgb(0,0,0);stroke-width:5" />
+</svg>
+  </span>
+  <span><p strong>Joukkoliikennereitti</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 50" style="enable-background:new 0 0 100 50;" xml:space="preserve">
+<style type="text/css">
+	.st1{fill:none;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.9221,11.0649;}
+</style>
+<g>
+	<g>
+		<line class="st1" x1="25.6" y1="25" x2="80" y2="25"/>
+	</g>
+</g>
+</svg>
+  </span>
+  <span><p strong>Kävelyreitti / Pyöräilyreitti</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus liikenne">
+  LR
+  </span>
+  <span><p strong>Rautatie</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 50" style="enable-background:new 0 0 100 50;" xml:space="preserve">
+<style type="text/css">
+	.st00{fill:none;stroke:#000000;stroke-width:2;}
+	.st11{fill:none;stroke:#FF0000;stroke-width:2.5;}
+	.st22{font-family:'Arial'; font-size:24px;}
+</style>
+<circle class="st00" cx="50" cy="25" r="17.5"/>
+<circle class="st11" cx="50" cy="25" r="15"/>
+<text transform="matrix(1 0 0 1 43 33.5742)" class="st22">lr</text>
+</svg>
+  </span>
+  <span><p strong>Rautatieasema (pistemäinen geometria)</p>
+  Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus liikenne">
+  LP
+  </span>
+  <span><p strong>Pysäköinnin alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta osa">
+  p
+  </span>
+  <span><p strong>Autopaikkojen alue</p>
+    Koodin kuvaus.
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus pysakointi">
+  LH
+  </span>
+  <span><p strong>Huoltoasema-alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus pysakointi">
+  LPA
+  </span>
+  <span><p strong>Autopaikkojen alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus pysakointi">
+  LHA
+  </span>
+  <span><p strong>Henkilöliikenteen terminaalialue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus pysakointi">
+  LTA
+  </span>
+  <span><p strong>Tavaraliikenteen terminaalialue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus liikenne">
+  LL
+  </span>
+  <span><p strong>Lentoliikenteen alue / Lentokenttä</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus liikenne">
+  LS
+  </span>
+  <span><p strong>Satama</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus liikenne">
+  LV
+  </span>
+  <span><p strong>Venesatama</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus liikenne">
+  LV
+  </span>
+  <span><p strong>Venevalkama</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta">
+  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 50" style="enable-background:new 0 0 100 50;" xml:space="preserve">
+<style type="text/css">
+	.st00{fill:none;stroke:#000000;stroke-width:2;}
+	.st11{fill:none;stroke:#FF0000;stroke-width:2.5;}
+	.st22{font-family:'Arial'; font-size:22px;}
+</style>
+<circle class="st00" cx="50" cy="25" r="17.5"/>
+<circle class="st11" cx="50" cy="25" r="15"/>
+<text transform="matrix(1 0 0 1 43 33.5742)" class="st22">lv</text>
+</svg>
+  </span>
+  <span><p strong>Venesatama / Venevalkama (pistemäinen geometria)</p>
+  Koodin kuvaus
+  </span>
+</div>
+
+
+<div class="container ak yk">
+  <span class="merkinta kayttotarkoitus liikenne">
+  LK
+  </span>
+  <span><p strong>Kanava</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta liikenneosa katu">
+  </span>
+  <span><p strong>Katu</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta liikenneosa katu">
+  jk
+  </span>
+  <span><p strong>Jalankulkualue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta osa">
+  jk/sis
+  </span>
+  <span><p strong>Jalankulkualue + Varattu alueen sisäiseen käyttöön</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta osa">
+  jk/y
+  </span>
+  <span><p strong>Jalankulkualue + Varattu yleiseen käyttöön</p>
+    Ehdotettu aiemman viivoituksen sijaan muiden tapaan merkittäväksi.
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta liikenneosa katu">
+  pp
+  </span>
+  <span><p strong>Pyöräilyalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta liikenneosa katu">
+  LT-pp
+  </span>
+  <span><p strong>Pyöräilyalue + Maantie </p>
+    Aiemmin "Yleiseen tiehen kuuluva jalankulku- ja polkupyörätie."
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta liikenneosa katu">
+  pp/h
+  </span>
+  <span><p strong>Pyöräilyalue + Huoltoajoalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta liikenneosa katu">
+  pp/t
+  </span>
+  <span><p strong>Pyöräilyalue + Tontille ajo sallittu
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta liikenneosa katu">
+  jl
+  </span>
+  <span><p strong>Joukkoliikennealue</p>
+     Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta liikenneosa katu">
+  hk
+  </span>
+  <span><p strong>Hidaskatu</p>
+     Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta liikenneosa katu">
+  pk
+  </span>
+  <span><p strong>Pihakatu</p>
+     Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta osa">
+  h
+  </span>
+  <span><p strong>Huoltoajoalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak"> 
+  <span class="merkinta osa">
+  ajo
+  </span>
+  <span><p strong>Ajoyhteys</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak"> 
+  <span class="merkinta osa">
+  nä
+  </span>
+  <span><p strong>Näkemä-alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak"> 
+  <span class="merkinta osa">
+  su
+  </span>
+  <span><p strong>Suoja-alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+
+<div class="container ak">
+  <span class="osabox">
+e
+  </span>
+  <span><p strong>Eritasoristeys</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="osabox">
+a
+  </span>
+  <span><p strong>Alikulku</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="osabox">
+y
+  </span>
+  <span><p strong>Ylikulku</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta osa maa">
+  maa-lt
+  </span>
+  <span><p strong>Liikennetunneli</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="merkinta osa maa">
+  maa
+  </span>
+  <span><p strong>Maanalainen tila</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+
+</section>
+
+<section>
+<h2>
+Erityisalue
+</h2>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityis">
+  E
+  </span>
+  <span><p strong>Erityisalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityis">
+  EN
+  </span>
+  <span><p strong>Energiahuollon alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityis">
+  EO
+  </span>
+  <span><p strong>Maa-ainesten ottoalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityis">
+  EK
+  </span>
+  <span><p strong>Kaivosalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityis">
+  EJ
+  </span>
+  <span><p strong>Jätteenkäsittelyalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityis">
+  EA
+  </span>
+  <span><p strong>Ampumarata-alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityis">
+  EP
+  </span>
+  <span><p strong>Puolustusvoimien alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityis">
+  EU
+  </span>
+  <span><p strong>Moottorirata-alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityis">
+  EMT
+  </span>
+  <span><p strong>Mastoalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityis">
+  ETV
+  </span>
+  <span><p strong>Tuulivoimala-alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa label">
+  tv
+  </span>
+  <span><p strong>Tuulivoimala-alue + osa-alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityisviher">
+  EV
+  </span>
+  <span><p strong>Suojaviheralue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityisviher">
+  EH
+  </span>
+  <span><p strong>Hautausmaa</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+</section>
+<section>
+<h2>
+Yhdyskuntateknisen huollon alue
+</h2>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus erityis">
+  ET
+  </span>
+  <span><p strong>Yhdyskuntateknisen huollon alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak"> 
+  <span class="merkinta osa">
+  jo
+  </span>
+  <span><p strong>Johto, putki tai linja</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+</section>
+<section>
+<h2>
+Ympäristöarvojen alue
+</h2>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus suojelu">
+  S
+  </span>
+  <span><p strong>Suojelualue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="minikohde kayttotarkoitus suojelu">
+  </span>
+  <span><p strong>Suojelualue (pistemäinen geometria)</p>
+    Ympyrämäiset kohteet (circle) ovat yleisimmin eri piirtoteknologioissa tuettuja vs. aiemmat neliöt.
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus suojelu">
+  SL
+  </span>
+  <span><p strong>Luonnonsuojelualue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa">
+  sl
+  </span>
+  <span><p strong>Luonnonsuojelualue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus viher">
+  VX
+  </span>
+  <span><p strong>Ekologisen kompensaation alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta helmet label">
+  nat
+  </span>
+  <span><p strong>Natura 2000 -verkoston alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa label">
+  ge
+  </span>
+  <span><p strong>Arvokas geologinen muodostuma</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta pv label">
+  pv
+  </span>
+  <span><p strong>Pohjavesialue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta label luo">
+  luo
+  </span>
+  <span><p strong>Luonnon monimuotoisuuden kannalta tärkeä alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<h3>
+Kulttuuriympäristöarvojen alue
+</h3>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus suojelu">
+  SM
+  </span>
+  <span><p strong>Muinaismuistoalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa">
+  sm
+  </span>
+  <span><p strong>Kiinteä muinaisjäännös</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container ak">
+  <span class="minikohde kayttotarkoitus suojelu">
+  </span>
+  <span><p strong>Kiinteä muinaisjäännös (pistemäinen geometria)</p>
+    Ympyrämäiset kohteet (circle) ovat yleisimmin eri piirtoteknologioissa tuettuja vs. aiemmat neliöt.
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus suojelu">
+  SR
+  </span>
+  <span><p strong>Rakennussuojelualue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa">
+  s
+  </span>
+  <span><p strong>Suojeltava alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa">
+  sr
+  </span>
+  <span><p strong>Suojeltava rakennus</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa">
+  srs
+  </span>
+  <span><p strong>Lain rakennusperinnön suojelemisesta nojalla suojeltava rakennus</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa label">
+  ma
+  </span>
+  <span><p strong>Maisemallisesti arvokas alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa label">
+  sk
+  </span>
+  <span><p strong>Rakennetun ympäristön arvojen alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta helmet label">
+  un
+  </span>
+  <span><p strong>UNESCO:n maailmanperintökohde</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa label">
+  kp
+  </span>
+  <span><p strong>Kansallinen kaupunkipuisto</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+</section>
+<section>
+<h2>
+Vesialue
+</h2>
+<div class="container">
+  <span class="merkinta kayttotarkoitus vesi">
+  W
+  </span>
+  <span><p strong>Vesialue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+</section>
+<section>
+<h2>
+Maa- ja metsätalousalue
+</h2>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus maametsa">
+  M
+  </span>
+  <span><p strong>Maa- ja metsätalousalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus maametsa">
+  MT
+  </span>
+  <span><p strong>Maatalousalue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus maametsa">
+  MM
+  </span>
+  <span><p strong>Metsätalousalue</p>
+    Uutena ehdotettu.
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus maametsa">
+  ME
+  </span>
+  <span><p strong>Kotieläintalouden suuryksikön alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus maametsa">
+  MP
+  </span>
+  <span><p strong>Puutarha- ja kasvihuonealue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus maametsa">
+  MP
+  </span>
+  <span><p strong>Puutarha- ja kasvihuonealue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus maametsa">
+  MA
+  </span>
+  <span><p strong>Pelto + Alue, jolla maisema säilytettävä avoimena</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa label">
+ mp
+  </span>
+  <span><p strong>Pelto + Alue, jolla maisema säilytettävä avoimena</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta kayttotarkoitus maametsaviher">
+  MU
+  </span>
+  <span><p strong>Maa- ja metsätalousalue + Alue, jolla on erityistä ulkoilun ohjaamistarvetta</p>
+    Koodin kuvaus
+  </span>
+  </div>
+  
+<div class="container">
+  <span class="merkinta kayttotarkoitus maametsaviher">
+  MY
+  </span>
+  <span><p strong>Maa- ja metsätalousalue + Ympäristöarvojen alue</p>
+    Koodin kuvaus
+  </span>
+  </div>
+
+
+</section>
+<section>
+<h2>
+Ympäristöhäiriöalue
+</h2>
+
+<div class="container">
+  <span class="merkinta osa label">
+  va
+  </span>
+  <span><p strong>Vaara-alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa label">
+  sv
+  </span>
+  <span><p strong>Suojavyöhyke</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa label">
+  pima
+  </span>
+  <span><p strong>Pilaantunut maa-alue</p>
+    Lyhenne ehdotettu uutena.
+  </span>
+</div>
+
+</section>
+<section>
+<h2>
+Kehittämisalue
+</h2>
+
+<div class="container">
+  <span class="merkinta osa label">
+  ke
+  </span>
+  <span><p strong>Kehittämisalue</p>
+     Koodin kuvaus
+  </span>
+</div>
+</section>
+
+<section>
+<h2>
+Alue, jota koskee kehittämisperiaate
+</h2>
+
+<div class="container">
+  <span class="merkinta">
+<svg height="50" width="100">
+  <polygon fill="#E2C096" points="67.3,47.9 67.3,36.2 8.9,36.2 8.9,12.8 67.3,12.8 67.3,1.1 90.7,24.5 "/>
+</svg>
+
+  </span>
+  <span><p strong>Yhdyskuntarakenteen laajenemissuunta</p>
+     Koodin kuvaus
+  </span>
+</div>
+</section>
+
+<section>
+<h2>
+Suunnittelutarvealue
+</h2>
+
+<div class="container">
+  <span class="merkinta osa label">
+  st
+  </span>
+  <span><p strong>Kehittämisalue</p>
+     Koodin kuvaus
+  </span>
+</div>
+
+<section>
+<h2>
+Tarve (lisätiedon laji)
+</h2>
+
+<div class="container">
+  <span class="merkinta">
+<svg height="50" width="100">
+  <text transform="matrix(1 0 0 1 42.7233 40.8089)" stroke="black" fill="none" font-size="44px" font-family="Arial";>!</text>
+</svg>
+
+  </span>
+  <span><p strong>Ympäristö- tai maisemahaitan korjaustarve</p>
+     Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta">
+<svg height="50" width="100">
+  <text transform="matrix(1 0 0 1 42.7233 40.8089)" font-size="44px" font-family="Arial";>!</text>
+</svg>
+
+  </span>
+  <span><p strong>Terveyshaitan poistamistarve</p>
+     Koodin kuvaus
+  </span>
+</div>
+</section>
+
+</section>
+<section>
+<h2>
+Tontti
+</h2>
+
+<div class="container">
+  <span class="merkinta label tontti">
+  7
+  </span>
+  <span><p strong>Tontti + Sijainti sitova + Tontin numero</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta label tontti">
+  </span>
+  <span><p strong>Tontti + Sijainti ohjeellinen</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+</section>
+<section>
+<h2>
+Rakennusala
+</h2>
+
+<div class="container">
+  <span class="merkinta osa">
+  </span>
+  <span><p strong>Rakennusala</p>
+    Tarkempi rakennuksen käyttötarkoitus RL2018-luokituksen mukaisesti voidaan osoittaa nimiöinnillä rl- + rakennustyypin koodi, esim. rl-191.
+  </span>
+</div>
+
+<div class="container">
+  <span class="osabox">
+  <strong>╳</strong>
+  </span>
+  <span><p strong>Rakennukseen jätettävä kulkuaukko</p>
+    Kulmasta kulmaan menevien diagonaalilinjojen sijaan helpointa olisi vain piirtää alueen sisälle Unicode 2573 eli "Box Drawings Light Diagonal Cross".
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa">
+  u
+  </span>
+  <span><p strong>Uloke</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+</section>
+<section>
+<h2>
+Ulkoalue
+</h2>
+
+<div class="container">
+  <span class="merkinta osa">
+  v
+  </span>
+  <span><p strong>Valokatteinen tila</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta osa">
+  le
+  </span>
+  <span><p strong>Leikkialue / oleskelualue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 50" style="enable-background:new 0 0 100 50;" xml:space="preserve">
+<circle cx="11.8" cy="6.3" r="0.9"/>
+<path d="M23.9,6.3c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C23.5,5.3,23.9,5.7,23.9,6.3z"/>
+<circle cx="34.2" cy="6.3" r="0.9"/>
+<path d="M46.4,6.3c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C46,5.3,46.4,5.7,46.4,6.3z"/>
+<path d="M57.6,6.3c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C57.2,5.3,57.6,5.7,57.6,6.3z"/>
+<circle cx="17.1" cy="14.2" r="0.9"/>
+<path d="M29.2,14.2c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C28.8,13.3,29.2,13.7,29.2,14.2z"/>
+<circle cx="39.5" cy="14.2" r="0.9"/>
+<path d="M51.7,14.2c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C51.3,13.3,51.7,13.7,51.7,14.2z"/>
+<path d="M62.9,14.2c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C62.5,13.3,62.9,13.7,62.9,14.2z"/>
+<circle cx="11.8" cy="23.6" r="0.9"/>
+<path d="M23.9,23.6c0,0.5-0.4,0.9-0.9,0.9s-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9S23.9,23.1,23.9,23.6z"/>
+<circle cx="34.2" cy="23.6" r="0.9"/>
+<path d="M46.4,23.6c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C46,22.7,46.4,23.1,46.4,23.6z"/>
+<path d="M57.6,23.6c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C57.2,22.7,57.6,23.1,57.6,23.6z"/>
+<circle cx="6.4" cy="14.3" r="0.9"/>
+<g>
+	<path d="M100,0H88v1h12V0L100,0z M84,0h-2v1h2V0L84,0z M78,0H66v1h12V0L78,0z M62,0h-2v1h2V0L62,0z M56,0H44v1h12V0L56,0z M40,0h-2
+		v1h2V0L40,0z M34,0H22v1h12V0L34,0z M18,0h-2v1h2V0L18,0z M12,0H0v1h12V0L12,0z M1,4H0v2h1V4L1,4z M1,10H0v12h1V10L1,10z M1,26H0v2
+		h1V26L1,26z M1,32H0v12h1V32L1,32z M1,48H0v2h1V48L1,48z M16,49H4v1h12V49L16,49z M22,49h-2v1h2V49L22,49z M38,49H26v1h12V49L38,49
+		z M44,49h-2v1h2V49L44,49z M60,49H48v1h12V49L60,49z M66,49h-2v1h2V49L66,49z M82,49H70v1h12V49L82,49z M88,49h-2v1h2V49L88,49z
+		 M100,46h-1v3h-7v1h8V46L100,46z M100,40h-1v2h1V40L100,40z M100,24h-1v12h1V24L100,24z M100,18h-1v2h1V18L100,18z M100,2h-1v12h1
+		V2L100,2z"/>
+</g>
+<circle cx="17.4" cy="34.4" r="0.9"/>
+<path d="M29.6,34.4c0,0.5-0.4,0.9-0.9,0.9s-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9S29.6,33.9,29.6,34.4z"/>
+<circle cx="39.9" cy="34.4" r="0.9"/>
+<path d="M52.1,34.4c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C51.6,33.5,52.1,33.9,52.1,34.4z"/>
+<path d="M63.3,34.4c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C62.9,33.5,63.3,33.9,63.3,34.4z"/>
+<circle cx="12.1" cy="43.8" r="0.9"/>
+<path d="M24.3,43.8c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C23.9,42.9,24.3,43.3,24.3,43.8z"/>
+<circle cx="34.6" cy="43.8" r="0.9"/>
+<path d="M46.8,43.8c0,0.5-0.4,0.9-0.9,0.9s-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9S46.8,43.3,46.8,43.8z"/>
+<path d="M58,43.8c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C57.6,42.9,58,43.3,58,43.8z"/>
+<circle cx="6.8" cy="34.5" r="0.9"/>
+<path d="M69,6.3c0,0.5-0.4,0.9-0.9,0.9s-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9S69,5.8,69,6.3z"/>
+<path d="M80.2,6.3c0,0.5-0.4,0.9-0.9,0.9s-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9S80.2,5.8,80.2,6.3z"/>
+<path d="M74.3,14.3c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C73.9,13.4,74.3,13.8,74.3,14.3z"/>
+<path d="M85.5,14.3c0,0.5-0.4,0.9-0.9,0.9s-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9S85.5,13.8,85.5,14.3z"/>
+<path d="M69,23.7c0,0.5-0.4,0.9-0.9,0.9s-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9S69,23.2,69,23.7z"/>
+<path d="M80.2,23.7c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9C79.8,22.8,80.2,23.2,80.2,23.7z"/>
+<path d="M74.7,34.5c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9C74.3,33.5,74.7,34,74.7,34.5z"/>
+<path d="M85.9,34.5c0,0.5-0.4,0.9-0.9,0.9S84,35,84,34.5c0-0.5,0.4-0.9,0.9-0.9S85.9,34,85.9,34.5z"/>
+<path d="M69.4,43.9c0,0.5-0.4,0.9-0.9,0.9s-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9S69.4,43.4,69.4,43.9z"/>
+<path d="M80.6,43.9c0,0.5-0.4,0.9-0.9,0.9c-0.5,0-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9C80.2,43,80.6,43.4,80.6,43.9z"/>
+<path d="M92.3,6.3c0,0.5-0.4,0.9-0.9,0.9s-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9S92.3,5.8,92.3,6.3z"/>
+<path d="M92.3,23.7c0,0.5-0.4,0.9-0.9,0.9s-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9S92.3,23.2,92.3,23.7z"/>
+<path d="M92.6,43.9c0,0.5-0.4,0.9-0.9,0.9s-0.9-0.4-0.9-0.9s0.4-0.9,0.9-0.9S92.6,43.4,92.6,43.9z"/>
+</svg>
+
+  </span>
+  <span><p strong>Istutettava alue</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+</section>
+
+<section>
+<h2>
+Eri tahojen tarpeisiin varaaminen (lisätiedon laji)
+</h2>
+
+<div class="container">
+  <span class="merkinta tyhja">
+  /k
+  </span>
+  <span><p strong>Varattu kunnan käyttöön</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta tyhja">
+  /v
+  </span>
+  <span><p strong>Varattu valtion käyttöön</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta tyhja">
+  /y
+  </span>
+  <span><p strong>Varattu yleiseen käyttöön</p>
+  Aiemmin /yk
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta tyhja">
+  /yks
+  </span>
+  <span><p strong>Varattu yksityiseen käyttöön</p>
+  Uusi
+  </span>
+</div>
+
+<div class="container">
+  <span class="merkinta tyhja">
+  /sis
+  </span>
+  <span><p strong>Varattu alueen sisäiseen käyttöön</p>
+  Koodin kuvaus
+  </span>
+  </div>
+
+</section>
+
+<section>
+<h2>
+Ympäristömuutoksen laji (lisätiedon laji)
+</h2>
+
+<div class="container">
+  <span class="merkinta tyhja">
+  /uusi
+  </span>
+  <span><p strong>Uusi</p>
+  Koodin kuvaus
+  </span>
+  </div>
+  
+  <div class="container">
+  <span class="merkinta tyhja">
+  /olo
+  </span>
+  <span><p strong>Olemassa oleva</p>
+  Koodin kuvaus
+  </span>
+  </div>
+  
+  <div class="container">
+  <span class="merkinta tyhja">
+  /par
+  </span>
+  <span><p strong>Parannettava</p>
+  Koodin kuvaus
+  </span>
+  </div>
+  
+  <div class="container">
+  <span class="merkinta tyhja">
+  /mpar
+  </span>
+  <span><p strong>Merkittävästi parannettava</p>
+  Koodin kuvaus
+  </span>
+  </div>
+  
+  <div class="container">
+  <span class="merkinta tyhja">
+  /muut
+  </span>
+  <span><p strong>Olennaisesti muuttuva</p>
+  Koodin kuvaus
+  </span>
+  </div>
+
+
+<div class="container">
+  <span class="merkinta tyhja">
+  /pur
+  </span>
+  <span><p strong>Purettava</p>
+  Koodin kuvaus
+  </span>
+  </div>
+  
+ 
+<div class="container">
+  <span class="merkinta tyhja">
+  /pien
+  </span>
+  <span><p strong>Pienin toimenpitein kehitettävä</p>
+  Koodin kuvaus
+  </span>
+  </div>
+  
+  
+   
+<div class="container">
+  <span class="merkinta tyhja">
+  /r
+  </span>
+  <span><p strong>Reservialue</p>
+  Koodin kuvaus
+  </span>
+  </div>
+ 
+<div class="container">
+  <span class="merkinta tyhja">
+  /s
+  </span>
+  <span><p strong>Ympäristöltään säilytettävä alue</p>
+  Koodin kuvaus
+  </span>
+  </div>
+
+</section>
+
+<section>
+<h2>
+Rakentamisen määrä, Rakentamisen tapa, Liikenteen suureet
+</h2>
+
+ <div class="container">
+  <span class="merkinta tyhja snadi">
+  2525
+  </span>
+  <span><p strong>Sallittu kerrosala</p>
+  Koodin kuvaus
+  </span>
+  </div>
+  
+ <div class="container">
+  <span class="merkinta tyhja snadi">
+  e = 0.12
+  </span>
+  <span><p strong>Tehokkuusluku</p>
+  Koodin kuvaus
+  </span>
+  </div>
+    
+ <div class="container">
+  <span class="merkinta tyhja snadi">
+  α = 00°
+  </span>
+  <span><p strong>Kattokaltevuus</p>
+  Koodin kuvaus
+  </span>
+  </div>
+  
+   <div class="container">
+  <span class="merkinta tyhja snadi"> 
+  β = 250°
+  </span>
+  <span><p strong>Rakennuksen harjan suunta</p>
+  Koodin kuvaus
+  </span>
+  </div>
+
+<div class="container ak yk">
+  <span class="merkinta">
+<svg version="1.1" id="layeri" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 50" style="enable-background:new 0 0 100 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:1;}
+	.st1{font-family:'Arial';font-size:12px;}
+</style>
+  <text x="45" y="20">ik</text>
+<polyline class="st0" points="14,40.8 22.8,31.9 31.9,41 "/>
+<polyline class="st0" points="32,40.8 40.8,31.8 49.9,40.9 "/>
+<polyline class="st0" points="50.1,40.6 58.9,31.7 68,40.8 "/>
+<polyline class="st0" points="68,40.6 76.8,31.7 85.9,40.8 "/>
+</svg>
+
+  </span>
+  <span><p strong>Ikkunaton seinä</p>
+    Koodin kuvaus
+  </span>
+</div>
+
+
+<div class="container ak yk">
+  <span class="merkinta">
+<svg version="1.1" id="layeri" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 100 50" style="enable-background:new 0 0 100 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-width:1;}
+	.st1{font-family:'Arial';font-size:12px;}
+</style>
+  <text x="30" y="20">-15 dB</text>
+<polyline class="st0" points="14,40.8 22.8,31.9 31.9,41 "/>
+<polyline class="st0" points="32,40.8 40.8,31.8 49.9,40.9 "/>
+<polyline class="st0" points="50.1,40.6 58.9,31.7 68,40.8 "/>
+<polyline class="st0" points="68,40.6 76.8,31.7 85.9,40.8 "/>
+</svg>
+
+  </span>
+  <span><p strong>Ääneneristävyys</p>
+    Koodin kuvaus
+  </span>
+</div>
+  
+   <div class="container">
+  <span class="merkinta tyhja snadi">
+  IV
+  </span>
+  <span><p strong>Maanpäällinen kerrosluku</p>
+  Roomalaisin numeroin osoitettu.
+  </span>
+  </div>
+  
+     <div class="container">
+  <span class="merkinta tyhja snadi">
+  II-
+  </span>
+  <span><p strong>Maanalainen kerrosluku</p>
+  Roomalaisin numeroin osoitettu.
+  </span>
+  </div>
+  
+     <div class="container">
+  <span class="merkinta tyhja snadi">
+  III k 1/2
+  </span>
+  <span><p strong>Kellarin sallittu osuus kerrosalasta</p>
+  Roomalaisin numeroin osoitettu.
+
+  </span>
+  </div>
+  
+     <div class="container">
+  <span class="merkinta tyhja snadi">
+  IV u 1/2
+  </span>
+  <span><p strong>Ullakon sallittu osuus kerrosalasta</p>
+  Roomalaisin numeroin osoitettu.
+  </span>
+  </div>
+  
+  <div class="container">
+  <span class="merkinta tyhja snadi">
+  0.5 ap/as
+  </span>
+  <span><p strong>Autopaikkojen määrä asuntoa kohden</p>
+  Roomalaisin numeroin osoitettu.
+  </span>
+  </div>
+    
+  <div class="container">
+  <span class="merkinta tyhja snadi">
+  0.01 ap/m²
+  </span>
+  <span><p strong>Autopaikkojen määrä kerrosneliömetriä kohden</p>
+  Roomalaisin numeroin osoitettu.
+  </span>
+  </div>
+  
+  <div class="container">
+  <span class="merkinta tyhja snadi">
+  2.5 pp/as
+  </span>
+  <span><p strong>Polkupyöräpysäköinnin määrä asuntoa kohden</p>
+  Roomalaisin numeroin osoitettu.
+  </span>
+  </div>
+    
+  <div class="container">
+  <span class="merkinta tyhja snadi">
+  0.05 pp/m²
+  </span>
+  <span><p strong>Polkupyöräpysäköinnin määrä kerrosneliömetriä kohden</p>
+  Roomalaisin numeroin osoitettu.
+  </span>
+  </div>
+  </section>
+<section>
+<h2>
+Nimistö ja aluetunnukset
+</h2>
+  
+ <div class="container">
+  <span class="merkinta tyhja iso">
+  KAUP
+  </span>
+  <span><p strong>Kaupungin- tai kunnanosan nimi</p>
+  Koodin kuvaus
+  </span>
+  </div>
+  
+   <div class="container">
+  <span class="merkinta tyhja semiiso">
+  12
+  </span>
+  <span><p strong>Korttelin numero</p>
+  Koodin kuvaus
+  </span>
+  </div>
+
+   <div class="container">
+  <span class="merkinta tyhja snadi">
+  KATU
+  </span>
+  <span><p strong>Kadun tai tien nimi / Torin tai katuaukion nimi</p>
+  Koodin kuvaus
+  </span>
+  </div>
+  
+    <div class="container">
+  <span class="merkinta tyhja snadimpi">
+  23
+  </span>
+  <span><p strong>Tontin numero</p>
+  Koodin kuvaus
+  </span>
+  </div>
+
+
+</section>
+
+</body>
