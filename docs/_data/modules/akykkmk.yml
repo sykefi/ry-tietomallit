@@ -1,7 +1,7 @@
 title: "Asema- ja yleiskaavan kaavamääräyskokoelma-hanke 2022-23"
 basepath: "kehitys/akykkmk"
 nav_items:
-- pageId: "akykkmk"
+- pageId: "kuvaus"
   title: "Hankkeen kuvaus"
   path: ""
   gitHubFile: "index.md"
