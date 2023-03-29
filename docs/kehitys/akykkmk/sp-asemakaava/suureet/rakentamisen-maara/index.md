@@ -23,7 +23,7 @@ Ryhmittelyotsikko, vain {% include common/moduleLink.html moduleId="kaavatiedot"
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="sp-ak/vaat-sallittu-kerrosala-kaavakohde" %}
-Asemakaavassa kaavamääräyslaji [Sallittu kerrosala](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/sallittuKerrosala>) voidaan osoittaa vain {% include common/moduleLink.html moduleId="kaavatiedot" path="looginenmalli/dokumentaatio/#kaavakohde" title="Kaavakohteelle", johon liittyy [KaavamääraysLaji](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays)-koodi [Rakennusala](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/rakennusala>), tai joka kuvaa [Aluevarausta](../../aluevaraukset/index.md).%}
+Asemakaavassa kaavamääräyslaji [Sallittu kerrosala](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/sallittuKerrosala) voidaan osoittaa vain {% include common/moduleLink.html moduleId="kaavatiedot" path="looginenmalli/dokumentaatio/#kaavakohde" title="Kaavakohteelle"%}, johon liittyy [KaavamääraysLaji](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays)-koodi [Rakennusala](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/rakennusala), tai joka kuvaa [Aluevarausta](../../aluevaraukset/index.md).
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="sp-ak/vaat-sallittu-kerrosala-lisatiedot" %}
@@ -42,7 +42,7 @@ Mikäli sallittua rakentamisen määrää ei ole jaoteltu käyttötarkoituksitta
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="sp-ak/vaat-sallittu-rakennustilavuus-kaavakohde" %}
-Asemakaavassa kaavamääräyslaji [Sallittu rakennustilavuus](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/sallittuRakennustilavuus>) voidaan osoittaa vain {% include common/moduleLink.html moduleId="kaavatiedot" path="looginenmalli/dokumentaatio/#kaavakohde" title="Kaavakohteelle", johon liittyy [KaavamääraysLaji](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays)-koodi [Rakennusala](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/rakennusala>), tai joka kuvaa [Aluevarausta](../../aluevaraukset/index.md).%}
+Asemakaavassa kaavamääräyslaji [Sallittu rakennustilavuus](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/sallittuRakennustilavuus) voidaan osoittaa vain {% include common/moduleLink.html moduleId="kaavatiedot" path="looginenmalli/dokumentaatio/#kaavakohde" title="Kaavakohteelle", johon liittyy [KaavamääraysLaji](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays)-koodi [Rakennusala](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/rakennusala), tai joka kuvaa [Aluevarausta](../../aluevaraukset/index.md).%}
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="sp-ak/vaat-sallittu-rakennustilavuus-lisatiedot" %}
