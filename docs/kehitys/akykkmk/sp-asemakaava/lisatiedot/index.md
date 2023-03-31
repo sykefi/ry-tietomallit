@@ -4,7 +4,6 @@ description: ""
 id: "lisatiedot"
 status: "Ehdotus"
 ---
-
 # Kaavamääräyksen lisätiedot
 {:.no_toc}
 
