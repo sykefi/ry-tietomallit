@@ -18,7 +18,7 @@ nav_items:
     path: "index.html"
     gitHubFile: "index.md"
     default: true
-  - pageId: "kaavamaarayslajit"
+  - groupId: "kaavamaarayslajit"
     title: "Kaavamääräyslajit"
     path: ""
     nav_items:
@@ -53,7 +53,7 @@ nav_items:
     title: "Rakennusala"
   - pageId: "tontti"
     title: "Tontti"
-  - pageId: "suureet"
+  - groupId: "suureet"
     title: "Suureet"
     nav_items:
     - pageId: "aluetunnukset"
