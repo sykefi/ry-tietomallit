@@ -140,8 +140,6 @@ Aluevarauksen käyttötarkoitusta kuvaavaan kaavamääräykseen liitetty ```lisa
 
 Mikäli sallittua rakentamisen määrää ei ole jaoteltu käyttötarkoituksittain, ei lisätietoja käytetä.
 
-{% include common/question.html content="Eikö olisi vain selkeämpää päättää, että käytetään esim. prosentteja? Eikä käytetä joko-tai -tyyppisiä vaihtoehtoja?" %}
-
 <!--
 ## Kulttuuriymparistöarvojen alue
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/kulttuuriymparistoarvojenAlue>
