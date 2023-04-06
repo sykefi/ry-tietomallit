@@ -22,8 +22,6 @@ Esimerkkejä:<br>
 
 * ```Maatalouden talouskeskuksen rakennuspaikka``` voidaan määritellä kahden käyttötarkoituskohdistus-lisätiedon yhdistelmällä, arvoina Rakennusluokituksen 2018:n mukaiset [Asuinrakennukset](http://uri.suomi.fi/codelist/jhs/rakennus_1_20180712/code/01) ja [Maatalousrakennukset ja eläinsuojat](http://uri.suomi.fi/codelist/jhs/rakennus_1_20180712/code/14) yhdistelmällä.
 
-{% include common/question.html content="Nykyoppaissahan näitä ei varsinaisesti edes ole. Käytännössä yleiskaavan aluevarauksen päälle on osoitettu pistemäinen kohde uudelle rakennuspaikalle. Oletuksena saaden aluevarauksen mukaisen käyttötarkoituksen. Onko tämä aiemminkin esitetty soveltamistapa ajateltu vaikeamman kautta?" %}
-
 {% include common/clause_start.html type="req" id="sp-yk/vaat-rakennuspaikka-tuulivoimayleiskaava" %}
 [Maankäyttö- ja rakennuslain 77 a §](https://www.finlex.fi/fi/laki/ajantasa/1999/19990132#L10aP77a) mukaisissa yleiskaavoissa tuulivoimalan rakennuspaikka tulee kuvata kaavamääräyslajilla [Rakennuspaikka](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/rakennuspaikka), joka sijaitsee spatiaalisesti sellaisen Kaavakohteen sisällä, johon liittyy kaavamääräyslaji [Tuulivoimala-alue](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/tuulivoimala-alue).
 {% include common/clause_end.html %}
