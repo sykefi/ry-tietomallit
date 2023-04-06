@@ -23,6 +23,8 @@ nav_items:
     title: "Kehittämisalue"
   - pageId: "kehittamisperiaatteet"
     title: "Kehittämisperiaatteet"
+  - pageId: "lisatiedot"
+    title: "Lisätiedot"
   - pageId: "rakennuspaikka"
     title: "Rakennuspaikka"
   - pageId: "suunnittelutarvealue"
