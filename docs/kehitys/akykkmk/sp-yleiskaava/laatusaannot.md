@@ -10,7 +10,7 @@ Nämä laatusäännöt laajentavat Kaavatietomallin [yleisiä laatusääntöjä]
 ## Yleiset säännöt
 
 {% include common/clause_start.html type="req" id="sp-yk/arvot" %}
-Ellei tarkemmin ole määritetty, ```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi {% include common/moduleLink.html moduleId="kaavatiedot" path="looginenmalli/dokumentaatio/#tekstiarvo" title="TekstiArvo" %} (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
+Ellei tarkemmin ole määritetty, ```arvo```-attribuutin arvoina saa esiintyä nolla tai useampi [Tekstiarvo](https://tietomallit.suomi.fi/model/rytj-kaava/Tekstiarvo/) (yksi kullakin kielellä), joka täydentää kaavamääräystietoa. Muun tyyppiset arvot eivät ole sallittuja.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="rec" id="sp-yk/suos-asiakirja" %}
@@ -18,5 +18,5 @@ Mikäli kaavakohteeseen liittyen on laadittu jokin suunnitelma, selvitys, raport
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="rec" id="sp-yk/suos-liittyvakohde" %}
-{% include common/moduleLink.html moduleId="kaavatiedot" path="looginenmalli/dokumentaatio/#kaavakohde" title="Kaavakohde" %} voidaan linkittää toisiin {% include common/moduleLink.html moduleId="kaavatiedot" path="looginenmalli/dokumentaatio/#kaavakohde" title="Kaavakohteisiin" %} assosiaation ```liittyvaKohde``` arvojen avulla.
+[Kaavakohde](https://tietomallit.suomi.fi/model/rytj-kaava/Kaavakohde/) voidaan linkittää toisiin [Kaavakohteisiin](https://tietomallit.suomi.fi/model/rytj-kaava/Kaavakohde/) assosiaation [Liittyvä kohde](https://tietomallit.suomi.fi/model/rytj-kaava/Kaavakohde/6e080c6a-bb00-4d7f-b095-215f7c902e19) arvojen avulla.
 {% include common/clause_end.html %}
