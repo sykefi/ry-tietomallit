@@ -3,17 +3,17 @@ basepath: "kehitys/akykkmk"
 nav_items:
 - pageId: "kuvaus"
   title: "Hankkeen kuvaus"
-  path: ""
+  path: "index.html"
   gitHubFile: "index.md"
   default: true
 - pageId: "koodistot"
   title: "Koodistot"
-  path: ""
+  path: "koodistot.html"
   gitHubFile: "koodistot.md"
   default: true
 - pageId: "sanalliset"
   title: "Sanalliset määräykset"
-  path: ""
+  path: "sanalliset.html"
   gitHubFile: "sanalliset.md"
   default: true
 - pageId: "esitystavat"
