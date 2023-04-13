@@ -15,7 +15,7 @@ status: "Ehdotus"
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="sp-ak/vaat-rakennusala-liittyvakohde" %}
-Kaavakohteeseen, johon liittyy kaavamääräyslaji-koodi [Rakennusala](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji/code/rakennusala), tulee {% include common/moduleLink.html moduleId="kaavatiedot" path="dokumentaatio/#liittyvakohde" title="Liittyvakohde" %}-assosiaation avulla linkittää se (Aluevaraus)[/../../aluevaraukset/index.md], jonka sisälle rakennusala spatiaalisesti sijoittuu.
+Kaavakohteeseen, johon liittyy kaavamääräyslaji-koodi [Rakennusala](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji/code/rakennusala), tulee  -assosiaation avulla linkittää se (Aluevaraus)[/../../aluevaraukset/index.md], jonka sisälle rakennusala spatiaalisesti sijoittuu.
 {% include common/clause_end.html %}
 
 ### Rakennusalan sivu, jota koskee tarkempi määräys

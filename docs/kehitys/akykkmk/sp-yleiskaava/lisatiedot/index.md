@@ -36,7 +36,7 @@ Esimerkkejä
 {% include common/tip.html content="```Ohjeelliset tielinjaukset``` ja vastaavat ohjeelliset kaavamääräykset muodostetaan Kaavakohteen ```sijainninSitovuus``` -attribuutin arvon ```Ohjeellinen``` avulla." %}
 
 {% include common/clause_start.html type="rec" id="sp-yk/suos-vaihtoehtoinen-liittyva-kohde" %}
-{[Kaavakohteen](https://tietomallit.suomi.fi/model/rytj-kaava/Kaavakohde/), johon liittyy lisätieto vaihtoehtoinen, assosiaation [Liittyvä kohde](https://tietomallit.suomi.fi/model/rytj-kaava/Kaavakohde/6e080c6a-bb00-4d7f-b095-215f7c902e19) tulee viitata näiden vaihtoehtoista maankäyttöä kuvaaviin Kaavakohteisiin. Assosiaation ```rooli```-attribuutin arvon tulee ilmaista, että liittyvä kohde on vaihtoehtoinen." %}
+[Kaavakohteen](https://tietomallit.suomi.fi/model/rytj-kaava/Kaavakohde/), johon liittyy lisätieto vaihtoehtoinen, assosiaation [Liittyvä kohde](https://tietomallit.suomi.fi/model/rytj-kaava/Kaavakohde/6e080c6a-bb00-4d7f-b095-215f7c902e19) tulee viitata näiden vaihtoehtoista maankäyttöä kuvaaviin Kaavakohteisiin. Assosiaation ```rooli```-attribuutin arvon tulee ilmaista, että liittyvä kohde on vaihtoehtoinen."s
 {% include common/clause_end.html %}
 
 ## Merkittävyys
