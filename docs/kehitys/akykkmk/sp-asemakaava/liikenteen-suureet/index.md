@@ -9,17 +9,17 @@ status: "Ehdotus"
 
 ## Liikenteen suureet
 ### Pysäköinnin määrä
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/pysakoinninMaara>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji/code/pysakoinninMaara>
 
 Ryhmittelyotsikko, vain {% include common/moduleLink.html moduleId="kaavatiedot" path="looginenmalli/elinkaarisaannot.html#elinkaari-vaat-alakoodi-maar" title="alakoodeja" %} käytetään.
 
 Niin moottoajoneuvoille kuin polkupyörille varattujen pysäköintipaikkojen määrä voidaan ilmaista usealla tavalla.
 
-Ilmaistaessa pysäköintipaikkojen kokonaismäärää, käytetään joko Kaavamääräys-koodia [Polkupyöräpysäköinnin määrä](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/polkupyoraPysakoinninMaara) tai [Autopaikkojen määrä](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/autopaikkojenMaara).
+Ilmaistaessa pysäköintipaikkojen kokonaismäärää, käytetään joko Kaavamääräys-koodia [Pyöräpaikkojen määrä](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji/code/pyorapaikkojenMaara) tai [Autopaikkojen määrä](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji/code/autopaikkojenMaara).
 
-Ilmaistaessa pysäköintipaikkojen lukumäärää per asunto, käytetään joko Kaavamääräys-koodia [Polkupyöräpysäköinnin määrä per asunto](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/polkupyoraPysakoinninMaaraPerAsunto) tai [Autopaikkojen määrä per asunto](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/autopaikkojenMaaraPerAsunto).
+Ilmaistaessa pysäköintipaikkojen lukumäärää per asunto, käytetään joko Kaavamääräys-koodia [Pyöräpaikkojen määrä asuntoa kohden](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji/code/pyorapaikkojenMaaraAsuntoaKohden) tai [Autopaikkojen määrä asuntoa kohden](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji/code/autopaikkojenMaaraAsuntoaKohden).
 
-Ilmaistaessa pysäköintipaikkojen lukumäärää per kerrosneliömetri, käytetään Kaavamääräys-koodia [Polkupyöräpysäköinnin määrä per kerrosneliömetri](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/polkupyoraPysakoinninMaaraPerKerrosneliometri). tai [Autopaikkojen määrä per kerrosneliömetri](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/polkupyoraPysakoinninMaaraPerKerrosneliometri). Lisätiedon [Käyttötarkoituskohdistus](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayksen_Lisatieto/kayttotarkoituskohdistus) ja sen ```arvo```-attribuutin avulla täsmennetään, minkä käyttötarkoituksen mukaiseen kerrosalaan pysäköinnin määrää verrataan.
+Ilmaistaessa pysäköintipaikkojen lukumäärää per kerrosneliömetri, käytetään Kaavamääräys-koodia [Pyöräpaikkojen määrä kerrosneliömetriä kohden](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji/code/pyorapaikkojenMaaraKerrosneliometriaKohden). tai [Autopaikkojen määrä kerrosneliömetriä kohden](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji/code/autopaikkojenMaaraKerrosneliometriaKohden). Lisätiedon [Käyttötarkoituskohdistus](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayksen_Lisatiedonlaji/code/kayttotarkoituskohdistus) ja sen ```arvo```-attribuutin avulla täsmennetään, minkä käyttötarkoituksen mukaiseen kerrosalaan pysäköinnin määrää verrataan.
 
 {% include common/tip.html content="Mikäli halutaan antaa pysyköintipaikojen lukumäärät erikseen eri käyttötarkoituksille, voidaan kaavakohteella käyttää useampaa kaavamääräyksen ja sen lisätiedon yhdistelmää yllä kuvatulla tavalla kutakin käyttötarkoitusta kohden." %}
 

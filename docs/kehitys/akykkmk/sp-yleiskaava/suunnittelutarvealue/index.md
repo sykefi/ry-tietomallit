@@ -7,7 +7,7 @@ status: "Ehdotus"
 # Suunnittelutarvealue
 {:.no_toc}
 
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/suunnittelutarveAlue>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji/code/suunnittelutarveAlue>
 
 {:toc}
 

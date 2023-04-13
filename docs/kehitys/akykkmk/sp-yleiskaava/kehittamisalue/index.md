@@ -7,7 +7,7 @@ status: "Ehdotus"
 # Kehittämisalue
 {:.no_toc}
 
-**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays/code/kehittamisAlue>
+**Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji/code/kehittamisAlue>
 
 {:toc}
 
