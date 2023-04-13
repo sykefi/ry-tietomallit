@@ -6,6 +6,16 @@ nav_items:
   path: ""
   gitHubFile: "index.md"
   default: true
+- pageId: "koodistot"
+  title: "Koodistot"
+  path: ""
+  gitHubFile: "koodistot.md"
+  default: true
+- pageId: "sanalliset"
+  title: "Sanalliset määräykset"
+  path: ""
+  gitHubFile: "sanalliset.md"
+  default: true
 - pageId: "esitystavat"
   title: "Esitystapaesimerkit"
   path: "esitystavat.html"

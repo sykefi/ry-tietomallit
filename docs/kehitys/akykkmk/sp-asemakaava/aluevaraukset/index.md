@@ -9,11 +9,11 @@ status: "Ehdotus"
 ## Aluevaraus
 
 {% include common/clause_start.html type="req" id="sp-ak/vaat-aluemainen-aluevaraus" %}
-Asemakaavan aluevaraus on {% include common/moduleLink.html moduleId="kaavatiedot" path="dokumentaatio/#kaavakohde" title="Kaavakohde" %}-luokan objekti, jonka ```geometria```-attribuutin kuvaama geometria on aluemainen.
+Asemakaavan aluevaraus on [Kaavakohde](https://tietomallit.suomi.fi/model/rytj-kaava/Kaavakohde/)-luokan objekti, jonka ```geometria```-attribuutin kuvaama geometria on aluemainen.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="sp-ak/vaat-kayttotarkoitusalue-maar" %}
-Asemakaavan aluevaraus liittyy assosiaatiolla ```maarays``` yhteen tai useampaan sellaiseen [Kaavamaarays](dokumentaatio/#kaavamaarays)-luokan objektiin, jonka ```laji```-attribuutin arvo on jokin [Kaavamääräyslaji](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarays)-koodiston arvoista, joka sisältyy määrityshierarkioihin  ```Aluevaraus``` ja ```Asemakaava```.
+Asemakaavan aluevaraus liittyy assosiaatiolla ```maarays``` yhteen tai useampaan sellaiseen [Kaavamaarays](https://tietomallit.suomi.fi/model/rytj-kaava/Kaavamaarays/)-luokan objektiin, jonka ```laji```-attribuutin arvo on jokin [Kaavamääräyslaji](http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji)-koodiston arvoista, joka sisältyy määrityshierarkioihin  ```Aluevaraus``` ja ```Asemakaava```.
 {% include common/clause_end.html %}
 
 {% include common/clause_start.html type="req" id="sp-ak/vaat-ei-leikkaavat-kayttotarkoitusalueet" %}
