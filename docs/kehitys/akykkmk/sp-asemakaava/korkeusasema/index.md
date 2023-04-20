@@ -43,7 +43,7 @@ Kaava-aineistossa voidaan ilmaista maanpinnan nimelliskorkeus merenpinnasta tiet
 **Koodi**: <http://uri.suomi.fi/codelist/rytj/RY_Kaavamaarayslaji/code/julkisivunEnimmaiskorkeus>
 
 {% include common/clause_start.html type="req" id="sp-ak/vaat-julkisivun-enimmaiskorkeus-arvot" %}
-```arvo```-attribuutin arvona saa esiintyä yksi [Numeerinen arvoväli](https://tietomallit.suomi.fi/model/rytj-kaava/NumeerinenArvovali/) joka kertoo kaavakohteen alueelle sijoitettavien rakennusten julkisivujen minimikorkeuden, maksimikorkeuden tai molemmat. Numeerisen arvon on toteutettava [Integer](https://tietomallit.ymparisto.fi/kaavatiedot/dev/looginenmalli/dokumentaatio/#real)-rajapinta. Yksikkönä metri (```m```). Muun tyyppiset arvot eivät ole sallittuja.
+```arvo```-attribuutin arvona saa esiintyä yksi [Numeerinen arvoväli](https://tietomallit.suomi.fi/model/rytj-kaava/NumeerinenArvovali/) joka kertoo kaavakohteen alueelle sijoitettavien rakennusten julkisivujen minimikorkeuden, maksimikorkeuden tai molemmat. Numeerisen arvon on toteutettava [Real](https://tietomallit.ymparisto.fi/kaavatiedot/dev/looginenmalli/dokumentaatio/#real)-rajapinta. Yksikkönä metri (```m```). Muun tyyppiset arvot eivät ole sallittuja.
 {% include common/clause_end.html %}
 
 ## Rakennusten, rakenteiden ja laitteiden ylin korkeusasema
