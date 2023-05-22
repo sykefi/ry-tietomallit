@@ -87,3 +87,5 @@
       moduleId: "kaatio"
     - type: "module"
       moduleId: "akykkmk"
+    - type: "module"
+      moduleId: "sp-maakuntakaava"
