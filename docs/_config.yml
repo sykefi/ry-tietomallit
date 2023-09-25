@@ -1,6 +1,6 @@
 theme: jekyll-theme-slate
-url: "https://tietomallit.ymparisto.fi" # the base hostname & protocol for your site
-home: "https://tietomallit.ymparisto.fi/"
+url: "https://sykefi.github.io/ry-tietomallit" # the base hostname & protocol for your site
+home: "https://sykefi.github.io/ry-tietomallit/"
 repository: sykefi/ry-tietomallit
 title: "Rakennetun ympäristön tietomallit"
 name: "Rakennetun ympäristön tietomallit"
